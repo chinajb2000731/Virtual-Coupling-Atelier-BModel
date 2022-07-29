@@ -1,0 +1,84 @@
+/* RMU_i
+ * Author: ASUS
+ * Creation date: 2022/1/21
+ */
+
+IMPLEMENTATION RMU_i
+REFINES RMU
+
+SEES
+    Context
+
+CONCRETE_VARIABLES
+    flag_RMU_operation,
+    flag_RMU_getinfor_train1,
+    
+    flag_RMU_inform_train1_newlineinfor,
+    
+    flag_RMU_know_train3_cancel_VC,
+    flag_RMU_estab_train3,
+    flag_RMU_know_train2_cancel_VC,
+    flag_RMU_estab_train2
+
+INITIALISATION
+    flag_RMU_operation:=normally;
+    flag_RMU_getinfor_train1:=RMU_no_get_train1_infor;
+    
+    flag_RMU_inform_train1_newlineinfor:=no_wait_train1_rec;
+    
+    flag_RMU_know_train3_cancel_VC:=not_know_train3_cancelVC;
+    flag_RMU_estab_train3:=RMU_no_estab_train3;
+    flag_RMU_know_train2_cancel_VC:=not_know_train2_cancelVC;
+    flag_RMU_estab_train2:=RMU_no_estab_train2
+
+OPERATIONS
+    change_flag_RMU_operation(input)=
+    BEGIN
+        flag_RMU_operation:=input
+    END;
+
+    
+    change_flag_RMU_getinfor_train1(input)=
+    BEGIN
+        flag_RMU_getinfor_train1:=input
+    END;
+
+    ///////////////////////////////////////////////////
+    change_flag_RMU_inform_train1_newlineinfor_cancel(input)=
+    BEGIN
+        flag_RMU_inform_train1_newlineinfor:=input
+    END;
+
+    //////////////////////////////////////////////////
+    change_flag_RMU_know_train3_cancel_VC(input)=
+    BEGIN
+        flag_RMU_know_train3_cancel_VC:=input
+    END;
+
+    
+    change_flag_RMU_estab_train3(input)=
+    BEGIN
+        flag_RMU_estab_train3:=input
+    END;
+
+    
+    change_flag_RMU_know_train2_cancel_VC(input)=
+    BEGIN
+        flag_RMU_know_train2_cancel_VC:=input
+    END;
+
+    
+    change_flag_RMU_estab_train2(input)=
+    BEGIN
+        flag_RMU_estab_train2:=input
+    END;
+    output<--get_flag_RMU_operation=output:=flag_RMU_operation;
+    output<--get_flag_RMU_getinfor_train1=output:=flag_RMU_getinfor_train1;
+    output<--get_flag_RMU_inform_train1_newlineinfor=output:=flag_RMU_inform_train1_newlineinfor;
+    output<--get_flag_RMU_know_train3_cancel_VC=output:=flag_RMU_know_train3_cancel_VC;
+    output<--get_flag_RMU_estab_train3=output:=flag_RMU_estab_train3;
+    output<--get_flag_RMU_know_train2_cancel_VC=output:=flag_RMU_know_train2_cancel_VC;
+    output<--get_flag_RMU_estab_train2=output:=flag_RMU_estab_train2
+
+
+ END

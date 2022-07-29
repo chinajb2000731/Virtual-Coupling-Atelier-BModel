@@ -1,0 +1,44 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..2)*{TRAIN_OPERATION}): FIN(NATURAL*{TRAIN_OPERATION}) & not(((1..2)*{TRAIN_OPERATION}) = {});
+((1..2)*{Flag_train2_getinfor_train1}): FIN(NATURAL*{Flag_train2_getinfor_train1}) & not(((1..2)*{Flag_train2_getinfor_train1}) = {}) & ((1..2)*{Flag_train2_getinfor_train3}): FIN(NATURAL*{Flag_train2_getinfor_train3}) & not(((1..2)*{Flag_train2_getinfor_train3}) = {}) & ((1..2)*{Flag_train2_receive_newline_cancelVC}): FIN(NATURAL*{Flag_train2_receive_newline_cancelVC}) & not(((1..2)*{Flag_train2_receive_newline_cancelVC}) = {}) & ((1..2)*{Flag_train2_wait_train3_cancelVC}): FIN(NATURAL*{Flag_train2_wait_train3_cancelVC}) & not(((1..2)*{Flag_train2_wait_train3_cancelVC}) = {}) & ((1..2)*{Flag_train2_know_train3_cancelVC}): FIN(NATURAL*{Flag_train2_know_train3_cancelVC}) & not(((1..2)*{Flag_train2_know_train3_cancelVC}) = {}) & ((1..2)*{Flag_train2_reach_right_spdi}): FIN(NATURAL*{Flag_train2_reach_right_spdi}) & not(((1..2)*{Flag_train2_reach_right_spdi}) = {}) & ((1..2)*{Flag_train2_estab_train1}): FIN(NATURAL*{Flag_train2_estab_train1}) & not(((1..2)*{Flag_train2_estab_train1}) = {}) & ((1..2)*{Flag_train2_estab_RMU}): FIN(NATURAL*{Flag_train2_estab_RMU}) & not(((1..2)*{Flag_train2_estab_RMU}) = {}) & ((1..2)*{Flag_train2_operation_state}): FIN(NATURAL*{Flag_train2_operation_state}) & not(((1..2)*{Flag_train2_operation_state}) = {});
+((flag_train2_VC) : (BOOL)) & ((flag_train2_operation) : (((1..2)*{TRAIN_OPERATION}))) & ((flag_train2_getinfor_train1) : (((1..2)*{Flag_train2_getinfor_train1}))) & ((flag_train2_getinfor_train3) : (((1..2)*{Flag_train2_getinfor_train3}))) & ((flag_train2_receive_newline_cancelVC) : (((1..2)*{Flag_train2_receive_newline_cancelVC}))) & ((flag_train2_wait_train3_cancelVC) : (((1..2)*{Flag_train2_wait_train3_cancelVC}))) & ((flag_train2_know_train3_cancelVC) : (((1..2)*{Flag_train2_know_train3_cancelVC}))) & ((flag_train2_reach_right_spdi) : (((1..2)*{Flag_train2_reach_right_spdi}))) & ((flag_train2_estab_train1) : (((1..2)*{Flag_train2_estab_train1}))) & ((flag_train2_estab_RMU) : (((1..2)*{Flag_train2_estab_RMU}))) & ((flag_train2_operation_state) : (((1..2)*{Flag_train2_operation_state})));
+btrue;
+((input) : (((1..2)*{TRAIN_OPERATION})));
+((input) : (((1..2)*{Flag_train2_getinfor_train1})));
+((input) : (((1..2)*{Flag_train2_getinfor_train3})));
+((input) : (((1..2)*{Flag_train2_receive_newline_cancelVC})));
+((input) : (((1..2)*{Flag_train2_wait_train3_cancelVC})));
+((input) : (((1..2)*{Flag_train2_know_train3_cancelVC})));
+((input) : (((1..2)*{Flag_train2_reach_right_spdi})));
+((input) : (((1..2)*{Flag_train2_estab_train1})));
+((input) : (((1..2)*{Flag_train2_estab_RMU})));
+((input) : (((1..2)*{Flag_train2_operation_state})));
+((1..2)*{Flag_train2_getinfor_train1}): FIN(NATURAL*{Flag_train2_getinfor_train1}) & not(((1..2)*{Flag_train2_getinfor_train1}) = {});
+((flag_train2_estab_RMU) : (((1..2)*{Flag_train2_estab_RMU})));
+((flag_train2_estab_train1) : (((1..2)*{Flag_train2_estab_train1})));
+((flag_train2_reach_right_spdi) : (((1..2)*{Flag_train2_reach_right_spdi})));
+((flag_train2_know_train3_cancelVC) : (((1..2)*{Flag_train2_know_train3_cancelVC})));
+((flag_train2_wait_train3_cancelVC) : (((1..2)*{Flag_train2_wait_train3_cancelVC})));
+((flag_train2_receive_newline_cancelVC) : (((1..2)*{Flag_train2_receive_newline_cancelVC})));
+((flag_train2_getinfor_train3) : (((1..2)*{Flag_train2_getinfor_train3})));
+((flag_train2_getinfor_train1) : (((1..2)*{Flag_train2_getinfor_train1})));
+((flag_train2_operation) : (((1..2)*{TRAIN_OPERATION})));
+((flag_train2_VC) : (BOOL))
+END
+&
+THEORY EnumerateX IS
+Flag_train2_estab_RMU == {train2_estab_RMU,train2_no_estab_RMU};
+Flag_train2_estab_train1 == {train2_estab_train1,train2_no_estab_train1};
+Flag_train2_getinfor_train1 == {train2_get_train1_infor,train2_no_get_train1_infor};
+Flag_train2_getinfor_train3 == {train2_get_train3_infor,train2_no_get_train3_infor};
+Flag_train2_know_train3_cancelVC == {train2_know_train3_cancelVC,train2_not_know_train3_cancelVC};
+Flag_train2_operation_state == {train2_normally,train2_VC};
+Flag_train2_reach_right_spdi == {train2_reach,train2_not_reach};
+Flag_train2_receive_newline_cancelVC == {train2_receive,train2_not_recive};
+Flag_train2_wait_train3_cancelVC == {train2_wait_train3,train2_not_wait_train3};
+TRAIN_OPERATION == {normally,abnormally}
+END

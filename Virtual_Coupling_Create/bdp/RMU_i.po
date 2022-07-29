@@ -1,0 +1,30 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..2)*{TRAIN_OPERATION}): FIN(NATURAL*{TRAIN_OPERATION}) & not(((1..2)*{TRAIN_OPERATION}) = {});
+((1..2)*{Flag_RMU_getinfor_train1}): FIN(NATURAL*{Flag_RMU_getinfor_train1}) & not(((1..2)*{Flag_RMU_getinfor_train1}) = {}) & ((1..2)*{Flag_RMU_getinfor_train1}): FIN(NATURAL*{Flag_RMU_getinfor_train1}) & not(((1..2)*{Flag_RMU_getinfor_train1}) = {}) & ((1..2)*{Flag_RMU_getinfor_train3}): FIN(NATURAL*{Flag_RMU_getinfor_train3}) & not(((1..2)*{Flag_RMU_getinfor_train3}) = {}) & ((1..2)*{Flag_RMU_getinfor_train3}): FIN(NATURAL*{Flag_RMU_getinfor_train3}) & not(((1..2)*{Flag_RMU_getinfor_train3}) = {}) & ((1..2)*{Flag_RMU_getnewVC_train1}): FIN(NATURAL*{Flag_RMU_getnewVC_train1}) & not(((1..2)*{Flag_RMU_getnewVC_train1}) = {}) & ((1..2)*{Flag_RMU_getnewVC_train1}): FIN(NATURAL*{Flag_RMU_getnewVC_train1}) & not(((1..2)*{Flag_RMU_getnewVC_train1}) = {}) & ((1..2)*{Flag_RMU_getnewVC_train3}): FIN(NATURAL*{Flag_RMU_getnewVC_train3}) & not(((1..2)*{Flag_RMU_getnewVC_train3}) = {}) & ((1..2)*{Flag_RMU_getnewVC_train3}): FIN(NATURAL*{Flag_RMU_getnewVC_train3}) & not(((1..2)*{Flag_RMU_getnewVC_train3}) = {});
+((1..2)*{Flag_RMU_getinfor_train1}): FIN(NATURAL*{Flag_RMU_getinfor_train1}) & not(((1..2)*{Flag_RMU_getinfor_train1}) = {}) & ((1..2)*{Flag_RMU_getinfor_train3}): FIN(NATURAL*{Flag_RMU_getinfor_train3}) & not(((1..2)*{Flag_RMU_getinfor_train3}) = {}) & ((1..2)*{Flag_RMU_getnewVC_train1}): FIN(NATURAL*{Flag_RMU_getnewVC_train1}) & not(((1..2)*{Flag_RMU_getnewVC_train1}) = {}) & ((1..2)*{Flag_RMU_getnewVC_train3}): FIN(NATURAL*{Flag_RMU_getnewVC_train3}) & not(((1..2)*{Flag_RMU_getnewVC_train3}) = {});
+((flag_RMU_getinfor_train1) : (((1..2)*{Flag_RMU_getinfor_train1}))) & ((flag_RMU_getinfor_train3) : (((1..2)*{Flag_RMU_getinfor_train3}))) & ((flag_RMU_getnewVC_train1) : (((1..2)*{Flag_RMU_getnewVC_train1}))) & ((flag_RMU_getnewVC_train3) : (((1..2)*{Flag_RMU_getnewVC_train3}))) & ((flag_RMU_operation) : (((1..2)*{TRAIN_OPERATION})));
+((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1)) & ((flag_RMU_getinfor_train3) = (flag_RMU_getinfor_train3$1)) & ((flag_RMU_getnewVC_train1) = (flag_RMU_getnewVC_train1$1)) & ((flag_RMU_getnewVC_train3) = (flag_RMU_getnewVC_train3$1)) & ((flag_RMU_operation) = (flag_RMU_operation$1));
+((input) : (((1..2)*{Flag_RMU_getinfor_train1})));
+btrue;
+((input) : (((1..2)*{Flag_RMU_getinfor_train3})));
+((input) : (((1..2)*{Flag_RMU_getnewVC_train1})));
+((input) : (((1..2)*{Flag_RMU_getnewVC_train3})));
+((output) = (output));
+((output$1) = (output));
+((flag_RMU_getnewVC_train3) = (flag_RMU_getnewVC_train3$1));
+((flag_RMU_getnewVC_train1) = (flag_RMU_getnewVC_train1$1));
+((flag_RMU_getinfor_train3) = (flag_RMU_getinfor_train3$1));
+((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))
+END
+&
+THEORY EnumerateX IS
+Flag_RMU_getinfor_train1 == {RMU_get_train1_infor,RMU_no_get_train1_infor};
+Flag_RMU_getinfor_train3 == {RMU_get_train3_infor,RMU_no_get_train3_infor};
+Flag_RMU_getnewVC_train1 == {RMU_get_newVC_train1,RMU_no_get_newVC_train1};
+Flag_RMU_getnewVC_train3 == {RMU_get_newVC_train3,RMU_no_get_newVC_train3};
+TRAIN_OPERATION == {normally,abnormally}
+END

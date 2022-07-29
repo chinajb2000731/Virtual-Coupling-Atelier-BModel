@@ -1,0 +1,6651 @@
+<Machine name='Train3_i' type='implementation'>
+<Abstraction>Train3</Abstraction>
+<Imports>
+<Attr>
+<Pos l='10' c='1' s='7'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='11' c='5' s='3'/>
+</Attr>
+<Name>RMU</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='11' c='9' s='6'/>
+</Attr>
+<Name>Train1</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='11' c='16' s='6'/>
+</Attr>
+<Name>Train2</Name>
+</Referenced_Machine>
+</Imports>
+<Sees>
+<Attr>
+<Pos l='8' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='9' c='5' s='7'/>
+</Attr>
+<Name>Context</Name>
+</Referenced_Machine>
+</Sees>
+<Concrete_Variables>
+<Attr>
+<Pos l='12' c='1' s='18'/>
+</Attr>
+<Id value='flag_train3' typref='2043437594'>
+<Attr>
+<Pos l='13' c='5' s='11'/>
+</Attr>
+</Id>
+<Id value='flag_train3_operation' typref='1363008440'>
+<Attr>
+<Pos l='14' c='5' s='21'/>
+</Attr>
+</Id>
+<Id value='flag_go' typref='1651831437'>
+<Attr>
+<Pos l='15' c='5' s='7'/>
+</Attr>
+</Id>
+<Id value='flag_station' typref='2991857219'>
+<Attr>
+<Pos l='16' c='5' s='12'/>
+</Attr>
+</Id>
+<Id value='flag_train3_connect_RMU' typref='4009388996'>
+<Attr>
+<Pos l='17' c='5' s='23'/>
+</Attr>
+</Id>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='18' c='5' s='23'/>
+</Attr>
+</Id>
+<Id value='flag_train3_estab_train1' typref='1369567426'>
+<Attr>
+<Pos l='19' c='5' s='24'/>
+</Attr>
+</Id>
+<Id value='flag_train3_getinfor_train1' typref='3231375471'>
+<Attr>
+<Pos l='20' c='5' s='27'/>
+</Attr>
+</Id>
+<Id value='flag_train3_wait_train1_VC' typref='2816155306'>
+<Attr>
+<Pos l='22' c='5' s='26'/>
+</Attr>
+</Id>
+<Id value='flag_train3_conf_train1_VC' typref='2271753243'>
+<Attr>
+<Pos l='23' c='5' s='26'/>
+</Attr>
+</Id>
+<Id value='flag_train3_comm_train2' typref='556533580'>
+<Attr>
+<Pos l='25' c='5' s='23'/>
+</Attr>
+</Id>
+<Id value='flag_train3_estab_train2' typref='2150154625'>
+<Attr>
+<Pos l='26' c='5' s='24'/>
+</Attr>
+</Id>
+<Id value='flag_train3_getinfor_train2' typref='4011962670'>
+<Attr>
+<Pos l='27' c='5' s='27'/>
+</Attr>
+</Id>
+<Id value='flag_train3_conf_train1_acdc' typref='2362371911'>
+<Attr>
+<Pos l='28' c='5' s='28'/>
+</Attr>
+</Id>
+<Id value='flag_train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='30' c='5' s='20'/>
+</Attr>
+</Id>
+<Id value='flag_train3_adjust_spdis' typref='3638181090'>
+<Attr>
+<Pos l='31' c='5' s='24'/>
+</Attr>
+</Id>
+<Id value='flag_train3_inform_VC' typref='42012262'>
+<Attr>
+<Pos l='32' c='5' s='21'/>
+</Attr>
+</Id>
+<Id value='flag_train3_informRMU' typref='3295376536'>
+<Attr>
+<Pos l='33' c='5' s='21'/>
+</Attr>
+</Id>
+</Concrete_Variables>
+<Initialisation>
+<Attr>
+<Pos l='35' c='1' s='14'/>
+</Attr>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='36' c='16' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3' typref='2043437594'>
+<Attr>
+<Pos l='36' c='5' s='11'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Boolean_Literal value='TRUE' typref='2043437594'>
+<Attr>
+<Pos l='36' c='18' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='37' c='26' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_operation' typref='1363008440'>
+<Attr>
+<Pos l='37' c='5' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='normally' typref='1363008440'>
+<Attr>
+<Pos l='37' c='28' s='8'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='38' c='12' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_go' typref='1651831437'>
+<Attr>
+<Pos l='38' c='5' s='7'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='not_ready_go' typref='1651831437'>
+<Attr>
+<Pos l='38' c='14' s='12'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='39' c='17' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_station' typref='2991857219'>
+<Attr>
+<Pos l='39' c='5' s='12'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='no_leaving_station' typref='2991857219'>
+<Attr>
+<Pos l='39' c='19' s='18'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='40' c='28' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_connect_RMU' typref='4009388996'>
+<Attr>
+<Pos l='40' c='5' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_get_RMU_infor' typref='4009388996'>
+<Attr>
+<Pos l='40' c='30' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='41' c='28' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='41' c='5' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='no_wait_train1' typref='4070913677'>
+<Attr>
+<Pos l='41' c='30' s='14'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='42' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_estab_train1' typref='1369567426'>
+<Attr>
+<Pos l='42' c='5' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_estab_train1' typref='1369567426'>
+<Attr>
+<Pos l='42' c='31' s='22'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='43' c='32' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_getinfor_train1' typref='3231375471'>
+<Attr>
+<Pos l='43' c='5' s='27'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_get_train1_infor' typref='3231375471'>
+<Attr>
+<Pos l='43' c='34' s='26'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='45' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_wait_train1_VC' typref='2816155306'>
+<Attr>
+<Pos l='45' c='5' s='26'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_wait_train1_VCre' typref='2816155306'>
+<Attr>
+<Pos l='45' c='33' s='26'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='46' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_conf_train1_VC' typref='2271753243'>
+<Attr>
+<Pos l='46' c='5' s='26'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_conf_train1_VCres' typref='2271753243'>
+<Attr>
+<Pos l='46' c='33' s='27'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='48' c='28' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_comm_train2' typref='556533580'>
+<Attr>
+<Pos l='48' c='5' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='no_wait_train2' typref='556533580'>
+<Attr>
+<Pos l='48' c='30' s='14'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='49' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_estab_train2' typref='2150154625'>
+<Attr>
+<Pos l='49' c='5' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_estab_train2' typref='2150154625'>
+<Attr>
+<Pos l='49' c='31' s='22'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='50' c='32' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_getinfor_train2' typref='4011962670'>
+<Attr>
+<Pos l='50' c='5' s='27'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_get_train2_infor' typref='4011962670'>
+<Attr>
+<Pos l='50' c='34' s='26'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='51' c='33' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_conf_train1_acdc' typref='2362371911'>
+<Attr>
+<Pos l='51' c='5' s='28'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_conf_acdc' typref='2362371911'>
+<Attr>
+<Pos l='51' c='35' s='19'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='53' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='53' c='5' s='20'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='53' c='27' s='18'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='54' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_adjust_spdis' typref='3638181090'>
+<Attr>
+<Pos l='54' c='5' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_complete_VC' typref='3638181090'>
+<Attr>
+<Pos l='54' c='31' s='21'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='55' c='26' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_inform_VC' typref='42012262'>
+<Attr>
+<Pos l='55' c='5' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_complete_informVC' typref='42012262'>
+<Attr>
+<Pos l='55' c='28' s='27'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='56' c='26' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_informRMU' typref='3295376536'>
+<Attr>
+<Pos l='56' c='5' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_maintainVC' typref='3295376536'>
+<Attr>
+<Pos l='56' c='28' s='20'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='Train1_exchange_information_RMU'>
+<Attr>
+<Pos l='59' c='5' s='31' endLine='71'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='60' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='RMU_operation' typref='1363008440'>
+<Attr>
+<Pos l='60' c='9' s='13'/>
+</Attr>
+</Id>
+<Id value='train1_getinfor_train2' typref='1674119088'>
+<Attr>
+<Pos l='60' c='23' s='22'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='61' c='21' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_RMU_operation'>
+<Attr>
+<Pos l='61' c='24' s='22'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='RMU_operation' typref='1363008440'>
+<Attr>
+<Pos l='61' c='8' s='13'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='62' c='30' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_getinfor_train2'>
+<Attr>
+<Pos l='62' c='33' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_getinfor_train2' typref='1674119088'>
+<Attr>
+<Pos l='62' c='8' s='22'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='63' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='63' c='21' s='1'/>
+</Attr>
+<Id value='RMU_operation' typref='1363008440'>
+<Attr>
+<Pos l='63' c='8' s='13'/>
+</Attr>
+</Id>
+<Id value='normally' typref='1363008440'>
+<Attr>
+<Pos l='63' c='22' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='63' c='53' s='1'/>
+</Attr>
+<Id value='train1_getinfor_train2' typref='1674119088'>
+<Attr>
+<Pos l='63' c='31' s='22'/>
+</Attr>
+</Id>
+<Id value='train1_get_train2_infor' typref='1674119088'>
+<Attr>
+<Pos l='63' c='54' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='65' c='40' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_RMU_getinfor_train1'>
+<Attr>
+<Pos l='65' c='9' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='RMU_get_train1_infor' typref='1710673570'>
+<Attr>
+<Pos l='65' c='41' s='20'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='66' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_connect_RMU'>
+<Attr>
+<Pos l='66' c='9' s='30'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_get_RMU_infor' typref='3551626310'>
+<Attr>
+<Pos l='66' c='40' s='20'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='68' c='40' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_RMU_getinfor_train1'>
+<Attr>
+<Pos l='68' c='9' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='RMU_no_get_train1_infor' typref='1710673570'>
+<Attr>
+<Pos l='68' c='41' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='69' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_connect_RMU'>
+<Attr>
+<Pos l='69' c='9' s='30'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_no_get_RMU_infor' typref='3551626310'>
+<Attr>
+<Pos l='69' c='40' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_exchange_information_Train2'>
+<Attr>
+<Pos l='74' c='5' s='34' endLine='83'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='75' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_operation' typref='1363008440'>
+<Attr>
+<Pos l='75' c='9' s='16'/>
+</Attr>
+</Id>
+<Id value='train2_operation' typref='1363008440'>
+<Attr>
+<Pos l='75' c='26' s='16'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='76' c='25' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_operation'>
+<Attr>
+<Pos l='76' c='28' s='25'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_operation' typref='1363008440'>
+<Attr>
+<Pos l='76' c='9' s='16'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='77' c='25' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_operation'>
+<Attr>
+<Pos l='77' c='28' s='25'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_operation' typref='1363008440'>
+<Attr>
+<Pos l='77' c='9' s='16'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='78' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='78' c='25' s='1'/>
+</Attr>
+<Id value='train1_operation' typref='1363008440'>
+<Attr>
+<Pos l='78' c='9' s='16'/>
+</Attr>
+</Id>
+<Id value='normally' typref='1363008440'>
+<Attr>
+<Pos l='78' c='26' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='78' c='51' s='1'/>
+</Attr>
+<Id value='train2_operation' typref='1363008440'>
+<Attr>
+<Pos l='78' c='35' s='16'/>
+</Attr>
+</Id>
+<Id value='normally' typref='1363008440'>
+<Attr>
+<Pos l='78' c='52' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='80' c='43' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_getinfor_train2'>
+<Attr>
+<Pos l='80' c='9' s='34'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_get_train2_infor' typref='1674119088'>
+<Attr>
+<Pos l='80' c='44' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='81' c='43' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_getinfor_train1'>
+<Attr>
+<Pos l='81' c='9' s='34'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_get_train1_infor' typref='2062453680'>
+<Attr>
+<Pos l='81' c='44' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train3_connect_RMU'>
+<Attr>
+<Pos l='86' c='5' s='18' endLine='98'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='87' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='RMU_getinfor_train1' typref='1710673570'>
+<Attr>
+<Pos l='87' c='9' s='19'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='88' c='27' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_RMU_getinfor_train1'>
+<Attr>
+<Pos l='88' c='30' s='28'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='RMU_getinfor_train1' typref='1710673570'>
+<Attr>
+<Pos l='88' c='8' s='19'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='89' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='89' c='20' s='1'/>
+</Attr>
+<Id value='flag_station' typref='2991857219'>
+<Attr>
+<Pos l='89' c='8' s='12'/>
+</Attr>
+</Id>
+<Id value='leaving_station' typref='2991857219'>
+<Attr>
+<Pos l='89' c='21' s='15'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='89' c='56' s='1'/>
+</Attr>
+<Id value='RMU_getinfor_train1' typref='1710673570'>
+<Attr>
+<Pos l='89' c='37' s='19'/>
+</Attr>
+</Id>
+<Id value='RMU_get_train1_infor' typref='1710673570'>
+<Attr>
+<Pos l='89' c='57' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='91' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_connect_RMU' typref='4009388996'>
+<Attr>
+<Pos l='91' c='8' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_get_RMU_infor' typref='4009388996'>
+<Attr>
+<Pos l='91' c='33' s='20'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='92' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_RMU_getinfor_train3'>
+<Attr>
+<Pos l='92' c='8' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='RMU_get_train3_infor' typref='3271847968'>
+<Attr>
+<Pos l='92' c='40' s='20'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='93' c='42' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='93' c='24' s='2'/>
+</Attr>
+<Id value='flag_station' typref='2991857219'>
+<Attr>
+<Pos l='93' c='12' s='12'/>
+</Attr>
+</Id>
+<Id value='leaving_station' typref='2991857219'>
+<Attr>
+<Pos l='93' c='26' s='15'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='93' c='64' s='2'/>
+</Attr>
+<Id value='RMU_getinfor_train1' typref='1710673570'>
+<Attr>
+<Pos l='93' c='45' s='19'/>
+</Attr>
+</Id>
+<Id value='RMU_get_train1_infor' typref='1710673570'>
+<Attr>
+<Pos l='93' c='66' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='93' c='111' s='2'/>
+</Attr>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='93' c='88' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train1' typref='4070913677'>
+<Attr>
+<Pos l='93' c='121' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='95' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_connect_RMU' typref='4009388996'>
+<Attr>
+<Pos l='95' c='8' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_get_RMU_infor' typref='4009388996'>
+<Attr>
+<Pos l='95' c='33' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='96' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_RMU_getinfor_train3'>
+<Attr>
+<Pos l='96' c='8' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='RMU_no_get_train3_infor' typref='3271847968'>
+<Attr>
+<Pos l='96' c='40' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train3_selfcheck'>
+<Attr>
+<Pos l='102' c='5' s='16' endLine='108'/>
+</Attr>
+<Body>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='103' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='103' c='29' s='1'/>
+</Attr>
+<Id value='flag_train3_operation' typref='1363008440'>
+<Attr>
+<Pos l='103' c='8' s='21'/>
+</Attr>
+</Id>
+<Id value='normally' typref='1363008440'>
+<Attr>
+<Pos l='103' c='30' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='103' c='50' s='1'/>
+</Attr>
+<Id value='flag_train3' typref='2043437594'>
+<Attr>
+<Pos l='103' c='39' s='11'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='2043437594'>
+<Attr>
+<Pos l='103' c='51' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Attr>
+<Pos l='105' c='16' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_go' typref='1651831437'>
+<Attr>
+<Pos l='105' c='9' s='7'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='ready_go' typref='1651831437'>
+<Attr>
+<Pos l='105' c='18' s='8'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Attr>
+<Pos l='107' c='16' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_go' typref='1651831437'>
+<Attr>
+<Pos l='107' c='9' s='7'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='not_ready_go' typref='1651831437'>
+<Attr>
+<Pos l='107' c='18' s='12'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Body>
+</Operation>
+<Operation name='Train3_allow_outbound'>
+<Attr>
+<Pos l='111' c='5' s='21' endLine='115'/>
+</Attr>
+<Body>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='112' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='112' c='15' s='1'/>
+</Attr>
+<Id value='flag_go' typref='1651831437'>
+<Attr>
+<Pos l='112' c='8' s='7'/>
+</Attr>
+</Id>
+<Id value='ready_go' typref='1651831437'>
+<Attr>
+<Pos l='112' c='16' s='8'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='112' c='36' s='1'/>
+</Attr>
+<Id value='flag_train3' typref='2043437594'>
+<Attr>
+<Pos l='112' c='25' s='11'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='2043437594'>
+<Attr>
+<Pos l='112' c='37' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Attr>
+<Pos l='114' c='20' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_station' typref='2991857219'>
+<Attr>
+<Pos l='114' c='8' s='12'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='leaving_station' typref='2991857219'>
+<Attr>
+<Pos l='114' c='22' s='15'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Then>
+</If_Sub>
+</Body>
+</Operation>
+<Operation name='Trian3_send_communication_request_Train1'>
+<Attr>
+<Pos l='118' c='5' s='40' endLine='127'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='119' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_connect_RMU' typref='3551626310'>
+<Attr>
+<Pos l='119' c='9' s='18'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='120' c='26' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_connect_RMU'>
+<Attr>
+<Pos l='120' c='29' s='27'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_connect_RMU' typref='3551626310'>
+<Attr>
+<Pos l='120' c='8' s='18'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='121' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='121' c='26' s='1'/>
+</Attr>
+<Id value='train1_connect_RMU' typref='3551626310'>
+<Attr>
+<Pos l='121' c='8' s='18'/>
+</Attr>
+</Id>
+<Id value='train1_get_RMU_infor' typref='3551626310'>
+<Attr>
+<Pos l='121' c='27' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='121' c='71' s='1'/>
+</Attr>
+<Id value='flag_train3_connect_RMU' typref='4009388996'>
+<Attr>
+<Pos l='121' c='48' s='23'/>
+</Attr>
+</Id>
+<Id value='train3_get_RMU_infor' typref='4009388996'>
+<Attr>
+<Pos l='121' c='72' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Attr>
+<Pos l='123' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='123' c='8' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='wait_train1' typref='4070913677'>
+<Attr>
+<Pos l='123' c='33' s='11'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<Assignement_Sub>
+<Attr>
+<Pos l='125' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='125' c='8' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='no_wait_train1' typref='4070913677'>
+<Attr>
+<Pos l='125' c='33' s='14'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_receive_Train3_communication_request'>
+<Attr>
+<Pos l='130' c='5' s='43' endLine='140'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='131' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_connect_RMU' typref='3551626310'>
+<Attr>
+<Pos l='131' c='9' s='18'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='132' c='26' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_connect_RMU'>
+<Attr>
+<Pos l='132' c='29' s='27'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_connect_RMU' typref='3551626310'>
+<Attr>
+<Pos l='132' c='8' s='18'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='133' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='133' c='26' s='1'/>
+</Attr>
+<Id value='train1_connect_RMU' typref='3551626310'>
+<Attr>
+<Pos l='133' c='8' s='18'/>
+</Attr>
+</Id>
+<Id value='train1_get_RMU_infor' typref='3551626310'>
+<Attr>
+<Pos l='133' c='27' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='133' c='72' s='1'/>
+</Attr>
+<Id value='flag_train3_connect_RMU' typref='4009388996'>
+<Attr>
+<Pos l='133' c='49' s='23'/>
+</Attr>
+</Id>
+<Id value='train3_get_RMU_infor' typref='4009388996'>
+<Attr>
+<Pos l='133' c='73' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='133' c='117' s='1'/>
+</Attr>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='133' c='94' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train1' typref='4070913677'>
+<Attr>
+<Pos l='133' c='118' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='135' c='46' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_get_train3_request'>
+<Attr>
+<Pos l='135' c='9' s='37'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_receive_train3' typref='2066224125'>
+<Attr>
+<Pos l='135' c='47' s='21'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='136' c='102' s='2'/>
+</Attr>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='136' c='53' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='136' c='30' s='2'/>
+</Attr>
+<Id value='train1_connect_RMU' typref='3551626310'>
+<Attr>
+<Pos l='136' c='12' s='18'/>
+</Attr>
+</Id>
+<Id value='train1_get_RMU_infor' typref='3551626310'>
+<Attr>
+<Pos l='136' c='32' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='136' c='79' s='2'/>
+</Attr>
+<Id value='flag_train3_connect_RMU' typref='4009388996'>
+<Attr>
+<Pos l='136' c='56' s='23'/>
+</Attr>
+</Id>
+<Id value='train3_get_RMU_infor' typref='4009388996'>
+<Attr>
+<Pos l='136' c='81' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='136' c='128' s='2'/>
+</Attr>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='136' c='105' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train1' typref='4070913677'>
+<Attr>
+<Pos l='136' c='130' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='138' c='47' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_get_train3_request'>
+<Attr>
+<Pos l='138' c='10' s='37'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='trian1_no_receive_train3' typref='2066224125'>
+<Attr>
+<Pos l='138' c='48' s='24'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_check_communication_request'>
+<Attr>
+<Pos l='143' c='5' s='34' endLine='155'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='144' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_get_train3_request' typref='2066224125'>
+<Attr>
+<Pos l='144' c='9' s='25'/>
+</Attr>
+</Id>
+<Id value='train1_com' typref='2043437594'>
+<Attr>
+<Pos l='144' c='35' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='145' c='33' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_get_train3_request'>
+<Attr>
+<Pos l='145' c='36' s='34'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_get_train3_request' typref='2066224125'>
+<Attr>
+<Pos l='145' c='8' s='25'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='146' c='18' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_com'>
+<Attr>
+<Pos l='146' c='21' s='19'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_com' typref='2043437594'>
+<Attr>
+<Pos l='146' c='8' s='10'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='147' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='147' c='33' s='1'/>
+</Attr>
+<Id value='train1_get_train3_request' typref='2066224125'>
+<Attr>
+<Pos l='147' c='8' s='25'/>
+</Attr>
+</Id>
+<Id value='train1_receive_train3' typref='2066224125'>
+<Attr>
+<Pos l='147' c='34' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='147' c='66' s='1'/>
+</Attr>
+<Id value='train1_com' typref='2043437594'>
+<Attr>
+<Pos l='147' c='56' s='10'/>
+</Attr>
+</Id>
+<Boolean_Literal value='FALSE' typref='2043437594'>
+<Attr>
+<Pos l='147' c='67' s='5'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='149' c='49' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_check_train3_request'>
+<Attr>
+<Pos l='149' c='10' s='39'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_find_request_error' typref='958851311'>
+<Attr>
+<Pos l='149' c='50' s='25'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='150' c='36' s='1'/>
+</Attr>
+<Id value='train1_get_train3_request' typref='2066224125'>
+<Attr>
+<Pos l='150' c='11' s='25'/>
+</Attr>
+</Id>
+<Id value='train1_receive_train3' typref='2066224125'>
+<Attr>
+<Pos l='150' c='37' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='150' c='69' s='1'/>
+</Attr>
+<Id value='train1_com' typref='2043437594'>
+<Attr>
+<Pos l='150' c='59' s='10'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='2043437594'>
+<Attr>
+<Pos l='150' c='70' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='153' c='49' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_check_train3_request'>
+<Attr>
+<Pos l='153' c='10' s='39'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_confirm_request' typref='958851311'>
+<Attr>
+<Pos l='153' c='50' s='22'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train_send_termination_communication'>
+<Attr>
+<Pos l='158' c='5' s='36' endLine='167'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='159' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_check_train3_request' typref='958851311'>
+<Attr>
+<Pos l='159' c='9' s='27'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='160' c='35' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_check_train3_request'>
+<Attr>
+<Pos l='160' c='38' s='36'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_check_train3_request' typref='958851311'>
+<Attr>
+<Pos l='160' c='8' s='27'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='161' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='161' c='31' s='1'/>
+</Attr>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='161' c='8' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train1' typref='4070913677'>
+<Attr>
+<Pos l='161' c='32' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='161' c='71' s='1'/>
+</Attr>
+<Id value='train1_check_train3_request' typref='958851311'>
+<Attr>
+<Pos l='161' c='44' s='27'/>
+</Attr>
+</Id>
+<Id value='train1_find_request_error' typref='958851311'>
+<Attr>
+<Pos l='161' c='72' s='25'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='163' c='38' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_termination'>
+<Attr>
+<Pos l='163' c='8' s='30'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='termination' typref='468682439'>
+<Attr>
+<Pos l='163' c='39' s='11'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<Operation_Call>
+<Attr>
+<Pos l='165' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_termination'>
+<Attr>
+<Pos l='165' c='9' s='30'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='no_termination' typref='468682439'>
+<Attr>
+<Pos l='165' c='40' s='14'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_send_confirm_communication'>
+<Attr>
+<Pos l='170' c='5' s='33' endLine='183'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='171' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_check_train3_request' typref='958851311'>
+<Attr>
+<Pos l='171' c='9' s='27'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='172' c='35' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_check_train3_request'>
+<Attr>
+<Pos l='172' c='38' s='36'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_check_train3_request' typref='958851311'>
+<Attr>
+<Pos l='172' c='8' s='27'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='173' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='173' c='35' s='1'/>
+</Attr>
+<Id value='train1_check_train3_request' typref='958851311'>
+<Attr>
+<Pos l='173' c='8' s='27'/>
+</Attr>
+</Id>
+<Id value='train1_confirm_request' typref='958851311'>
+<Attr>
+<Pos l='173' c='36' s='22'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='173' c='82' s='1'/>
+</Attr>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='173' c='59' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train1' typref='4070913677'>
+<Attr>
+<Pos l='173' c='83' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='175' c='32' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_estab_train1' typref='1369567426'>
+<Attr>
+<Pos l='175' c='8' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_estab_train1' typref='1369567426'>
+<Attr>
+<Pos l='175' c='34' s='19'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='176' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_estab_train3'>
+<Attr>
+<Pos l='176' c='8' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_estab_train3' typref='272669246'>
+<Attr>
+<Pos l='176' c='40' s='19'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='177' c='38' s='2'/>
+</Attr>
+<Id value='train1_check_train3_request' typref='958851311'>
+<Attr>
+<Pos l='177' c='11' s='27'/>
+</Attr>
+</Id>
+<Id value='train1_confirm_request' typref='958851311'>
+<Attr>
+<Pos l='177' c='40' s='22'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='177' c='88' s='1'/>
+</Attr>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='177' c='65' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train1' typref='4070913677'>
+<Attr>
+<Pos l='177' c='89' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='179' c='32' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_estab_train1' typref='1369567426'>
+<Attr>
+<Pos l='179' c='8' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_estab_train1' typref='1369567426'>
+<Attr>
+<Pos l='179' c='34' s='22'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='180' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_estab_train3'>
+<Attr>
+<Pos l='180' c='8' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_no_estab_train3' typref='272669246'>
+<Attr>
+<Pos l='180' c='40' s='22'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_and_Train3_exchange_information'>
+<Attr>
+<Pos l='186' c='5' s='38' endLine='197'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='187' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_estab_train3_2' typref='272669246'>
+<Attr>
+<Pos l='187' c='9' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='188' c='30' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_estab_train3'>
+<Attr>
+<Pos l='188' c='33' s='28'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_estab_train3_2' typref='272669246'>
+<Attr>
+<Pos l='188' c='9' s='21'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='189' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='189' c='32' s='1'/>
+</Attr>
+<Id value='flag_train3_estab_train1' typref='1369567426'>
+<Attr>
+<Pos l='189' c='8' s='24'/>
+</Attr>
+</Id>
+<Id value='train3_estab_train1' typref='1369567426'>
+<Attr>
+<Pos l='189' c='33' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='189' c='74' s='1'/>
+</Attr>
+<Id value='train1_estab_train3_2' typref='272669246'>
+<Attr>
+<Pos l='189' c='53' s='21'/>
+</Attr>
+</Id>
+<Id value='train1_estab_train3' typref='272669246'>
+<Attr>
+<Pos l='189' c='75' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='191' c='35' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_getinfor_train1' typref='3231375471'>
+<Attr>
+<Pos l='191' c='8' s='27'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_get_train1_infor' typref='3231375471'>
+<Attr>
+<Pos l='191' c='37' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='192' c='42' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_getinfor_train3'>
+<Attr>
+<Pos l='192' c='8' s='34'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_get_train3_infor' typref='2454706287'>
+<Attr>
+<Pos l='192' c='43' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='194' c='35' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_getinfor_train1' typref='3231375471'>
+<Attr>
+<Pos l='194' c='8' s='27'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_get_train1_infor' typref='3231375471'>
+<Attr>
+<Pos l='194' c='37' s='26'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='195' c='42' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_getinfor_train3'>
+<Attr>
+<Pos l='195' c='8' s='34'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_no_get_train3_infor' typref='2454706287'>
+<Attr>
+<Pos l='195' c='43' s='26'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train3_send_VC_request_to_train1'>
+<Attr>
+<Pos l='201' c='5' s='32' endLine='213'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='202' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_getinfor_train3' typref='2454706287'>
+<Attr>
+<Pos l='202' c='9' s='22'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='203' c='31' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_getinfor_train3'>
+<Attr>
+<Pos l='203' c='34' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_getinfor_train3' typref='2454706287'>
+<Attr>
+<Pos l='203' c='9' s='22'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='204' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='204' c='35' s='1'/>
+</Attr>
+<Id value='flag_train3_getinfor_train1' typref='3231375471'>
+<Attr>
+<Pos l='204' c='8' s='27'/>
+</Attr>
+</Id>
+<Id value='train3_get_train1_infor' typref='3231375471'>
+<Attr>
+<Pos l='204' c='36' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='204' c='82' s='1'/>
+</Attr>
+<Id value='train1_getinfor_train3' typref='2454706287'>
+<Attr>
+<Pos l='204' c='60' s='22'/>
+</Attr>
+</Id>
+<Id value='train1_get_train3_infor' typref='2454706287'>
+<Attr>
+<Pos l='204' c='83' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='206' c='34' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_wait_train1_VC' typref='2816155306'>
+<Attr>
+<Pos l='206' c='8' s='26'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_wait_train1_VCre' typref='2816155306'>
+<Attr>
+<Pos l='206' c='36' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='207' c='46' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_receive_train3_VCre'>
+<Attr>
+<Pos l='207' c='8' s='38'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='receive_train3_VCre' typref='900023347'>
+<Attr>
+<Pos l='207' c='47' s='19'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='208' c='64' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='208' c='38' s='2'/>
+</Attr>
+<Id value='flag_train3_getinfor_train1' typref='3231375471'>
+<Attr>
+<Pos l='208' c='11' s='27'/>
+</Attr>
+</Id>
+<Id value='train3_get_train1_infor' typref='3231375471'>
+<Attr>
+<Pos l='208' c='40' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='208' c='89' s='2'/>
+</Attr>
+<Id value='train1_getinfor_train3' typref='2454706287'>
+<Attr>
+<Pos l='208' c='67' s='22'/>
+</Attr>
+</Id>
+<Id value='train1_get_train3_infor' typref='2454706287'>
+<Attr>
+<Pos l='208' c='91' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='210' c='34' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_wait_train1_VC' typref='2816155306'>
+<Attr>
+<Pos l='210' c='8' s='26'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_wait_train1_VCre' typref='2816155306'>
+<Attr>
+<Pos l='210' c='36' s='26'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='211' c='46' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_receive_train3_VCre'>
+<Attr>
+<Pos l='211' c='8' s='38'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='no_receive_train3_VCre' typref='900023347'>
+<Attr>
+<Pos l='211' c='47' s='22'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_check_Train3_VC_request'>
+<Attr>
+<Pos l='216' c='5' s='30' endLine='227'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='217' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_receive_train3_VCre' typref='900023347'>
+<Attr>
+<Pos l='217' c='9' s='26'/>
+</Attr>
+</Id>
+<Id value='train1_VC' typref='2043437594'>
+<Attr>
+<Pos l='217' c='36' s='9'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='218' c='34' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_receive_train3_VCre'>
+<Attr>
+<Pos l='218' c='37' s='35'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_receive_train3_VCre' typref='900023347'>
+<Attr>
+<Pos l='218' c='8' s='26'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='219' c='17' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_VC'>
+<Attr>
+<Pos l='219' c='20' s='18'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_VC' typref='2043437594'>
+<Attr>
+<Pos l='219' c='8' s='9'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='220' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='220' c='34' s='1'/>
+</Attr>
+<Id value='train1_receive_train3_VCre' typref='900023347'>
+<Attr>
+<Pos l='220' c='8' s='26'/>
+</Attr>
+</Id>
+<Id value='receive_train3_VCre' typref='900023347'>
+<Attr>
+<Pos l='220' c='35' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='220' c='64' s='1'/>
+</Attr>
+<Id value='train1_VC' typref='2043437594'>
+<Attr>
+<Pos l='220' c='55' s='9'/>
+</Attr>
+</Id>
+<Boolean_Literal value='FALSE' typref='2043437594'>
+<Attr>
+<Pos l='220' c='65' s='5'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='222' c='45' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_check_train3_VCre'>
+<Attr>
+<Pos l='222' c='9' s='36'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train3_VCre_error' typref='3745006894'>
+<Attr>
+<Pos l='222' c='46' s='17'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='223' c='37' s='1'/>
+</Attr>
+<Id value='train1_receive_train3_VCre' typref='900023347'>
+<Attr>
+<Pos l='223' c='11' s='26'/>
+</Attr>
+</Id>
+<Id value='receive_train3_VCre' typref='900023347'>
+<Attr>
+<Pos l='223' c='38' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='223' c='67' s='1'/>
+</Attr>
+<Id value='train1_VC' typref='2043437594'>
+<Attr>
+<Pos l='223' c='58' s='9'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='2043437594'>
+<Attr>
+<Pos l='223' c='68' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='225' c='45' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_check_train3_VCre'>
+<Attr>
+<Pos l='225' c='9' s='36'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train3_VCre_noerror' typref='3745006894'>
+<Attr>
+<Pos l='225' c='46' s='19'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_analyze_VC_condition'>
+<Attr>
+<Pos l='230' c='5' s='27' endLine='241'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='231' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_check_train3_VCre' typref='3745006894'>
+<Attr>
+<Pos l='231' c='9' s='24'/>
+</Attr>
+</Id>
+<Id value='train1_AnVC' typref='2043437594'>
+<Attr>
+<Pos l='231' c='34' s='11'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='232' c='33' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_check_train3_VCre'>
+<Attr>
+<Pos l='232' c='36' s='33'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_check_train3_VCre' typref='3745006894'>
+<Attr>
+<Pos l='232' c='9' s='24'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='233' c='20' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_AnVC'>
+<Attr>
+<Pos l='233' c='23' s='20'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_AnVC' typref='2043437594'>
+<Attr>
+<Pos l='233' c='9' s='11'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='234' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='234' c='32' s='1'/>
+</Attr>
+<Id value='train1_check_train3_VCre' typref='3745006894'>
+<Attr>
+<Pos l='234' c='8' s='24'/>
+</Attr>
+</Id>
+<Id value='train3_VCre_noerror' typref='3745006894'>
+<Attr>
+<Pos l='234' c='33' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='234' c='64' s='1'/>
+</Attr>
+<Id value='train1_AnVC' typref='2043437594'>
+<Attr>
+<Pos l='234' c='53' s='11'/>
+</Attr>
+</Id>
+<Boolean_Literal value='FALSE' typref='2043437594'>
+<Attr>
+<Pos l='234' c='65' s='5'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='236' c='38' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_analyze_VC'>
+<Attr>
+<Pos l='236' c='9' s='29'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train3_not_suitable' typref='2295176513'>
+<Attr>
+<Pos l='236' c='39' s='19'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='237' c='35' s='1'/>
+</Attr>
+<Id value='train1_check_train3_VCre' typref='3745006894'>
+<Attr>
+<Pos l='237' c='11' s='24'/>
+</Attr>
+</Id>
+<Id value='train3_VCre_noerror' typref='3745006894'>
+<Attr>
+<Pos l='237' c='36' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='237' c='67' s='1'/>
+</Attr>
+<Id value='train1_AnVC' typref='2043437594'>
+<Attr>
+<Pos l='237' c='56' s='11'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='2043437594'>
+<Attr>
+<Pos l='237' c='68' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='239' c='38' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_analyze_VC'>
+<Attr>
+<Pos l='239' c='9' s='29'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train3_suitable' typref='2295176513'>
+<Attr>
+<Pos l='239' c='39' s='15'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_send_termination_VC_train3'>
+<Attr>
+<Pos l='244' c='5' s='33' endLine='254'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='245' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_analyze_VC' typref='2295176513'>
+<Attr>
+<Pos l='245' c='9' s='17'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='246' c='26' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_analyze_VC'>
+<Attr>
+<Pos l='246' c='29' s='26'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_analyze_VC' typref='2295176513'>
+<Attr>
+<Pos l='246' c='9' s='17'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='247' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='247' c='25' s='1'/>
+</Attr>
+<Id value='train1_analyze_VC' typref='2295176513'>
+<Attr>
+<Pos l='247' c='8' s='17'/>
+</Attr>
+</Id>
+<Id value='train3_not_suitable' typref='2295176513'>
+<Attr>
+<Pos l='247' c='26' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='247' c='72' s='1'/>
+</Attr>
+<Id value='flag_train3_wait_train1_VC' typref='2816155306'>
+<Attr>
+<Pos l='247' c='46' s='26'/>
+</Attr>
+</Id>
+<Id value='train3_wait_train1_VCre' typref='2816155306'>
+<Attr>
+<Pos l='247' c='73' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='249' c='45' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_VC_terminationcmd'>
+<Attr>
+<Pos l='249' c='9' s='36'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='VCterminated' typref='1190766915'>
+<Attr>
+<Pos l='249' c='46' s='12'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='250' c='50' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='250' c='28' s='2'/>
+</Attr>
+<Id value='train1_analyze_VC' typref='2295176513'>
+<Attr>
+<Pos l='250' c='11' s='17'/>
+</Attr>
+</Id>
+<Id value='train3_not_suitable' typref='2295176513'>
+<Attr>
+<Pos l='250' c='30' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='250' c='79' s='1'/>
+</Attr>
+<Id value='flag_train3_wait_train1_VC' typref='2816155306'>
+<Attr>
+<Pos l='250' c='53' s='26'/>
+</Attr>
+</Id>
+<Id value='train3_wait_train1_VCre' typref='2816155306'>
+<Attr>
+<Pos l='250' c='80' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='252' c='46' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_VC_terminationcmd'>
+<Attr>
+<Pos l='252' c='10' s='36'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='not_VCterminated' typref='1190766915'>
+<Attr>
+<Pos l='252' c='47' s='16'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_send_analyze_result_train3'>
+<Attr>
+<Pos l='257' c='5' s='33' endLine='268'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='258' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_analyze_VC' typref='2295176513'>
+<Attr>
+<Pos l='258' c='9' s='17'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='259' c='26' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_analyze_VC'>
+<Attr>
+<Pos l='259' c='29' s='26'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_analyze_VC' typref='2295176513'>
+<Attr>
+<Pos l='259' c='9' s='17'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='260' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='260' c='25' s='1'/>
+</Attr>
+<Id value='train1_analyze_VC' typref='2295176513'>
+<Attr>
+<Pos l='260' c='8' s='17'/>
+</Attr>
+</Id>
+<Id value='train3_suitable' typref='2295176513'>
+<Attr>
+<Pos l='260' c='26' s='15'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='260' c='68' s='1'/>
+</Attr>
+<Id value='flag_train3_wait_train1_VC' typref='2816155306'>
+<Attr>
+<Pos l='260' c='42' s='26'/>
+</Attr>
+</Id>
+<Id value='train3_wait_train1_VCre' typref='2816155306'>
+<Attr>
+<Pos l='260' c='69' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='261' c='41' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_analyze_acdc'>
+<Attr>
+<Pos l='261' c='10' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_analyze' typref='4073071981'>
+<Attr>
+<Pos l='261' c='42' s='14'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Attr>
+<Pos l='262' c='36' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_conf_train1_VC' typref='2271753243'>
+<Attr>
+<Pos l='262' c='10' s='26'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_conf_train1_VCres' typref='2271753243'>
+<Attr>
+<Pos l='262' c='38' s='24'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='263' c='48' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='263' c='30' s='2'/>
+</Attr>
+<Id value='train1_analyze_VC' typref='2295176513'>
+<Attr>
+<Pos l='263' c='13' s='17'/>
+</Attr>
+</Id>
+<Id value='train3_suitable' typref='2295176513'>
+<Attr>
+<Pos l='263' c='32' s='15'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='263' c='77' s='2'/>
+</Attr>
+<Id value='flag_train3_wait_train1_VC' typref='2816155306'>
+<Attr>
+<Pos l='263' c='51' s='26'/>
+</Attr>
+</Id>
+<Id value='train3_wait_train1_VCre' typref='2816155306'>
+<Attr>
+<Pos l='263' c='79' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='263' c='129' s='2'/>
+</Attr>
+<Id value='flag_train3_comm_train2' typref='556533580'>
+<Attr>
+<Pos l='263' c='105' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train2' typref='556533580'>
+<Attr>
+<Pos l='263' c='132' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='265' c='41' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_analyze_acdc'>
+<Attr>
+<Pos l='265' c='10' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_not_analyze' typref='4073071981'>
+<Attr>
+<Pos l='265' c='42' s='18'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Attr>
+<Pos l='266' c='36' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_conf_train1_VC' typref='2271753243'>
+<Attr>
+<Pos l='266' c='10' s='26'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_conf_train1_VCres' typref='2271753243'>
+<Attr>
+<Pos l='266' c='38' s='27'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Trian3_send_communication_request_Train2'>
+<Attr>
+<Pos l='272' c='5' s='40' endLine='283'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='273' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train2_VC_state' typref='3178963683'>
+<Attr>
+<Pos l='273' c='9' s='15'/>
+</Attr>
+</Id>
+<Id value='train2_estab_train3_temp' typref='1601705535'>
+<Attr>
+<Pos l='273' c='25' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='274' c='24' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_VC_state'>
+<Attr>
+<Pos l='274' c='27' s='24'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_VC_state' typref='3178963683'>
+<Attr>
+<Pos l='274' c='9' s='15'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='275' c='33' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_estab_train3'>
+<Attr>
+<Pos l='275' c='36' s='28'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_estab_train3_temp' typref='1601705535'>
+<Attr>
+<Pos l='275' c='9' s='24'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='276' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='276' c='35' s='1'/>
+</Attr>
+<Id value='flag_train3_conf_train1_VC' typref='2271753243'>
+<Attr>
+<Pos l='276' c='9' s='26'/>
+</Attr>
+</Id>
+<Id value='train3_conf_train1_VCres' typref='2271753243'>
+<Attr>
+<Pos l='276' c='36' s='24'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='276' c='76' s='1'/>
+</Attr>
+<Id value='train2_VC_state' typref='3178963683'>
+<Attr>
+<Pos l='276' c='61' s='15'/>
+</Attr>
+</Id>
+<Id value='train2_maintain_VC_waitre' typref='3178963683'>
+<Attr>
+<Pos l='276' c='77' s='25'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Attr>
+<Pos l='278' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_comm_train2' typref='556533580'>
+<Attr>
+<Pos l='278' c='8' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='wait_train2' typref='556533580'>
+<Attr>
+<Pos l='278' c='33' s='11'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='279' c='65' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='279' c='38' s='2'/>
+</Attr>
+<Id value='flag_train3_conf_train1_VC' typref='2271753243'>
+<Attr>
+<Pos l='279' c='12' s='26'/>
+</Attr>
+</Id>
+<Id value='train3_conf_train1_VCres' typref='2271753243'>
+<Attr>
+<Pos l='279' c='40' s='24'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='279' c='83' s='2'/>
+</Attr>
+<Id value='train2_VC_state' typref='3178963683'>
+<Attr>
+<Pos l='279' c='68' s='15'/>
+</Attr>
+</Id>
+<Id value='train2_maintain_VC_waitre' typref='3178963683'>
+<Attr>
+<Pos l='279' c='85' s='25'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='279' c='137' s='2'/>
+</Attr>
+<Id value='train2_estab_train3_temp' typref='1601705535'>
+<Attr>
+<Pos l='279' c='112' s='24'/>
+</Attr>
+</Id>
+<Id value='train2_estab_train3' typref='1601705535'>
+<Attr>
+<Pos l='279' c='140' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Attr>
+<Pos l='281' c='31' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_comm_train2' typref='556533580'>
+<Attr>
+<Pos l='281' c='8' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='no_wait_train2' typref='556533580'>
+<Attr>
+<Pos l='281' c='33' s='14'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train2_receive_Train3_communication_request'>
+<Attr>
+<Pos l='286' c='5' s='43' endLine='301'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='287' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train2_VC_state' typref='3178963683'>
+<Attr>
+<Pos l='287' c='9' s='15'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='288' c='24' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_VC_state'>
+<Attr>
+<Pos l='288' c='27' s='24'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_VC_state' typref='3178963683'>
+<Attr>
+<Pos l='288' c='9' s='15'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='289' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='289' c='34' s='1'/>
+</Attr>
+<Id value='flag_train3_conf_train1_VC' typref='2271753243'>
+<Attr>
+<Pos l='289' c='8' s='26'/>
+</Attr>
+</Id>
+<Id value='train3_conf_train1_VCres' typref='2271753243'>
+<Attr>
+<Pos l='289' c='35' s='24'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='290' c='23' s='1'/>
+</Attr>
+<Id value='train2_VC_state' typref='3178963683'>
+<Attr>
+<Pos l='290' c='8' s='15'/>
+</Attr>
+</Id>
+<Id value='train2_maintain_VC_waitre' typref='3178963683'>
+<Attr>
+<Pos l='290' c='24' s='25'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='291' c='31' s='1'/>
+</Attr>
+<Id value='flag_train3_comm_train2' typref='556533580'>
+<Attr>
+<Pos l='291' c='8' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train2' typref='556533580'>
+<Attr>
+<Pos l='291' c='32' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='293' c='47' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_get_train3_request'>
+<Attr>
+<Pos l='293' c='10' s='37'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_receive_train3' typref='697335422'>
+<Attr>
+<Pos l='293' c='48' s='21'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='296' c='51' s='2'/>
+</Attr>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='295' c='61' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='295' c='34' s='2'/>
+</Attr>
+<Id value='flag_train3_conf_train1_VC' typref='2271753243'>
+<Attr>
+<Pos l='295' c='8' s='26'/>
+</Attr>
+</Id>
+<Id value='train3_conf_train1_VCres' typref='2271753243'>
+<Attr>
+<Pos l='295' c='36' s='24'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='296' c='23' s='2'/>
+</Attr>
+<Id value='train2_VC_state' typref='3178963683'>
+<Attr>
+<Pos l='296' c='8' s='15'/>
+</Attr>
+</Id>
+<Id value='train2_maintain_VC_waitre' typref='3178963683'>
+<Attr>
+<Pos l='296' c='25' s='25'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='297' c='31' s='2'/>
+</Attr>
+<Id value='flag_train3_comm_train2' typref='556533580'>
+<Attr>
+<Pos l='297' c='8' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train2' typref='556533580'>
+<Attr>
+<Pos l='297' c='33' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='299' c='46' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_get_train3_request'>
+<Attr>
+<Pos l='299' c='9' s='37'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='trian2_no_receive_train3' typref='697335422'>
+<Attr>
+<Pos l='299' c='47' s='24'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train2_check_communication_request'>
+<Attr>
+<Pos l='304' c='5' s='34' endLine='315'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='305' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train2_get_train3_request' typref='697335422'>
+<Attr>
+<Pos l='305' c='9' s='25'/>
+</Attr>
+</Id>
+<Id value='train2_com' typref='2043437594'>
+<Attr>
+<Pos l='305' c='35' s='10'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='306' c='34' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_get_train3_request'>
+<Attr>
+<Pos l='306' c='37' s='34'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_get_train3_request' typref='697335422'>
+<Attr>
+<Pos l='306' c='9' s='25'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='307' c='19' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_com'>
+<Attr>
+<Pos l='307' c='22' s='19'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_com' typref='2043437594'>
+<Attr>
+<Pos l='307' c='9' s='10'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='308' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='308' c='33' s='1'/>
+</Attr>
+<Id value='train2_get_train3_request' typref='697335422'>
+<Attr>
+<Pos l='308' c='8' s='25'/>
+</Attr>
+</Id>
+<Id value='train2_receive_train3' typref='697335422'>
+<Attr>
+<Pos l='308' c='34' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='308' c='66' s='1'/>
+</Attr>
+<Id value='train2_com' typref='2043437594'>
+<Attr>
+<Pos l='308' c='56' s='10'/>
+</Attr>
+</Id>
+<Boolean_Literal value='FALSE' typref='2043437594'>
+<Attr>
+<Pos l='308' c='67' s='5'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='310' c='48' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_check_train3_request'>
+<Attr>
+<Pos l='310' c='9' s='39'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_find_request_error' typref='2776638192'>
+<Attr>
+<Pos l='310' c='49' s='25'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='311' c='36' s='1'/>
+</Attr>
+<Id value='train2_get_train3_request' typref='697335422'>
+<Attr>
+<Pos l='311' c='11' s='25'/>
+</Attr>
+</Id>
+<Id value='train2_receive_train3' typref='697335422'>
+<Attr>
+<Pos l='311' c='37' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='311' c='69' s='1'/>
+</Attr>
+<Id value='train2_com' typref='2043437594'>
+<Attr>
+<Pos l='311' c='59' s='10'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='2043437594'>
+<Attr>
+<Pos l='311' c='70' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='313' c='49' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_check_train3_request'>
+<Attr>
+<Pos l='313' c='10' s='39'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_confirm_request' typref='2776638192'>
+<Attr>
+<Pos l='313' c='50' s='22'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train2_send_confirm_communication'>
+<Attr>
+<Pos l='318' c='5' s='33' endLine='330'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='319' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train2_check_train3_request' typref='2776638192'>
+<Attr>
+<Pos l='319' c='9' s='27'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='320' c='36' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_check_train3_request'>
+<Attr>
+<Pos l='320' c='39' s='36'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_check_train3_request' typref='2776638192'>
+<Attr>
+<Pos l='320' c='9' s='27'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='321' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='321' c='36' s='1'/>
+</Attr>
+<Id value='train2_check_train3_request' typref='2776638192'>
+<Attr>
+<Pos l='321' c='9' s='27'/>
+</Attr>
+</Id>
+<Id value='train2_confirm_request' typref='2776638192'>
+<Attr>
+<Pos l='321' c='37' s='22'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='321' c='83' s='1'/>
+</Attr>
+<Id value='flag_train3_comm_train2' typref='556533580'>
+<Attr>
+<Pos l='321' c='60' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train2' typref='556533580'>
+<Attr>
+<Pos l='321' c='84' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='323' c='32' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_estab_train2' typref='2150154625'>
+<Attr>
+<Pos l='323' c='8' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_estab_train2' typref='2150154625'>
+<Attr>
+<Pos l='323' c='34' s='19'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='324' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_estab_train3'>
+<Attr>
+<Pos l='324' c='8' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_estab_train3' typref='1601705535'>
+<Attr>
+<Pos l='324' c='40' s='19'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='325' c='65' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='325' c='40' s='2'/>
+</Attr>
+<Id value='train2_check_train3_request' typref='2776638192'>
+<Attr>
+<Pos l='325' c='13' s='27'/>
+</Attr>
+</Id>
+<Id value='train2_confirm_request' typref='2776638192'>
+<Attr>
+<Pos l='325' c='42' s='22'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='325' c='91' s='2'/>
+</Attr>
+<Id value='flag_train3_comm_train2' typref='556533580'>
+<Attr>
+<Pos l='325' c='68' s='23'/>
+</Attr>
+</Id>
+<Id value='wait_train2' typref='556533580'>
+<Attr>
+<Pos l='325' c='93' s='11'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='325' c='135' s='2'/>
+</Attr>
+<Id value='flag_train3_getinfor_train2' typref='4011962670'>
+<Attr>
+<Pos l='325' c='107' s='27'/>
+</Attr>
+</Id>
+<Id value='train3_get_train2_infor' typref='4011962670'>
+<Attr>
+<Pos l='325' c='138' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='327' c='32' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_estab_train2' typref='2150154625'>
+<Attr>
+<Pos l='327' c='8' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_estab_train2' typref='2150154625'>
+<Attr>
+<Pos l='327' c='34' s='22'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='328' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_estab_train3'>
+<Attr>
+<Pos l='328' c='8' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_no_estab_train3' typref='1601705535'>
+<Attr>
+<Pos l='328' c='40' s='22'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train2_and_Train3_exchange_information'>
+<Attr>
+<Pos l='333' c='5' s='38' endLine='344'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='334' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train2_estab_train3_2' typref='1601705535'>
+<Attr>
+<Pos l='334' c='9' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='335' c='30' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_estab_train3'>
+<Attr>
+<Pos l='335' c='33' s='28'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_estab_train3_2' typref='1601705535'>
+<Attr>
+<Pos l='335' c='9' s='21'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='336' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='336' c='32' s='1'/>
+</Attr>
+<Id value='flag_train3_estab_train2' typref='2150154625'>
+<Attr>
+<Pos l='336' c='8' s='24'/>
+</Attr>
+</Id>
+<Id value='train3_estab_train2' typref='2150154625'>
+<Attr>
+<Pos l='336' c='33' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='336' c='74' s='1'/>
+</Attr>
+<Id value='train2_estab_train3_2' typref='1601705535'>
+<Attr>
+<Pos l='336' c='53' s='21'/>
+</Attr>
+</Id>
+<Id value='train2_estab_train3' typref='1601705535'>
+<Attr>
+<Pos l='336' c='75' s='19'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='338' c='35' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_getinfor_train2' typref='4011962670'>
+<Attr>
+<Pos l='338' c='8' s='27'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_get_train2_infor' typref='4011962670'>
+<Attr>
+<Pos l='338' c='37' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='339' c='42' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_getinfor_train3'>
+<Attr>
+<Pos l='339' c='8' s='34'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_get_train3_infor' typref='3623628078'>
+<Attr>
+<Pos l='339' c='43' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='341' c='35' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_getinfor_train2' typref='4011962670'>
+<Attr>
+<Pos l='341' c='8' s='27'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_get_train2_infor' typref='4011962670'>
+<Attr>
+<Pos l='341' c='37' s='26'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='342' c='42' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_getinfor_train3'>
+<Attr>
+<Pos l='342' c='8' s='34'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_no_get_train3_infor' typref='3623628078'>
+<Attr>
+<Pos l='342' c='43' s='26'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_inform_reasonable_acdc'>
+<Attr>
+<Pos l='347' c='5' s='29' endLine='367'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='348' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train2_getinfor_train3' typref='3623628078'>
+<Attr>
+<Pos l='348' c='9' s='22'/>
+</Attr>
+</Id>
+<Id value='train1_analyze_acdc' typref='4073071981'>
+<Attr>
+<Pos l='348' c='32' s='19'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='349' c='30' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_getinfor_train3'>
+<Attr>
+<Pos l='349' c='33' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_getinfor_train3' typref='3623628078'>
+<Attr>
+<Pos l='349' c='8' s='22'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='350' c='27' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_analyze_acdc'>
+<Attr>
+<Pos l='350' c='30' s='28'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_analyze_acdc' typref='4073071981'>
+<Attr>
+<Pos l='350' c='8' s='19'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='351' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='351' c='35' s='1'/>
+</Attr>
+<Id value='flag_train3_getinfor_train2' typref='4011962670'>
+<Attr>
+<Pos l='351' c='8' s='27'/>
+</Attr>
+</Id>
+<Id value='train3_get_train2_infor' typref='4011962670'>
+<Attr>
+<Pos l='351' c='36' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='352' c='30' s='1'/>
+</Attr>
+<Id value='train2_getinfor_train3' typref='3623628078'>
+<Attr>
+<Pos l='352' c='8' s='22'/>
+</Attr>
+</Id>
+<Id value='train2_get_train3_infor' typref='3623628078'>
+<Attr>
+<Pos l='352' c='31' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='353' c='27' s='1'/>
+</Attr>
+<Id value='train1_analyze_acdc' typref='4073071981'>
+<Attr>
+<Pos l='353' c='8' s='19'/>
+</Attr>
+</Id>
+<Id value='train1_analyze' typref='4073071981'>
+<Attr>
+<Pos l='353' c='28' s='14'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='355' c='36' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_conf_train1_acdc' typref='2362371911'>
+<Attr>
+<Pos l='355' c='8' s='28'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_conf_acdc' typref='2362371911'>
+<Attr>
+<Pos l='355' c='38' s='16'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='356' c='43' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_conf_train1_acdc'>
+<Attr>
+<Pos l='356' c='8' s='35'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_conf_acdc' typref='312939590'>
+<Attr>
+<Pos l='356' c='44' s='16'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='357' c='34' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_wait_VC'>
+<Attr>
+<Pos l='357' c='8' s='26'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_wait_VCcomplete' typref='1521663124'>
+<Attr>
+<Pos l='357' c='35' s='22'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='360' c='56' s='2'/>
+</Attr>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='359' c='62' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='359' c='36' s='2'/>
+</Attr>
+<Id value='flag_train3_getinfor_train2' typref='4011962670'>
+<Attr>
+<Pos l='359' c='9' s='27'/>
+</Attr>
+</Id>
+<Id value='train3_get_train2_infor' typref='4011962670'>
+<Attr>
+<Pos l='359' c='38' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='360' c='30' s='2'/>
+</Attr>
+<Id value='train2_getinfor_train3' typref='3623628078'>
+<Attr>
+<Pos l='360' c='8' s='22'/>
+</Attr>
+</Id>
+<Id value='train2_get_train3_infor' typref='3623628078'>
+<Attr>
+<Pos l='360' c='32' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='361' c='27' s='2'/>
+</Attr>
+<Id value='train1_analyze_acdc' typref='4073071981'>
+<Attr>
+<Pos l='361' c='8' s='19'/>
+</Attr>
+</Id>
+<Id value='train1_analyze' typref='4073071981'>
+<Attr>
+<Pos l='361' c='29' s='14'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='361' c='65' s='2'/>
+</Attr>
+<Id value='flag_train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='361' c='45' s='20'/>
+</Attr>
+</Id>
+<Id value='train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='361' c='67' s='15'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='363' c='36' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_conf_train1_acdc' typref='2362371911'>
+<Attr>
+<Pos l='363' c='8' s='28'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_conf_acdc' typref='2362371911'>
+<Attr>
+<Pos l='363' c='38' s='19'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='364' c='43' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_conf_train1_acdc'>
+<Attr>
+<Pos l='364' c='8' s='35'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_no_conf_acdc' typref='312939590'>
+<Attr>
+<Pos l='364' c='44' s='19'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='365' c='34' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_wait_VC'>
+<Attr>
+<Pos l='365' c='8' s='26'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_nowait_VCcomplete' typref='1521663124'>
+<Attr>
+<Pos l='365' c='35' s='24'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train2_maintain_VC_wait_request'>
+<Attr>
+<Pos l='370' c='5' s='31' endLine='378'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='371' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train2_getinfor_train1' typref='2062453680'>
+<Attr>
+<Pos l='371' c='9' s='22'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='372' c='31' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_getinfor_train1'>
+<Attr>
+<Pos l='372' c='34' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_getinfor_train1' typref='2062453680'>
+<Attr>
+<Pos l='372' c='9' s='22'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='373' c='5' s='2'/>
+</Attr>
+<Condition>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='373' c='30' s='1'/>
+</Attr>
+<Id value='train2_getinfor_train1' typref='2062453680'>
+<Attr>
+<Pos l='373' c='8' s='22'/>
+</Attr>
+</Id>
+<Id value='train2_get_train1_infor' typref='2062453680'>
+<Attr>
+<Pos l='373' c='31' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='374' c='37' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_VC_state'>
+<Attr>
+<Pos l='374' c='10' s='27'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_maintain_VC_waitre' typref='3178963683'>
+<Attr>
+<Pos l='374' c='38' s='25'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<Operation_Call>
+<Attr>
+<Pos l='376' c='36' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_VC_state'>
+<Attr>
+<Pos l='376' c='9' s='27'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_no_maintain_VC_waitre' typref='3178963683'>
+<Attr>
+<Pos l='376' c='37' s='28'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train3_inform_Train2_begin_VC'>
+<Attr>
+<Pos l='382' c='5' s='29' endLine='397'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='383' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train2_conf_train1_acdc' typref='312939590'>
+<Attr>
+<Pos l='383' c='9' s='23'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='384' c='32' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_conf_train1_acdc'>
+<Attr>
+<Pos l='384' c='35' s='32'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_conf_train1_acdc' typref='312939590'>
+<Attr>
+<Pos l='384' c='9' s='23'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='385' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='385' c='36' s='1'/>
+</Attr>
+<Id value='flag_train3_conf_train1_acdc' typref='2362371911'>
+<Attr>
+<Pos l='385' c='8' s='28'/>
+</Attr>
+</Id>
+<Id value='train3_conf_acdc' typref='2362371911'>
+<Attr>
+<Pos l='385' c='37' s='16'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='386' c='31' s='1'/>
+</Attr>
+<Id value='train2_conf_train1_acdc' typref='312939590'>
+<Attr>
+<Pos l='386' c='8' s='23'/>
+</Attr>
+</Id>
+<Id value='train2_conf_acdc' typref='312939590'>
+<Attr>
+<Pos l='386' c='32' s='16'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='388' c='28' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='388' c='8' s='20'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='388' c='30' s='15'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='389' c='49' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_wait_train3_finishedVC'>
+<Attr>
+<Pos l='389' c='8' s='41'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_wait_finished' typref='829262265'>
+<Attr>
+<Pos l='389' c='50' s='20'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='391' c='55' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='391' c='36' s='2'/>
+</Attr>
+<Id value='flag_train3_conf_train1_acdc' typref='2362371911'>
+<Attr>
+<Pos l='391' c='8' s='28'/>
+</Attr>
+</Id>
+<Id value='train3_conf_acdc' typref='2362371911'>
+<Attr>
+<Pos l='391' c='38' s='16'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='392' c='31' s='2'/>
+</Attr>
+<Id value='train2_conf_train1_acdc' typref='312939590'>
+<Attr>
+<Pos l='392' c='8' s='23'/>
+</Attr>
+</Id>
+<Id value='train2_conf_acdc' typref='312939590'>
+<Attr>
+<Pos l='392' c='33' s='16'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='394' c='28' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='394' c='8' s='20'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='394' c='30' s='18'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='395' c='49' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_wait_train3_finishedVC'>
+<Attr>
+<Pos l='395' c='8' s='41'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_no_wait_finished' typref='829262265'>
+<Attr>
+<Pos l='395' c='50' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train3_adjust_speed_distance'>
+<Attr>
+<Pos l='400' c='5' s='28' endLine='411'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='401' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_confirm_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='401' c='9' s='36'/>
+</Attr>
+</Id>
+<Id value='train2_confirm_train3_finishedVC' typref='3007145398'>
+<Attr>
+<Pos l='401' c='46' s='32'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='402' c='44' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_confirm_train3completeVCinfor'>
+<Attr>
+<Pos l='402' c='47' s='45'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_confirm_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='402' c='8' s='36'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='403' c='40' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_confirm_train3_finishedVC'>
+<Attr>
+<Pos l='403' c='43' s='41'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_confirm_train3_finishedVC' typref='3007145398'>
+<Attr>
+<Pos l='403' c='8' s='32'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='404' c='5' s='2'/>
+</Attr>
+<Condition>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='404' c='28' s='1'/>
+</Attr>
+<Id value='flag_train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='404' c='8' s='20'/>
+</Attr>
+</Id>
+<Id value='train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='404' c='29' s='15'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Attr>
+<Pos l='406' c='32' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_adjust_spdis' typref='3638181090'>
+<Attr>
+<Pos l='406' c='8' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_complete_VC' typref='3638181090'>
+<Attr>
+<Pos l='406' c='34' s='18'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='407' c='32' s='2'/>
+</Attr>
+<Id value='flag_train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='407' c='12' s='20'/>
+</Attr>
+</Id>
+<Id value='train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='407' c='34' s='15'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='407' c='87' s='2'/>
+</Attr>
+<Id value='train1_confirm_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='407' c='51' s='36'/>
+</Attr>
+</Id>
+<Id value='train1_conf_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='407' c='90' s='33'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='407' c='157' s='2'/>
+</Attr>
+<Id value='train2_confirm_train3_finishedVC' typref='3007145398'>
+<Attr>
+<Pos l='407' c='124' s='32'/>
+</Attr>
+</Id>
+<Id value='train2_confirm_finished' typref='3007145398'>
+<Attr>
+<Pos l='407' c='160' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Assignement_Sub>
+<Attr>
+<Pos l='409' c='32' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_adjust_spdis' typref='3638181090'>
+<Attr>
+<Pos l='409' c='8' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_complete_VC' typref='3638181090'>
+<Attr>
+<Pos l='409' c='34' s='21'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train3_inform_VC_finished_Train1_Train2'>
+<Attr>
+<Pos l='414' c='5' s='39' endLine='436'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='415' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train2_wait_train3_finishedVC' typref='829262265'>
+<Attr>
+<Pos l='415' c='9' s='29'/>
+</Attr>
+</Id>
+<Id value='train1_wait_VC' typref='1521663124'>
+<Attr>
+<Pos l='415' c='39' s='14'/>
+</Attr>
+</Id>
+<Id value='train1_informRMU' typref='3748343322'>
+<Attr>
+<Pos l='415' c='54' s='16'/>
+</Attr>
+</Id>
+<Id value='train2_maintainVC2' typref='4128144810'>
+<Attr>
+<Pos l='415' c='71' s='18'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='416' c='37' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_wait_train3_finishedVC'>
+<Attr>
+<Pos l='416' c='40' s='38'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_wait_train3_finishedVC' typref='829262265'>
+<Attr>
+<Pos l='416' c='8' s='29'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='417' c='22' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_wait_VC'>
+<Attr>
+<Pos l='417' c='25' s='23'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_wait_VC' typref='1521663124'>
+<Attr>
+<Pos l='417' c='8' s='14'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='418' c='24' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_informRMU'>
+<Attr>
+<Pos l='418' c='27' s='25'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_informRMU' typref='3748343322'>
+<Attr>
+<Pos l='418' c='8' s='16'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='419' c='26' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_maintainVC'>
+<Attr>
+<Pos l='419' c='29' s='26'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_maintainVC2' typref='4128144810'>
+<Attr>
+<Pos l='419' c='8' s='18'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='420' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='420' c='32' s='1'/>
+</Attr>
+<Id value='flag_train3_adjust_spdis' typref='3638181090'>
+<Attr>
+<Pos l='420' c='8' s='24'/>
+</Attr>
+</Id>
+<Id value='train3_complete_VC' typref='3638181090'>
+<Attr>
+<Pos l='420' c='33' s='18'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='421' c='37' s='1'/>
+</Attr>
+<Id value='train2_wait_train3_finishedVC' typref='829262265'>
+<Attr>
+<Pos l='421' c='8' s='29'/>
+</Attr>
+</Id>
+<Id value='train2_wait_finished' typref='829262265'>
+<Attr>
+<Pos l='421' c='38' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='422' c='22' s='1'/>
+</Attr>
+<Id value='train1_wait_VC' typref='1521663124'>
+<Attr>
+<Pos l='422' c='8' s='14'/>
+</Attr>
+</Id>
+<Id value='train1_wait_VCcomplete' typref='1521663124'>
+<Attr>
+<Pos l='422' c='23' s='22'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='424' c='56' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_confirm_train3completeVCinfor'>
+<Attr>
+<Pos l='424' c='8' s='48'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_conf_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='424' c='57' s='33'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='425' c='52' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_confirm_train3_finishedVC'>
+<Attr>
+<Pos l='425' c='8' s='44'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_confirm_finished' typref='3007145398'>
+<Attr>
+<Pos l='425' c='53' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Attr>
+<Pos l='426' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_inform_VC' typref='42012262'>
+<Attr>
+<Pos l='426' c='8' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_complete_informVC' typref='42012262'>
+<Attr>
+<Pos l='426' c='31' s='24'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='429' c='60' s='2'/>
+</Attr>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='428' c='54' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='428' c='33' s='2'/>
+</Attr>
+<Id value='flag_train3_adjust_spdis' typref='3638181090'>
+<Attr>
+<Pos l='428' c='9' s='24'/>
+</Attr>
+</Id>
+<Id value='train3_complete_VC' typref='3638181090'>
+<Attr>
+<Pos l='428' c='35' s='18'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='429' c='37' s='2'/>
+</Attr>
+<Id value='train2_wait_train3_finishedVC' typref='829262265'>
+<Attr>
+<Pos l='429' c='8' s='29'/>
+</Attr>
+</Id>
+<Id value='train2_wait_finished' typref='829262265'>
+<Attr>
+<Pos l='429' c='39' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='430' c='22' s='2'/>
+</Attr>
+<Id value='train1_wait_VC' typref='1521663124'>
+<Attr>
+<Pos l='430' c='8' s='14'/>
+</Attr>
+</Id>
+<Id value='train1_wait_VCcomplete' typref='1521663124'>
+<Attr>
+<Pos l='430' c='24' s='22'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='430' c='64' s='2'/>
+</Attr>
+<Id value='train1_informRMU' typref='3748343322'>
+<Attr>
+<Pos l='430' c='48' s='16'/>
+</Attr>
+</Id>
+<Id value='train1_maintainVC' typref='3748343322'>
+<Attr>
+<Pos l='430' c='67' s='17'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='430' c='103' s='2'/>
+</Attr>
+<Id value='train2_maintainVC2' typref='4128144810'>
+<Attr>
+<Pos l='430' c='85' s='18'/>
+</Attr>
+</Id>
+<Id value='train2_maintainVC' typref='4128144810'>
+<Attr>
+<Pos l='430' c='106' s='17'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='432' c='56' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_confirm_train3completeVCinfor'>
+<Attr>
+<Pos l='432' c='8' s='48'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_no_conf_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='432' c='57' s='36'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='433' c='52' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_confirm_train3_finishedVC'>
+<Attr>
+<Pos l='433' c='8' s='44'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_no_confirm_finished' typref='3007145398'>
+<Attr>
+<Pos l='433' c='53' s='26'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Assignement_Sub>
+<Attr>
+<Pos l='434' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_inform_VC' typref='42012262'>
+<Attr>
+<Pos l='434' c='8' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_complete_informVC' typref='42012262'>
+<Attr>
+<Pos l='434' c='31' s='27'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train1_inform_RMU_VC_newinformation'>
+<Attr>
+<Pos l='439' c='5' s='35' endLine='455'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='440' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train1_confirm_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='440' c='9' s='36'/>
+</Attr>
+</Id>
+<Id value='RMU_getinfor_train3' typref='3271847968'>
+<Attr>
+<Pos l='440' c='46' s='19'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='441' c='44' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train1_confirm_train3completeVCinfor'>
+<Attr>
+<Pos l='441' c='47' s='45'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train1_confirm_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='441' c='8' s='36'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='442' c='27' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_RMU_getinfor_train3'>
+<Attr>
+<Pos l='442' c='30' s='28'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='RMU_getinfor_train3' typref='3271847968'>
+<Attr>
+<Pos l='442' c='8' s='19'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='443' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='443' c='44' s='1'/>
+</Attr>
+<Id value='train1_confirm_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='443' c='8' s='36'/>
+</Attr>
+</Id>
+<Id value='train1_conf_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='443' c='45' s='33'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='444' c='27' s='1'/>
+</Attr>
+<Id value='RMU_getinfor_train3' typref='3271847968'>
+<Attr>
+<Pos l='444' c='8' s='19'/>
+</Attr>
+</Id>
+<Id value='RMU_get_train3_infor' typref='3271847968'>
+<Attr>
+<Pos l='444' c='28' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='446' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_RMU_getnewVC_train1'>
+<Attr>
+<Pos l='446' c='8' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='RMU_get_newVC_train1' typref='1789316523'>
+<Attr>
+<Pos l='446' c='40' s='20'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='447' c='36' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_informRMU'>
+<Attr>
+<Pos l='447' c='8' s='28'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_maintainVC' typref='3748343322'>
+<Attr>
+<Pos l='447' c='37' s='17'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='449' c='81' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='449' c='45' s='2'/>
+</Attr>
+<Id value='train1_confirm_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='449' c='9' s='36'/>
+</Attr>
+</Id>
+<Id value='train1_conf_train3completeVCinfor' typref='2309517559'>
+<Attr>
+<Pos l='449' c='47' s='33'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='450' c='27' s='2'/>
+</Attr>
+<Id value='RMU_getinfor_train3' typref='3271847968'>
+<Attr>
+<Pos l='450' c='8' s='19'/>
+</Attr>
+</Id>
+<Id value='RMU_get_train3_infor' typref='3271847968'>
+<Attr>
+<Pos l='450' c='29' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='450' c='72' s='2'/>
+</Attr>
+<Id value='flag_train3_informRMU' typref='3295376536'>
+<Attr>
+<Pos l='450' c='51' s='21'/>
+</Attr>
+</Id>
+<Id value='train3_maintainVC' typref='3295376536'>
+<Attr>
+<Pos l='450' c='75' s='17'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='452' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_RMU_getnewVC_train1'>
+<Attr>
+<Pos l='452' c='8' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='RMU_no_get_newVC_train1' typref='1789316523'>
+<Attr>
+<Pos l='452' c='40' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='453' c='36' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train1_informRMU'>
+<Attr>
+<Pos l='453' c='8' s='28'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train1_no_maintainVC' typref='3748343322'>
+<Attr>
+<Pos l='453' c='37' s='20'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train3_inform_RMU_VC_newinformation'>
+<Attr>
+<Pos l='458' c='5' s='35' endLine='473'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='459' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='RMU_getnewVC_train1' typref='1789316523'>
+<Attr>
+<Pos l='459' c='9' s='19'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='460' c='27' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_RMU_getnewVC_train1'>
+<Attr>
+<Pos l='460' c='30' s='28'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='RMU_getnewVC_train1' typref='1789316523'>
+<Attr>
+<Pos l='460' c='8' s='19'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='461' c='5' s='2'/>
+</Attr>
+<Condition>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='461' c='29' s='1'/>
+</Attr>
+<Id value='flag_train3_inform_VC' typref='42012262'>
+<Attr>
+<Pos l='461' c='8' s='21'/>
+</Attr>
+</Id>
+<Id value='train3_complete_informVC' typref='42012262'>
+<Attr>
+<Pos l='461' c='30' s='24'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='462' c='27' s='1'/>
+</Attr>
+<Id value='RMU_getnewVC_train1' typref='1789316523'>
+<Attr>
+<Pos l='462' c='8' s='19'/>
+</Attr>
+</Id>
+<Id value='RMU_get_newVC_train1' typref='1789316523'>
+<Attr>
+<Pos l='462' c='28' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='464' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_informRMU' typref='3295376536'>
+<Attr>
+<Pos l='464' c='8' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_maintainVC' typref='3295376536'>
+<Attr>
+<Pos l='464' c='31' s='17'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='465' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_RMU_getnewVC_train3'>
+<Attr>
+<Pos l='465' c='8' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='RMU_get_newVC_train3' typref='3350490921'>
+<Attr>
+<Pos l='465' c='40' s='20'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Binary_Pred op='or'>
+<Attr>
+<Pos l='467' c='56' s='2'/>
+</Attr>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='467' c='29' s='2'/>
+</Attr>
+<Id value='flag_train3_inform_VC' typref='42012262'>
+<Attr>
+<Pos l='467' c='8' s='21'/>
+</Attr>
+</Id>
+<Id value='train3_complete_informVC' typref='42012262'>
+<Attr>
+<Pos l='467' c='31' s='24'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='468' c='27' s='2'/>
+</Attr>
+<Id value='RMU_getnewVC_train1' typref='1789316523'>
+<Attr>
+<Pos l='468' c='8' s='19'/>
+</Attr>
+</Id>
+<Id value='RMU_get_newVC_train1' typref='1789316523'>
+<Attr>
+<Pos l='468' c='29' s='20'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Binary_Pred>
+</Condition>
+<Then>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='470' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_train3_informRMU' typref='3295376536'>
+<Attr>
+<Pos l='470' c='8' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='train3_no_maintainVC' typref='3295376536'>
+<Attr>
+<Pos l='470' c='31' s='20'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Operation_Call>
+<Attr>
+<Pos l='471' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_RMU_getnewVC_train3'>
+<Attr>
+<Pos l='471' c='8' s='31'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='RMU_no_get_newVC_train3' typref='3350490921'>
+<Attr>
+<Pos l='471' c='40' s='23'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Nary_Sub>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='Train2_maintain_VC'>
+<Attr>
+<Pos l='476' c='5' s='18' endLine='486'/>
+</Attr>
+<Body>
+<VAR_IN>
+<Attr>
+<Pos l='477' c='5' s='3'/>
+</Attr>
+<Variables>
+<Id value='train2_confirm_train3_finishedVC' typref='3007145398'>
+<Attr>
+<Pos l='477' c='9' s='32'/>
+</Attr>
+</Id>
+</Variables>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='478' c='40' s='3'/>
+</Attr>
+<Name>
+<Id value='get_flag_train2_confirm_train3_finishedVC'>
+<Attr>
+<Pos l='478' c='43' s='41'/>
+</Attr>
+</Id>
+</Name>
+<Output_Parameters>
+<Id value='train2_confirm_train3_finishedVC' typref='3007145398'>
+<Attr>
+<Pos l='478' c='8' s='32'/>
+</Attr>
+</Id>
+</Output_Parameters>
+</Operation_Call>
+<If_Sub elseif='no'>
+<Attr>
+<Pos l='479' c='5' s='2'/>
+</Attr>
+<Condition>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='479' c='40' s='1'/>
+</Attr>
+<Id value='train2_confirm_train3_finishedVC' typref='3007145398'>
+<Attr>
+<Pos l='479' c='8' s='32'/>
+</Attr>
+</Id>
+<Id value='train2_confirm_finished' typref='3007145398'>
+<Attr>
+<Pos l='479' c='41' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='481' c='38' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_maintainVC'>
+<Attr>
+<Pos l='481' c='9' s='29'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_maintainVC' typref='4128144810'>
+<Attr>
+<Pos l='481' c='39' s='17'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+<Else>
+<If_Sub elseif='yes'>
+<Condition>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='482' c='43' s='2'/>
+</Attr>
+<Id value='train2_confirm_train3_finishedVC' typref='3007145398'>
+<Attr>
+<Pos l='482' c='11' s='32'/>
+</Attr>
+</Id>
+<Id value='train2_confirm_finished' typref='3007145398'>
+<Attr>
+<Pos l='482' c='45' s='23'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Condition>
+<Then>
+<Operation_Call>
+<Attr>
+<Pos l='484' c='39' s='0'/>
+</Attr>
+<Name>
+<Id value='change_flag_train2_maintainVC'>
+<Attr>
+<Pos l='484' c='10' s='29'/>
+</Attr>
+</Id>
+</Name>
+<Input_Parameters>
+<Id value='train2_no_maintainVC' typref='4128144810'>
+<Attr>
+<Pos l='484' c='40' s='20'/>
+</Attr>
+</Id>
+</Input_Parameters>
+</Operation_Call>
+</Then>
+</If_Sub>
+</Else>
+</If_Sub>
+</Nary_Sub>
+</Body>
+</VAR_IN>
+</Body>
+</Operation>
+<Operation name='get_flag_train3'>
+<Attr>
+<Pos l='488' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='2043437594'>
+<Attr>
+<Pos l='488' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='488' c='36' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='2043437594'>
+<Attr>
+<Pos l='488' c='30' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3' typref='2043437594'>
+<Attr>
+<Pos l='488' c='38' s='11'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_operation'>
+<Attr>
+<Pos l='489' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='1363008440'>
+<Attr>
+<Pos l='489' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='489' c='46' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='1363008440'>
+<Attr>
+<Pos l='489' c='40' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_operation' typref='1363008440'>
+<Attr>
+<Pos l='489' c='48' s='21'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_go'>
+<Attr>
+<Pos l='490' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='1651831437'>
+<Attr>
+<Pos l='490' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='490' c='32' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='1651831437'>
+<Attr>
+<Pos l='490' c='26' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_go' typref='1651831437'>
+<Attr>
+<Pos l='490' c='34' s='7'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_station'>
+<Attr>
+<Pos l='491' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='2991857219'>
+<Attr>
+<Pos l='491' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='491' c='37' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='2991857219'>
+<Attr>
+<Pos l='491' c='31' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_station' typref='2991857219'>
+<Attr>
+<Pos l='491' c='39' s='12'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_connect_RMU'>
+<Attr>
+<Pos l='492' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='4009388996'>
+<Attr>
+<Pos l='492' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='492' c='48' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='4009388996'>
+<Attr>
+<Pos l='492' c='42' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_connect_RMU' typref='4009388996'>
+<Attr>
+<Pos l='492' c='50' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_comm_train1'>
+<Attr>
+<Pos l='493' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='4070913677'>
+<Attr>
+<Pos l='493' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='493' c='48' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='4070913677'>
+<Attr>
+<Pos l='493' c='42' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_comm_train1' typref='4070913677'>
+<Attr>
+<Pos l='493' c='50' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_estab_train1'>
+<Attr>
+<Pos l='494' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='1369567426'>
+<Attr>
+<Pos l='494' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='494' c='49' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='1369567426'>
+<Attr>
+<Pos l='494' c='43' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_estab_train1' typref='1369567426'>
+<Attr>
+<Pos l='494' c='51' s='24'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_getinfor_train1'>
+<Attr>
+<Pos l='495' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='3231375471'>
+<Attr>
+<Pos l='495' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='495' c='52' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='3231375471'>
+<Attr>
+<Pos l='495' c='46' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_getinfor_train1' typref='3231375471'>
+<Attr>
+<Pos l='495' c='54' s='27'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_wait_train1_VC'>
+<Attr>
+<Pos l='497' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='2816155306'>
+<Attr>
+<Pos l='497' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='497' c='51' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='2816155306'>
+<Attr>
+<Pos l='497' c='45' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_wait_train1_VC' typref='2816155306'>
+<Attr>
+<Pos l='497' c='53' s='26'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_conf_train1_VC'>
+<Attr>
+<Pos l='498' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='2271753243'>
+<Attr>
+<Pos l='498' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='498' c='51' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='2271753243'>
+<Attr>
+<Pos l='498' c='45' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_conf_train1_VC' typref='2271753243'>
+<Attr>
+<Pos l='498' c='53' s='26'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_comm_train2'>
+<Attr>
+<Pos l='500' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='556533580'>
+<Attr>
+<Pos l='500' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='500' c='48' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='556533580'>
+<Attr>
+<Pos l='500' c='42' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_comm_train2' typref='556533580'>
+<Attr>
+<Pos l='500' c='50' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_estab_train2'>
+<Attr>
+<Pos l='501' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='2150154625'>
+<Attr>
+<Pos l='501' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='501' c='49' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='2150154625'>
+<Attr>
+<Pos l='501' c='43' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_estab_train2' typref='2150154625'>
+<Attr>
+<Pos l='501' c='51' s='24'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_getinfor_train2'>
+<Attr>
+<Pos l='502' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='4011962670'>
+<Attr>
+<Pos l='502' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='502' c='52' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='4011962670'>
+<Attr>
+<Pos l='502' c='46' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_getinfor_train2' typref='4011962670'>
+<Attr>
+<Pos l='502' c='54' s='27'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_conf_train1_acdc'>
+<Attr>
+<Pos l='503' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='2362371911'>
+<Attr>
+<Pos l='503' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='503' c='53' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='2362371911'>
+<Attr>
+<Pos l='503' c='47' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_conf_train1_acdc' typref='2362371911'>
+<Attr>
+<Pos l='503' c='55' s='28'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_start_VC'>
+<Attr>
+<Pos l='505' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='3457933785'>
+<Attr>
+<Pos l='505' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='505' c='45' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='3457933785'>
+<Attr>
+<Pos l='505' c='39' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_start_VC' typref='3457933785'>
+<Attr>
+<Pos l='505' c='47' s='20'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_adjust_spdis'>
+<Attr>
+<Pos l='506' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='3638181090'>
+<Attr>
+<Pos l='506' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='506' c='49' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='3638181090'>
+<Attr>
+<Pos l='506' c='43' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_adjust_spdis' typref='3638181090'>
+<Attr>
+<Pos l='506' c='51' s='24'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_inform_VC'>
+<Attr>
+<Pos l='507' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='42012262'>
+<Attr>
+<Pos l='507' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='507' c='46' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='42012262'>
+<Attr>
+<Pos l='507' c='40' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_inform_VC' typref='42012262'>
+<Attr>
+<Pos l='507' c='48' s='21'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_train3_informRMU'>
+<Attr>
+<Pos l='508' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='3295376536'>
+<Attr>
+<Pos l='508' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='508' c='46' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='3295376536'>
+<Attr>
+<Pos l='508' c='40' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_train3_informRMU' typref='3295376536'>
+<Attr>
+<Pos l='508' c='48' s='21'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='2043437594'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1363008440'>
+<Id value='TRAIN_OPERATION'/>
+</Type>
+<Type id='1651831437'>
+<Id value='Flag_go'/>
+</Type>
+<Type id='2991857219'>
+<Id value='Flag_station'/>
+</Type>
+<Type id='4009388996'>
+<Id value='Flag_train3_connect_RMU'/>
+</Type>
+<Type id='4070913677'>
+<Id value='Flag_train3_comm_train1'/>
+</Type>
+<Type id='1369567426'>
+<Id value='Flag_train3_estab_train1'/>
+</Type>
+<Type id='3231375471'>
+<Id value='Flag_train3_getinfor_train1'/>
+</Type>
+<Type id='2816155306'>
+<Id value='Flag_train3_wait_train1_VC'/>
+</Type>
+<Type id='2271753243'>
+<Id value='Flag_train3_conf_train1_VC'/>
+</Type>
+<Type id='556533580'>
+<Id value='Flag_train3_comm_train2'/>
+</Type>
+<Type id='2150154625'>
+<Id value='Flag_train3_estab_train2'/>
+</Type>
+<Type id='4011962670'>
+<Id value='Flag_train3_getinfor_train2'/>
+</Type>
+<Type id='2362371911'>
+<Id value='Flag_train3_conf_train1_acdc'/>
+</Type>
+<Type id='3457933785'>
+<Id value='Flag_train3_start_VC'/>
+</Type>
+<Type id='3638181090'>
+<Id value='Flag_train3_adjust_spdis'/>
+</Type>
+<Type id='42012262'>
+<Id value='Flag_train3_inform_VC'/>
+</Type>
+<Type id='3295376536'>
+<Id value='Flag_train3_informRMU'/>
+</Type>
+<Type id='1674119088'>
+<Id value='Flag_train1_getinfor_train2'/>
+</Type>
+<Type id='1710673570'>
+<Id value='Flag_RMU_getinfor_train1'/>
+</Type>
+<Type id='3551626310'>
+<Id value='Flag_train1_connect_RMU'/>
+</Type>
+<Type id='2062453680'>
+<Id value='Flag_train2_getinfor_train1'/>
+</Type>
+<Type id='3271847968'>
+<Id value='Flag_RMU_getinfor_train3'/>
+</Type>
+<Type id='2066224125'>
+<Id value='Flag_train1_get_train3_request'/>
+</Type>
+<Type id='958851311'>
+<Id value='Flag_train1_check_train3_request'/>
+</Type>
+<Type id='468682439'>
+<Id value='Flag_train1_termination'/>
+</Type>
+<Type id='272669246'>
+<Id value='Flag_train1_estab_train3'/>
+</Type>
+<Type id='2454706287'>
+<Id value='Flag_train1_getinfor_train3'/>
+</Type>
+<Type id='900023347'>
+<Id value='Flag_train1_receive_train3_VCre'/>
+</Type>
+<Type id='3745006894'>
+<Id value='Flag_train1_check_train3_VCre'/>
+</Type>
+<Type id='2295176513'>
+<Id value='Flag_train1_analyze_VC'/>
+</Type>
+<Type id='1190766915'>
+<Id value='Flag_train1_VC_terminationcmd'/>
+</Type>
+<Type id='4073071981'>
+<Id value='Flag_train1_analyze_acdc'/>
+</Type>
+<Type id='3178963683'>
+<Id value='Flag_train2_VC_state'/>
+</Type>
+<Type id='1601705535'>
+<Id value='Flag_train2_estab_train3'/>
+</Type>
+<Type id='697335422'>
+<Id value='Flag_train2_get_train3_request'/>
+</Type>
+<Type id='2776638192'>
+<Id value='Flag_train2_check_train3_request'/>
+</Type>
+<Type id='3623628078'>
+<Id value='Flag_train2_getinfor_train3'/>
+</Type>
+<Type id='312939590'>
+<Id value='Flag_train2_conf_train1_acdc'/>
+</Type>
+<Type id='1521663124'>
+<Id value='Flag_train1_wait_VC'/>
+</Type>
+<Type id='829262265'>
+<Id value='Flag_train2_wait_train3_finishedVC'/>
+</Type>
+<Type id='2309517559'>
+<Id value='Flag_train1_confirm_train3completeVCinfor'/>
+</Type>
+<Type id='3007145398'>
+<Id value='Flag_train2_confirm_train3_finishedVC'/>
+</Type>
+<Type id='3748343322'>
+<Id value='Flag_train1_informRMU'/>
+</Type>
+<Type id='4128144810'>
+<Id value='Flag_train2_maintainVC'/>
+</Type>
+<Type id='1789316523'>
+<Id value='Flag_RMU_getnewVC_train1'/>
+</Type>
+<Type id='3350490921'>
+<Id value='Flag_RMU_getnewVC_train3'/>
+</Type>
+</TypeInfos>
+
+</Machine>

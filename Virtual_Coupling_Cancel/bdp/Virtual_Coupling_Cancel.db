@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<db_xml>
+    <atelierb version="3_7_ubuntu-cvs" />
+    <project decomp_dir="F:\AtelierB\Virtual_Coupling_Cancel\bdp\expand_src" old_decomp_dir="F:\AtelierB\Virtual_Coupling_Cancel\bdp\src">
+        <!-- Definition directory list -->
+        <!-- Proof mechanisms -->
+        <!-- Component file list -->
+        <component_file path="F:\AtelierB\Virtual_Coupling_Cancel\src" name="Context" suffix="mch" user="DK">
+            <component name="Context" type="specification" />
+        </component_file>
+        <component_file path="F:\AtelierB\Virtual_Coupling_Cancel\src" name="Context_i" suffix="imp" user="DK">
+            <component name="Context_i" type="implementation" />
+        </component_file>
+        <component_file path="F:\AtelierB\Virtual_Coupling_Cancel\src" name="RMU" suffix="mch" user="DK">
+            <component name="RMU" type="specification" />
+        </component_file>
+        <component_file path="F:\AtelierB\Virtual_Coupling_Cancel\src" name="RMU_i" suffix="imp" user="DK">
+            <component name="RMU_i" type="implementation" />
+        </component_file>
+        <component_file path="F:\AtelierB\Virtual_Coupling_Cancel\src" name="Train1" suffix="mch" user="DK">
+            <component name="Train1" type="specification" />
+        </component_file>
+        <component_file path="F:\AtelierB\Virtual_Coupling_Cancel\src" name="Train1_i" suffix="imp" user="DK">
+            <component name="Train1_i" type="implementation" />
+        </component_file>
+        <component_file path="F:\AtelierB\Virtual_Coupling_Cancel\src" name="Train2" suffix="mch" user="DK">
+            <component name="Train2" type="specification" />
+        </component_file>
+        <component_file path="F:\AtelierB\Virtual_Coupling_Cancel\src" name="Train2_i" suffix="imp" user="DK">
+            <component name="Train2_i" type="implementation" />
+        </component_file>
+        <component_file path="F:\AtelierB\Virtual_Coupling_Cancel\src" name="Train3" suffix="mch" user="DK">
+            <component name="Train3" type="specification" />
+        </component_file>
+        <component_file path="F:\AtelierB\Virtual_Coupling_Cancel\src" name="Train3_i" suffix="imp" user="DK">
+            <component name="Train3_i" type="implementation" />
+        </component_file>
+    </project>
+</db_xml>

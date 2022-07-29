@@ -1,0 +1,1006 @@
+<Proof_Obligations>
+<Define merge="=" name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define merge="=" name="ctx">
+<Attr>
+<Pos l="7" c="1" s="4"/>
+</Attr>
+<Set>
+<Id typref="3446528971" value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Create/bdp\Context.bxml:1:1:1:1">
+<Attr>
+<Pos l="8" c="4" s="15"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="1363008440" value="normally" tag="F:/Atelier/Virtual_Coupling_Create/bdp\Context.bxml:1:1:1:2:1">
+<Attr>
+<Pos l="8" c="21" s="8"/>
+</Attr>
+</Id>
+<Id typref="1363008440" value="abnormally" tag="F:/Atelier/Virtual_Coupling_Create/bdp\Context.bxml:1:1:1:2:2">
+<Attr>
+<Pos l="8" c="30" s="10"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define merge="-" name="seext"/>
+<Define merge="=" name="lprp">
+<Attr>
+<Pos l="9" c="1" s="4"/>
+</Attr>
+<Set>
+<Id typref="786048183" value="Flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:1:1">
+<Attr>
+<Pos l="10" c="5" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="1710673570" value="RMU_get_train1_infor" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:1:2:1">
+<Attr>
+<Pos l="10" c="31" s="20"/>
+</Attr>
+</Id>
+<Id typref="1710673570" value="RMU_no_get_train1_infor" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:1:2:2">
+<Attr>
+<Pos l="10" c="52" s="23"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id typref="3444120761" value="Flag_RMU_getinfor_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:2:1">
+<Attr>
+<Pos l="11" c="5" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="3271847968" value="RMU_get_train3_infor" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:2:2:1">
+<Attr>
+<Pos l="11" c="31" s="20"/>
+</Attr>
+</Id>
+<Id typref="3271847968" value="RMU_no_get_train3_infor" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:2:2:2">
+<Attr>
+<Pos l="11" c="52" s="23"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id typref="3968344814" value="Flag_RMU_getnewVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:3:1">
+<Attr>
+<Pos l="12" c="5" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="1789316523" value="RMU_get_newVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:3:2:1">
+<Attr>
+<Pos l="12" c="31" s="20"/>
+</Attr>
+</Id>
+<Id typref="1789316523" value="RMU_no_get_newVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:3:2:2">
+<Attr>
+<Pos l="12" c="52" s="23"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id typref="2331450096" value="Flag_RMU_getnewVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:4:1">
+<Attr>
+<Pos l="13" c="5" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="3350490921" value="RMU_get_newVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:4:2:1">
+<Attr>
+<Pos l="13" c="31" s="20"/>
+</Attr>
+</Id>
+<Id typref="3350490921" value="RMU_no_get_newVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:4:2:2">
+<Attr>
+<Pos l="13" c="52" s="23"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define merge="=" name="inprp"/>
+<Define merge="=" name="inext"/>
+<Define merge="=" name="inv">
+<Attr>
+<Pos l="20" c="1" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) : (Flag_RMU_getinfor_train1))" op=":">
+<Attr>
+<Pos l="21" c="29" s="1"/>
+</Attr>
+<Id typref="1710673570" value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:1:1">
+<Attr>
+<Pos l="21" c="5" s="24"/>
+</Attr>
+</Id>
+<Id typref="786048183" value="Flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:1:2">
+<Attr>
+<Pos l="21" c="30" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train3) : (Flag_RMU_getinfor_train3))" op=":">
+<Attr>
+<Pos l="22" c="29" s="1"/>
+</Attr>
+<Id typref="3271847968" value="flag_RMU_getinfor_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:2:1">
+<Attr>
+<Pos l="22" c="5" s="24"/>
+</Attr>
+</Id>
+<Id typref="3444120761" value="Flag_RMU_getinfor_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:2:2">
+<Attr>
+<Pos l="22" c="30" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getnewVC_train1) : (Flag_RMU_getnewVC_train1))" op=":">
+<Attr>
+<Pos l="23" c="29" s="1"/>
+</Attr>
+<Id typref="1789316523" value="flag_RMU_getnewVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:3:1">
+<Attr>
+<Pos l="23" c="5" s="24"/>
+</Attr>
+</Id>
+<Id typref="3968344814" value="Flag_RMU_getnewVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:3:2">
+<Attr>
+<Pos l="23" c="30" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getnewVC_train3) : (Flag_RMU_getnewVC_train3))" op=":">
+<Attr>
+<Pos l="24" c="29" s="1"/>
+</Attr>
+<Id typref="3350490921" value="flag_RMU_getnewVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:4:1">
+<Attr>
+<Pos l="24" c="5" s="24"/>
+</Attr>
+</Id>
+<Id typref="2331450096" value="Flag_RMU_getnewVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:4:2">
+<Attr>
+<Pos l="24" c="30" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_operation) : (TRAIN_OPERATION))" op=":">
+<Attr>
+<Pos l="25" c="23" s="1"/>
+</Attr>
+<Id typref="1363008440" value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:5:1">
+<Attr>
+<Pos l="25" c="5" s="18"/>
+</Attr>
+</Id>
+<Id typref="3446528971" value="TRAIN_OPERATION" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:5:2">
+<Attr>
+<Pos l="25" c="24" s="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define merge="=" name="ass"/>
+<Define merge="=" name="cst"/>
+<Proof_Obligation>
+<Comment>Initialisation dans une machine abstraite</Comment>
+<Tag>Initialisation</Tag>
+<Tag>Invariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>change_flag_RMU_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="35" c="14" s="1"/>
+</Attr>
+<Id typref="1710673570" value="input" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:1:2:1:1">
+<Attr>
+<Pos l="35" c="9" s="5"/>
+</Attr>
+</Id>
+<Id typref="786048183" value="Flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:1:2:1:2">
+<Attr>
+<Pos l="35" c="15" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>change_flag_RMU_getinfor_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="42" c="14" s="1"/>
+</Attr>
+<Id typref="3271847968" value="input" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:2:2:1:1">
+<Attr>
+<Pos l="42" c="9" s="5"/>
+</Attr>
+</Id>
+<Id typref="3444120761" value="Flag_RMU_getinfor_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:2:2:1:2">
+<Attr>
+<Pos l="42" c="15" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>change_flag_RMU_getnewVC_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="49" c="14" s="1"/>
+</Attr>
+<Id typref="1789316523" value="input" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:3:2:1:1">
+<Attr>
+<Pos l="49" c="9" s="5"/>
+</Attr>
+</Id>
+<Id typref="3968344814" value="Flag_RMU_getnewVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:3:2:1:2">
+<Attr>
+<Pos l="49" c="15" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>change_flag_RMU_getnewVC_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="56" c="14" s="1"/>
+</Attr>
+<Id typref="3350490921" value="input" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:4:2:1:1">
+<Attr>
+<Pos l="56" c="9" s="5"/>
+</Attr>
+</Id>
+<Id typref="2331450096" value="Flag_RMU_getnewVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:4:2:1:2">
+<Attr>
+<Pos l="56" c="15" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>get_flag_RMU_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>get_flag_RMU_getinfor_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>get_flag_RMU_getnewVC_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>get_flag_RMU_getnewVC_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>get_flag_RMU_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessConstraints</Tag>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Hypothesis>
+<Attr>
+<Pos l="9" c="1" s="4"/>
+</Attr>
+<Set>
+<Id typref="786048183" value="Flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:1:1">
+<Attr>
+<Pos l="10" c="5" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="1710673570" value="RMU_get_train1_infor" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:1:2:1">
+<Attr>
+<Pos l="10" c="31" s="20"/>
+</Attr>
+</Id>
+<Id typref="1710673570" value="RMU_no_get_train1_infor" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:1:2:2">
+<Attr>
+<Pos l="10" c="52" s="23"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id typref="3444120761" value="Flag_RMU_getinfor_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:2:1">
+<Attr>
+<Pos l="11" c="5" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="3271847968" value="RMU_get_train3_infor" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:2:2:1">
+<Attr>
+<Pos l="11" c="31" s="20"/>
+</Attr>
+</Id>
+<Id typref="3271847968" value="RMU_no_get_train3_infor" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:2:2:2">
+<Attr>
+<Pos l="11" c="52" s="23"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id typref="3968344814" value="Flag_RMU_getnewVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:3:1">
+<Attr>
+<Pos l="12" c="5" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="1789316523" value="RMU_get_newVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:3:2:1">
+<Attr>
+<Pos l="12" c="31" s="20"/>
+</Attr>
+</Id>
+<Id typref="1789316523" value="RMU_no_get_newVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:3:2:2">
+<Attr>
+<Pos l="12" c="52" s="23"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id typref="2331450096" value="Flag_RMU_getnewVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:4:1">
+<Attr>
+<Pos l="13" c="5" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id typref="3350490921" value="RMU_get_newVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:4:2:1">
+<Attr>
+<Pos l="13" c="31" s="20"/>
+</Attr>
+</Id>
+<Id typref="3350490921" value="RMU_no_get_newVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:2:4:2:2">
+<Attr>
+<Pos l="13" c="52" s="23"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Exp_Comparison initialTag="((flag_RMU_getnewVC_train3) : (Flag_RMU_getnewVC_train3))" op=":">
+<Attr>
+<Pos l="24" c="29" s="1"/>
+</Attr>
+<Id typref="3350490921" value="flag_RMU_getnewVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:4:1">
+<Attr>
+<Pos l="24" c="5" s="24"/>
+</Attr>
+</Id>
+<Id typref="2331450096" value="Flag_RMU_getnewVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:4:2">
+<Attr>
+<Pos l="24" c="30" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison initialTag="((flag_RMU_getnewVC_train1) : (Flag_RMU_getnewVC_train1))" op=":">
+<Attr>
+<Pos l="23" c="29" s="1"/>
+</Attr>
+<Id typref="1789316523" value="flag_RMU_getnewVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:3:1">
+<Attr>
+<Pos l="23" c="5" s="24"/>
+</Attr>
+</Id>
+<Id typref="3968344814" value="Flag_RMU_getnewVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:3:2">
+<Attr>
+<Pos l="23" c="30" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train3) : (Flag_RMU_getinfor_train3))" op=":">
+<Attr>
+<Pos l="22" c="29" s="1"/>
+</Attr>
+<Id typref="3271847968" value="flag_RMU_getinfor_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:2:1">
+<Attr>
+<Pos l="22" c="5" s="24"/>
+</Attr>
+</Id>
+<Id typref="3444120761" value="Flag_RMU_getinfor_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:2:2">
+<Attr>
+<Pos l="22" c="30" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) : (Flag_RMU_getinfor_train1))" op=":">
+<Attr>
+<Pos l="21" c="29" s="1"/>
+</Attr>
+<Id typref="1710673570" value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:1:1">
+<Attr>
+<Pos l="21" c="5" s="24"/>
+</Attr>
+</Id>
+<Id typref="786048183" value="Flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:4:1:1:2">
+<Attr>
+<Pos l="21" c="30" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_change_flag_RMU_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_change_flag_RMU_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="35" c="14" s="1"/>
+</Attr>
+<Id typref="1710673570" value="input" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:1:2:1:1">
+<Attr>
+<Pos l="35" c="9" s="5"/>
+</Attr>
+</Id>
+<Id typref="786048183" value="Flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:1:2:1:2">
+<Attr>
+<Pos l="35" c="15" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_change_flag_RMU_getinfor_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_change_flag_RMU_getinfor_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="42" c="14" s="1"/>
+</Attr>
+<Id typref="3271847968" value="input" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:2:2:1:1">
+<Attr>
+<Pos l="42" c="9" s="5"/>
+</Attr>
+</Id>
+<Id typref="3444120761" value="Flag_RMU_getinfor_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:2:2:1:2">
+<Attr>
+<Pos l="42" c="15" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_change_flag_RMU_getnewVC_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_change_flag_RMU_getnewVC_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="49" c="14" s="1"/>
+</Attr>
+<Id typref="1789316523" value="input" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:3:2:1:1">
+<Attr>
+<Pos l="49" c="9" s="5"/>
+</Attr>
+</Id>
+<Id typref="3968344814" value="Flag_RMU_getnewVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:3:2:1:2">
+<Attr>
+<Pos l="49" c="15" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_change_flag_RMU_getnewVC_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_change_flag_RMU_getnewVC_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Exp_Comparison op=":">
+<Attr>
+<Pos l="56" c="14" s="1"/>
+</Attr>
+<Id typref="3350490921" value="input" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:4:2:1:1">
+<Attr>
+<Pos l="56" c="9" s="5"/>
+</Attr>
+</Id>
+<Id typref="2331450096" value="Flag_RMU_getnewVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:6:4:2:1:2">
+<Attr>
+<Pos l="56" c="15" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_get_flag_RMU_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_get_flag_RMU_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_get_flag_RMU_getinfor_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_get_flag_RMU_getinfor_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_get_flag_RMU_getnewVC_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_get_flag_RMU_getnewVC_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_get_flag_RMU_getnewVC_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_get_flag_RMU_getnewVC_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_Precondition_get_flag_RMU_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une machine abstraite</Comment>
+<Tag>WellDefinedness_get_flag_RMU_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="cst"/>
+<Definition name="lprp"/>
+<Definition name="inprp"/>
+<Definition name="inext"/>
+<Definition name="seext"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis/>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="786048183">
+<Unary_Exp op="POW">
+<Id value="Flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:7:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1710673570">
+<Id value="Flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:7:2:1"/>
+</Type>
+<Type id="3444120761">
+<Unary_Exp op="POW">
+<Id value="Flag_RMU_getinfor_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:7:3:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3271847968">
+<Id value="Flag_RMU_getinfor_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:7:4:1"/>
+</Type>
+<Type id="3968344814">
+<Unary_Exp op="POW">
+<Id value="Flag_RMU_getnewVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:7:5:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1789316523">
+<Id value="Flag_RMU_getnewVC_train1" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:7:6:1"/>
+</Type>
+<Type id="2331450096">
+<Unary_Exp op="POW">
+<Id value="Flag_RMU_getnewVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:7:7:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3350490921">
+<Id value="Flag_RMU_getnewVC_train3" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:7:8:1"/>
+</Type>
+<Type id="1363008440">
+<Id value="TRAIN_OPERATION" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:7:9:1"/>
+</Type>
+<Type id="3446528971">
+<Unary_Exp op="POW">
+<Id value="TRAIN_OPERATION" tag="F:\Atelier\Virtual_Coupling_Create\bdp\RMU.bxml:1:7:10:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3446528971">
+<Unary_Exp op="POW">
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Create/bdp\Context.bxml:1:3:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1363008440">
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Create/bdp\Context.bxml:1:3:2:1"/>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

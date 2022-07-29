@@ -1,0 +1,40 @@
+<Machine name='Context' type='abstraction'>
+<Sets>
+<Attr>
+<Pos l='7' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='TRAIN_OPERATION' typref='3446528971'>
+<Attr>
+<Pos l='8' c='4' s='15'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='normally' typref='1363008440'>
+<Attr>
+<Pos l='8' c='21' s='8'/>
+</Attr>
+</Id>
+<Id value='abnormally' typref='1363008440'>
+<Attr>
+<Pos l='8' c='30' s='10'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos>
+<Type id='3446528971'>
+<Unary_Exp op='POW'>
+<Id value='TRAIN_OPERATION'/>
+</Unary_Exp>
+</Type>
+<Type id='1363008440'>
+<Id value='TRAIN_OPERATION'/>
+</Type>
+</TypeInfos>
+
+</Machine>

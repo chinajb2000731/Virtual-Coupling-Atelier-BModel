@@ -1,0 +1,453 @@
+﻿/* Train1_i
+ * Author: ASUS
+ * Creation date: 2022/1/21
+ */
+
+IMPLEMENTATION Train1_i
+REFINES Train1
+
+SEES
+    Context
+IMPORTS
+    RMU , Train2 , Train3
+CONCRETE_VARIABLES
+    flag_train1_newline ,
+    flag_train1_operation ,
+    flag_train1_getinfor_RMU ,
+    flag_train1_getinfor_train2 ,
+    flag_train1_getinfor_train3 ,
+
+    flag_train1_getRMU_newlineinfor ,
+    flag_train1_decide_cancelVC ,
+    flag_train1_wait_train3_cancelVC ,
+
+    flag_train1_know_train3_cancelVC ,
+    flag_train1_wait_train2_cancelVC ,
+    flag_train1_know_train2_cancelVC ,
+    flag_train1_cancelVC ,
+    flag_train1_operation_state
+
+INITIALISATION
+    flag_train1_newline := FALSE ;
+    flag_train1_operation := normally ;
+    flag_train1_getinfor_RMU := train1_no_get_RMU_infor ;
+    flag_train1_getinfor_train2 := train1_no_get_train2_infor ;
+    flag_train1_getinfor_train3 := train1_no_get_train3_infor ;
+
+    flag_train1_getRMU_newlineinfor := train1_not_getRMU_newlineinfor ;
+    flag_train1_decide_cancelVC := train1_not_decide_cancelVC ;
+    flag_train1_wait_train3_cancelVC := train1_not_wait_train3_cancel ;
+
+    flag_train1_know_train3_cancelVC := train1_not_know_train3_cancel ;
+    flag_train1_wait_train2_cancelVC := train1_not_wait_train2_cancel ;
+    flag_train1_know_train2_cancelVC := train1_not_know_train2_cancel ;
+    flag_train1_cancelVC := train1_not_cancelVC ;
+    flag_train1_operation_state := train1_VC
+
+OPERATIONS
+    Train1_exchange_infor_RMU =
+    VAR  RMU_operation
+    IN RMU_operation <-- get_flag_RMU_operation ;
+    IF flag_train1_operation = normally & RMU_operation = normally
+    THEN
+       flag_train1_getinfor_RMU := train1_get_RMU_infor ;
+       change_flag_RMU_getinfor_train1 ( RMU_get_train1_infor )
+    ELSE
+       flag_train1_getinfor_RMU := train1_no_get_RMU_infor ;
+       change_flag_RMU_getinfor_train1 ( RMU_no_get_train1_infor )
+    END
+    END ;
+
+
+    Train1_exchange_infor_Train2 =
+    VAR train2_operation
+    IN train2_operation <-- get_flag_train2_operation ;
+    IF flag_train1_getinfor_RMU = train1_get_RMU_infor & train2_operation = normally
+    THEN
+       flag_train1_getinfor_train2 := train1_get_train2_infor ;
+       change_flag_train2_getinfor_train1 ( train2_get_train1_infor )
+    ELSE
+       flag_train1_getinfor_train2 := train1_no_get_train2_infor ;
+       change_flag_train2_getinfor_train1 ( train2_no_get_train1_infor )
+    END
+    END ;
+
+
+    Train1_exchange_infor_Train3 =
+    VAR train3_operation
+    IN train3_operation <-- get_flag_train3_operation ;
+    IF flag_train1_getinfor_train2 = train1_get_train2_infor & train3_operation = normally
+    THEN
+       flag_train1_getinfor_train3 := train1_get_train3_infor ;
+       change_flag_train3_getinfor_train1 ( train3_get_train1_infor )
+    ELSE
+       flag_train1_getinfor_train3 := train1_no_get_train3_infor ;
+       change_flag_train3_getinfor_train1 ( train3_no_get_train1_infor )
+    END
+    END ;
+
+
+    Train2_exchange_infor_Train3 =
+    VAR train2_getinfor_train1 , train3_getinfor_train1
+    IN  train2_getinfor_train1 <-- get_flag_train2_getinfor_train1 ;
+        train3_getinfor_train1 <-- get_flag_train3_getinfor_train1 ;
+    IF  train2_getinfor_train1 = train2_get_train1_infor & train3_getinfor_train1 = train3_get_train1_infor
+    THEN
+        change_flag_train2_getinfor_train3 ( train2_get_train3_infor ) ;
+        change_flag_train3_getinfor_train2 ( train3_get_train2_infor )
+    ELSE
+        change_flag_train2_getinfor_train3 ( train2_no_get_train3_infor ) ;
+        change_flag_train3_getinfor_train2 ( train3_no_get_train2_infor )
+    END
+    END ;
+
+///////////////////////////////////////////////////////////////////////////
+    RMU_inform_Train1_newlineinfor =
+    VAR RMU_getinfor_train1
+    IN RMU_getinfor_train1 <-- get_flag_RMU_getinfor_train1 ;
+    IF RMU_getinfor_train1 = RMU_get_train1_infor & flag_train1_getinfor_train3 = train1_get_train3_infor
+    THEN
+        change_flag_RMU_inform_train1_newlineinfor_cancel ( wait_trian1_rec ) ;
+        flag_train1_getRMU_newlineinfor := train1_getRMU_newlineinfor
+    ELSIF RMU_getinfor_train1 /= RMU_get_train1_infor or flag_train1_getinfor_train3 /= train1_get_train3_infor
+    THEN
+        change_flag_RMU_inform_train1_newlineinfor_cancel ( no_wait_train1_rec ) ;
+        flag_train1_getRMU_newlineinfor := train1_not_getRMU_newlineinfor
+    END
+    END ;
+
+     /*****************/
+    Train1_analyze_newlineinfor =
+    IF flag_train1_getRMU_newlineinfor = train1_getRMU_newlineinfor & flag_train1_newline = TRUE
+    THEN
+       flag_train1_decide_cancelVC := train1_decide_cancelVC
+    ELSIF
+       flag_train1_getRMU_newlineinfor = train1_getRMU_newlineinfor & flag_train1_newline = FALSE
+    THEN
+       flag_train1_decide_cancelVC := train1_not_decide_cancelVC
+    END ;
+
+
+    change_flag_train1_newline_true =
+    IF flag_train1_newline = FALSE
+    THEN
+       flag_train1_newline := TRUE
+    END ;
+
+
+    change_flag_train1_newline_false =
+    IF flag_train1_newline = TRUE & flag_train1_decide_cancelVC /= train1_decide_cancelVC
+    THEN
+       flag_train1_newline := FALSE
+    END ;
+
+     /*****************/
+    Train1_inform_cancelVC =
+    VAR  train2_getinfor_train3 , train3_getinfor_train2
+    IN   train2_getinfor_train3 <-- get_flag_train2_getinfor_train3 ;
+         train3_getinfor_train2 <-- get_flag_train3_getinfor_train2 ;
+    IF flag_train1_decide_cancelVC = train1_decide_cancelVC &
+       train2_getinfor_train3 = train2_get_train3_infor &
+       train3_getinfor_train2 = train3_get_train2_infor
+    THEN
+       flag_train1_wait_train3_cancelVC := train1_wait_train3_cancel ;
+       change_flag_train3_receive_newline_cancelVC ( train3_receive ) ;
+       change_flag_train2_receive_newline_cancelVC ( train2_receive )
+    ELSIF
+       flag_train1_decide_cancelVC /= train1_decide_cancelVC or
+       train2_getinfor_train3 /= train2_get_train3_infor or
+       train3_getinfor_train2 /= train3_get_train2_infor
+    THEN
+       flag_train1_wait_train3_cancelVC := train1_not_wait_train3_cancel ;
+       change_flag_train3_receive_newline_cancelVC ( train3_not_recive ) ;
+       change_flag_train2_receive_newline_cancelVC ( train2_not_recive )
+    END
+    END ;
+
+    /*****************/
+    Train3_check_cancelVC =
+    VAR train3_receive_newline_cancelVC , train3VC
+    IN  train3_receive_newline_cancelVC <-- get_flag_train3_receive_newline_cancelVC ;
+        train3VC <-- get_flag_train3_VC ;
+    IF  train3_receive_newline_cancelVC = train3_receive & train3VC = TRUE
+    THEN
+        change_flag_train3_begin_cancelVC ( train3_begin_cancelVC )
+    ELSIF train3_receive_newline_cancelVC = train3_receive & train3VC = FALSE
+    THEN
+        change_flag_train3_begin_cancelVC ( train3_not_begin_cancelVC )
+    END
+    END ;
+
+
+    change_Train3_flag_train3_VC_true =
+    VAR train3VC
+    IN  train3VC <-- get_flag_train3_VC ;
+    IF  train3VC = FALSE
+    THEN
+        change_flag_train3_VC_true
+    END
+    END ;
+
+
+    change_Train3_flag_train3_VC_false =
+    VAR train3VC , train3begin_cancelVC
+    IN  train3VC <-- get_flag_train3_VC ;
+        train3begin_cancelVC <-- get_flag_train3_begin_cancelVC ;
+    IF train3VC = TRUE & train3begin_cancelVC /= train3_begin_cancelVC
+    THEN
+        change_flag_train3_VC_false
+    END
+    END ;
+
+    /*****************/
+    Train2_check_cancelVC =
+    VAR train2_receive_newline_cancelVC , train2VC
+    IN  train2_receive_newline_cancelVC <-- get_flag_train2_receive_newline_cancelVC ;
+        train2VC <-- get_flag_train2_VC ;
+    IF train2_receive_newline_cancelVC = train2_receive & train2VC = TRUE
+    THEN
+         change_flag_train2_wait_train3_cancelVC ( train2_wait_train3 )
+    ELSIF train2_receive_newline_cancelVC = train2_receive & train2VC = FALSE
+    THEN
+         change_flag_train2_wait_train3_cancelVC ( train2_not_wait_train3 )
+    END
+    END ;
+
+
+    change_Train2_flag_train2_VC_true =
+    VAR train2VC
+    IN  train2VC <-- get_flag_train2_VC ;
+    IF train2VC = FALSE
+    THEN
+        change_flag_train2_VC_true
+    END
+    END ;
+
+
+    change_Train2_flag_train2_VC_false =
+    VAR train2VC , train2_wait_train3_cancelVC
+    IN  train2VC <-- get_flag_train2_VC ;
+        train2_wait_train3_cancelVC <-- get_flag_train2_wait_train3_cancelVC ;
+    IF train2VC = TRUE & train2_wait_train3_cancelVC /= train2_wait_train3
+    THEN
+        change_flag_train2_VC_false
+    END
+    END ;
+
+    /*****************/
+    //////////////////////////////////////////////////////////////////
+    Train3_adjust_spdi =
+    VAR flagtrain3_begin_cancelVC , train3_estab_train1_temp , train2_know_train3_cancelVC_temp
+    IN  flagtrain3_begin_cancelVC <-- get_flag_train3_begin_cancelVC ;
+        train3_estab_train1_temp <-- get_flag_train3_estab_train1 ;
+        train2_know_train3_cancelVC_temp <-- get_flag_train2_know_train3_cancelVC ;
+    IF flagtrain3_begin_cancelVC = train3_begin_cancelVC
+    THEN
+        change_flag_train3_reach_right_spdi ( train3_reach )
+    ELSIF
+         flagtrain3_begin_cancelVC /= train3_begin_cancelVC &
+         flag_train1_know_train3_cancelVC /= train1_know_train3_cancel &
+         train3_estab_train1_temp /= train3_no_estab_train1 &
+         train2_know_train3_cancelVC_temp /= train2_know_train3_cancelVC
+    THEN
+        change_flag_train3_reach_right_spdi ( train3_not_reach )
+    END
+    END ;
+
+
+    Train3_inform_cancelVC_finished =
+    VAR train2_wait_train3_cancelVC , train3_reach_right_spdi , train3_estab_RMU_temp , RMU_estab_train3_temp ,
+        train2_reach_right_spdi_temp , RMU_know_train3_cancel_VC_temp
+    IN  train2_wait_train3_cancelVC <-- get_flag_train2_wait_train3_cancelVC ;
+        train3_reach_right_spdi <-- get_flag_train3_reach_right_spdi ;
+        train3_estab_RMU_temp <-- get_flag_train3_estab_RMU ;
+        RMU_estab_train3_temp <-- get_flag_RMU_estab_train3 ;
+        train2_reach_right_spdi_temp <-- get_flag_train2_reach_right_spdi ;
+        RMU_know_train3_cancel_VC_temp <-- get_flag_RMU_know_train3_cancel_VC ;
+    IF flag_train1_wait_train3_cancelVC = train1_wait_train3_cancel &
+       train2_wait_train3_cancelVC = train2_wait_train3 &
+       train3_reach_right_spdi = train3_reach
+    THEN
+       flag_train1_know_train3_cancelVC := train1_know_train3_cancel ;
+       change_flag_train2_know_train3_cancelVC ( train2_know_train3_cancelVC ) ;
+       change_flag_train3_estab_train1 ( train3_no_estab_train1 )
+    ELSIF
+       ( flag_train1_wait_train3_cancelVC /= train1_wait_train3_cancel or
+       train2_wait_train3_cancelVC /= train2_wait_train3 or
+       train3_reach_right_spdi /= train3_reach ) &
+       train3_estab_RMU_temp /= train3_estab_RMU &
+       RMU_estab_train3_temp /= RMU_estab_train3 &
+       train2_reach_right_spdi_temp /= train2_reach &
+       RMU_know_train3_cancel_VC_temp /= know_train3_cancelVC &
+       flag_train1_cancelVC /= train1_cancelVC
+    THEN
+       flag_train1_know_train3_cancelVC := train1_not_know_train3_cancel ;
+       change_flag_train2_know_train3_cancelVC ( train2_not_know_train3_cancelVC ) ;
+       change_flag_train3_estab_train1 ( train3_estab_train1 )
+    END
+    END ;
+
+
+    Train3_communicate_RMU =
+    VAR flagtrain3_estab_train1 , RMU_know_train3_cancel_VC
+    IN  flagtrain3_estab_train1 <-- get_flag_train3_estab_train1 ;
+        RMU_know_train3_cancel_VC <-- get_flag_RMU_know_train3_cancel_VC ;
+    IF flagtrain3_estab_train1 = train3_no_estab_train1 & RMU_know_train3_cancel_VC = know_train3_cancelVC
+    THEN
+       change_flag_train3_estab_RMU ( train3_estab_RMU ) ;
+       change_flag_RMU_estab_train3 ( RMU_estab_train3 )
+    ELSIF
+        flagtrain3_estab_train1 /= train3_no_estab_train1 or RMU_know_train3_cancel_VC /= know_train3_cancelVC
+    THEN
+       change_flag_train3_estab_RMU ( train3_no_estab_RMU ) ;
+       change_flag_RMU_estab_train3 ( RMU_no_estab_train3 )
+    END
+    END ;
+
+
+    Train3_selfcheck =
+    VAR flagtrain3_estab_RMU
+    IN  flagtrain3_estab_RMU <-- get_flag_train3_estab_RMU ;
+    IF flagtrain3_estab_RMU = train3_estab_RMU
+    THEN
+       change_flag_train3_operation_state ( train3_normally )
+    ELSIF
+       flagtrain3_estab_RMU /= train3_estab_RMU
+    THEN
+       change_flag_train3_operation_state ( train3_VC )
+    END
+    END ;
+
+
+    Train2_adjust_spdi =
+    VAR flagtrain2_know_train3_cancelVC
+    IN  flagtrain2_know_train3_cancelVC <-- get_flag_train2_know_train3_cancelVC ;
+    IF flagtrain2_know_train3_cancelVC = train2_know_train3_cancelVC
+    THEN
+        change_flag_train2_reach_right_spdi ( train2_reach )
+    ELSIF flagtrain2_know_train3_cancelVC /= train2_know_train3_cancelVC
+    THEN
+        change_flag_train2_reach_right_spdi ( train2_not_reach )
+    END
+    END ;
+
+
+    Train2_inform_trains_cancelVC_finished =
+    VAR train2_reach_right_spdi , flagRMU_know_train2_cancel_VC
+    IN  train2_reach_right_spdi <-- get_flag_train2_reach_right_spdi ;
+        flagRMU_know_train2_cancel_VC <-- get_flag_RMU_know_train2_cancel_VC ;
+    IF flag_train1_wait_train2_cancelVC = train1_wait_train2_cancel &
+       train2_reach_right_spdi = train2_reach
+    THEN
+        change_flag_train2_estab_train1 ( train2_no_estab_train1 ) ;
+        flag_train1_know_train2_cancelVC := train1_know_train2_cancel
+     ELSIF
+       ( flag_train1_wait_train2_cancelVC /= train1_wait_train2_cancel or
+       train2_reach_right_spdi /= train2_reach ) &
+       flagRMU_know_train2_cancel_VC /= know_train2_cancelVC &
+       flag_train1_cancelVC /= train1_cancelVC
+    THEN
+       change_flag_train2_estab_train1 ( train2_estab_train1 ) ;
+       flag_train1_know_train2_cancelVC := train1_not_know_train2_cancel
+    END
+    END ;
+
+
+    Train2_communicate_RMU =
+    VAR flagtrain2_estab_train1 , RMU_know_train2_cancel_VC
+    IN  flagtrain2_estab_train1 <-- get_flag_train2_estab_train1 ;
+        RMU_know_train2_cancel_VC <-- get_flag_RMU_know_train2_cancel_VC ;
+    IF flagtrain2_estab_train1 = train2_no_estab_train1 & RMU_know_train2_cancel_VC = know_train2_cancelVC
+    THEN
+       change_flag_train2_estab_RMU ( train2_estab_RMU ) ;
+       change_flag_RMU_estab_train2 ( RMU_estab_train2 )
+    ELSIF flagtrain2_estab_train1 /= train2_no_estab_train1 or RMU_know_train2_cancel_VC /= know_train2_cancelVC
+    THEN
+       change_flag_train2_estab_RMU ( train2_no_estab_RMU ) ;
+       change_flag_RMU_estab_train2 ( RMU_no_estab_train2 )
+    END
+    END ;
+
+
+    Train2_selfcheck =
+    VAR flagtrain2_estab_RMU
+    IN  flagtrain2_estab_RMU <-- get_flag_train2_estab_RMU ;
+    IF flagtrain2_estab_RMU = train2_estab_RMU
+    THEN
+       change_flag_train2_operation_state ( train2_normally )
+    ELSIF flagtrain2_estab_RMU /= train2_estab_RMU
+    THEN
+       change_flag_train2_operation_state ( train2_VC )
+    END
+    END ;
+
+
+    Train1_inform_RMU_Trian3_cancelVC =
+    VAR RMU_inform_train1_newlineinfor , flagtrain3_estab_RMU , flagRMU_estab_train3
+    IN  RMU_inform_train1_newlineinfor <-- get_flag_RMU_inform_train1_newlineinfor ;
+        flagtrain3_estab_RMU <-- get_flag_train3_estab_RMU ;
+        flagRMU_estab_train3 <-- get_flag_RMU_estab_train3 ;
+    IF flag_train1_know_train3_cancelVC = train1_know_train3_cancel &
+       RMU_inform_train1_newlineinfor = wait_trian1_rec
+    THEN
+       change_flag_RMU_know_train3_cancel_VC ( know_train3_cancelVC ) ;
+       flag_train1_wait_train2_cancelVC := train1_wait_train2_cancel
+    ELSIF ( flag_train1_know_train3_cancelVC /= train1_know_train3_cancel or
+       RMU_inform_train1_newlineinfor /= wait_trian1_rec ) &
+       flagtrain3_estab_RMU /= train3_estab_RMU &
+       flagRMU_estab_train3 /= RMU_estab_train3
+    THEN
+       change_flag_RMU_know_train3_cancel_VC ( not_know_train3_cancelVC ) ;
+       flag_train1_wait_train2_cancelVC := train1_not_wait_train2_cancel
+    END
+    END ;
+
+
+    Train1_inform_RMU_Trian2_cancelVC =
+    VAR flagRMU_estab_train3 , flagtrain2_estab_RMU , flagRMU_estab_train2
+    IN  flagRMU_estab_train3 <-- get_flag_RMU_estab_train3 ;
+        flagtrain2_estab_RMU <-- get_flag_train2_estab_RMU ;
+        flagRMU_estab_train2 <-- get_flag_RMU_estab_train2 ;
+    IF flag_train1_know_train2_cancelVC = train1_know_train2_cancel &
+       flagRMU_estab_train3 = RMU_estab_train3
+    THEN
+       change_flag_RMU_know_train2_cancel_VC ( know_train2_cancelVC ) ;
+       flag_train1_cancelVC := train1_cancelVC
+    ELSIF ( flag_train1_know_train2_cancelVC /= train1_know_train2_cancel or
+       flagRMU_estab_train3 /= RMU_estab_train3 ) &
+       flagtrain2_estab_RMU /= train2_estab_RMU &
+       flagRMU_estab_train2 /= RMU_estab_train2 &
+       flag_train1_operation_state /= train1_normally
+    THEN
+       change_flag_RMU_know_train2_cancel_VC ( not_know_train2_cancelVC ) ;
+       flag_train1_cancelVC := train1_not_cancelVC
+    END
+    END ;
+
+
+    Train1_selfcheck =
+    IF flag_train1_cancelVC = train1_cancelVC
+    THEN
+     flag_train1_operation_state := train1_normally
+    ELSIF flag_train1_cancelVC /= train1_cancelVC
+    THEN
+     flag_train1_operation_state := train1_VC
+    END ;
+
+
+    output <-- get_flag_train1_newline = output := flag_train1_newline ;
+    output <-- get_flag_train1_operation = output := flag_train1_operation ;
+    output <-- get_flag_train1_getinfor_RMU = output := flag_train1_getinfor_RMU ;
+    output <-- get_flag_train1_getinfor_train2 = output := flag_train1_getinfor_train2 ;
+    output <-- get_flag_train1_getinfor_train3 = output := flag_train1_getinfor_train3 ;
+    output <-- get_flag_train1_getRMU_newlineinfor = output := flag_train1_getRMU_newlineinfor ;
+    output <-- get_flag_train1_decide_cancelVC = output := flag_train1_decide_cancelVC ;
+    output <-- get_flag_train1_wait_train3_cancelVC = output := flag_train1_wait_train3_cancelVC ;
+    output <-- get_flag_train1_know_train3_cancelVC = output := flag_train1_know_train3_cancelVC ;
+    output <-- get_flag_train1_wait_train2_cancelVC = output := flag_train1_wait_train2_cancelVC ;
+    output <-- get_flag_train1_know_train2_cancelVC = output := flag_train1_know_train2_cancelVC ;
+    output <-- get_flag_train1_cancelVC = output := flag_train1_cancelVC ;
+    output <-- get_flag_train1_operation_state = output := flag_train1_operation_state
+
+
+ END

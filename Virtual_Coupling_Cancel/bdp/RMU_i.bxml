@@ -1,0 +1,682 @@
+<Machine name='RMU_i' type='implementation'>
+<Abstraction>RMU</Abstraction>
+<Sees>
+<Attr>
+<Pos l='9' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='10' c='5' s='7'/>
+</Attr>
+<Name>Context</Name>
+</Referenced_Machine>
+</Sees>
+<Concrete_Variables>
+<Attr>
+<Pos l='12' c='1' s='18'/>
+</Attr>
+<Id value='flag_RMU_operation' typref='1363008440'>
+<Attr>
+<Pos l='13' c='5' s='18'/>
+</Attr>
+</Id>
+<Id value='flag_RMU_getinfor_train1' typref='1710673570'>
+<Attr>
+<Pos l='14' c='5' s='24'/>
+</Attr>
+</Id>
+<Id value='flag_RMU_inform_train1_newlineinfor' typref='4079428000'>
+<Attr>
+<Pos l='16' c='5' s='35'/>
+</Attr>
+</Id>
+<Id value='flag_RMU_know_train3_cancel_VC' typref='1766831434'>
+<Attr>
+<Pos l='18' c='5' s='30'/>
+</Attr>
+</Id>
+<Id value='flag_RMU_estab_train3' typref='2457656781'>
+<Attr>
+<Pos l='19' c='5' s='21'/>
+</Attr>
+</Id>
+<Id value='flag_RMU_know_train2_cancel_VC' typref='4140798475'>
+<Attr>
+<Pos l='20' c='5' s='30'/>
+</Attr>
+</Id>
+<Id value='flag_RMU_estab_train2' typref='1677069582'>
+<Attr>
+<Pos l='21' c='5' s='21'/>
+</Attr>
+</Id>
+</Concrete_Variables>
+<Initialisation>
+<Attr>
+<Pos l='23' c='1' s='14'/>
+</Attr>
+<Nary_Sub op=';'>
+<Assignement_Sub>
+<Attr>
+<Pos l='24' c='23' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_operation' typref='1363008440'>
+<Attr>
+<Pos l='24' c='5' s='18'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='normally' typref='1363008440'>
+<Attr>
+<Pos l='24' c='25' s='8'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='25' c='29' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_getinfor_train1' typref='1710673570'>
+<Attr>
+<Pos l='25' c='5' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='RMU_no_get_train1_infor' typref='1710673570'>
+<Attr>
+<Pos l='25' c='31' s='23'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='27' c='40' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_inform_train1_newlineinfor' typref='4079428000'>
+<Attr>
+<Pos l='27' c='5' s='35'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='no_wait_train1_rec' typref='4079428000'>
+<Attr>
+<Pos l='27' c='42' s='18'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='29' c='35' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_know_train3_cancel_VC' typref='1766831434'>
+<Attr>
+<Pos l='29' c='5' s='30'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='not_know_train3_cancelVC' typref='1766831434'>
+<Attr>
+<Pos l='29' c='37' s='24'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='30' c='26' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_estab_train3' typref='2457656781'>
+<Attr>
+<Pos l='30' c='5' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='RMU_no_estab_train3' typref='2457656781'>
+<Attr>
+<Pos l='30' c='28' s='19'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='31' c='35' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_know_train2_cancel_VC' typref='4140798475'>
+<Attr>
+<Pos l='31' c='5' s='30'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='not_know_train2_cancelVC' typref='4140798475'>
+<Attr>
+<Pos l='31' c='37' s='24'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='32' c='26' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_estab_train2' typref='1677069582'>
+<Attr>
+<Pos l='32' c='5' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='RMU_no_estab_train2' typref='1677069582'>
+<Attr>
+<Pos l='32' c='28' s='19'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='change_flag_RMU_operation'>
+<Attr>
+<Pos l='35' c='5' s='25' endLine='38'/>
+</Attr>
+<Input_Parameters>
+<Id value='input' typref='1363008440'>
+<Attr>
+<Pos l='35' c='31' s='5'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='37' c='27' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_operation' typref='1363008440'>
+<Attr>
+<Pos l='37' c='9' s='18'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='input' typref='1363008440'>
+<Attr>
+<Pos l='37' c='29' s='5'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='change_flag_RMU_getinfor_train1'>
+<Attr>
+<Pos l='41' c='5' s='31' endLine='44'/>
+</Attr>
+<Input_Parameters>
+<Id value='input' typref='1710673570'>
+<Attr>
+<Pos l='41' c='37' s='5'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='43' c='33' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_getinfor_train1' typref='1710673570'>
+<Attr>
+<Pos l='43' c='9' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='input' typref='1710673570'>
+<Attr>
+<Pos l='43' c='35' s='5'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='change_flag_RMU_inform_train1_newlineinfor_cancel'>
+<Attr>
+<Pos l='47' c='5' s='49' endLine='50'/>
+</Attr>
+<Input_Parameters>
+<Id value='input' typref='4079428000'>
+<Attr>
+<Pos l='47' c='55' s='5'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='49' c='44' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_inform_train1_newlineinfor' typref='4079428000'>
+<Attr>
+<Pos l='49' c='9' s='35'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='input' typref='4079428000'>
+<Attr>
+<Pos l='49' c='46' s='5'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='change_flag_RMU_know_train3_cancel_VC'>
+<Attr>
+<Pos l='53' c='5' s='37' endLine='56'/>
+</Attr>
+<Input_Parameters>
+<Id value='input' typref='1766831434'>
+<Attr>
+<Pos l='53' c='43' s='5'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='55' c='39' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_know_train3_cancel_VC' typref='1766831434'>
+<Attr>
+<Pos l='55' c='9' s='30'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='input' typref='1766831434'>
+<Attr>
+<Pos l='55' c='41' s='5'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='change_flag_RMU_estab_train3'>
+<Attr>
+<Pos l='59' c='5' s='28' endLine='62'/>
+</Attr>
+<Input_Parameters>
+<Id value='input' typref='2457656781'>
+<Attr>
+<Pos l='59' c='34' s='5'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='61' c='30' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_estab_train3' typref='2457656781'>
+<Attr>
+<Pos l='61' c='9' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='input' typref='2457656781'>
+<Attr>
+<Pos l='61' c='32' s='5'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='change_flag_RMU_know_train2_cancel_VC'>
+<Attr>
+<Pos l='65' c='5' s='37' endLine='68'/>
+</Attr>
+<Input_Parameters>
+<Id value='input' typref='4140798475'>
+<Attr>
+<Pos l='65' c='43' s='5'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='67' c='39' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_know_train2_cancel_VC' typref='4140798475'>
+<Attr>
+<Pos l='67' c='9' s='30'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='input' typref='4140798475'>
+<Attr>
+<Pos l='67' c='41' s='5'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='change_flag_RMU_estab_train2'>
+<Attr>
+<Pos l='71' c='5' s='28' endLine='74'/>
+</Attr>
+<Input_Parameters>
+<Id value='input' typref='1677069582'>
+<Attr>
+<Pos l='71' c='34' s='5'/>
+</Attr>
+</Id>
+</Input_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='73' c='30' s='2'/>
+</Attr>
+<Variables>
+<Id value='flag_RMU_estab_train2' typref='1677069582'>
+<Attr>
+<Pos l='73' c='9' s='21'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='input' typref='1677069582'>
+<Attr>
+<Pos l='73' c='32' s='5'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_RMU_operation'>
+<Attr>
+<Pos l='75' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='1363008440'>
+<Attr>
+<Pos l='75' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='75' c='43' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='1363008440'>
+<Attr>
+<Pos l='75' c='37' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_RMU_operation' typref='1363008440'>
+<Attr>
+<Pos l='75' c='45' s='18'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_RMU_getinfor_train1'>
+<Attr>
+<Pos l='76' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='1710673570'>
+<Attr>
+<Pos l='76' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='76' c='49' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='1710673570'>
+<Attr>
+<Pos l='76' c='43' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_RMU_getinfor_train1' typref='1710673570'>
+<Attr>
+<Pos l='76' c='51' s='24'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_RMU_inform_train1_newlineinfor'>
+<Attr>
+<Pos l='77' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='4079428000'>
+<Attr>
+<Pos l='77' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='77' c='60' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='4079428000'>
+<Attr>
+<Pos l='77' c='54' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_RMU_inform_train1_newlineinfor' typref='4079428000'>
+<Attr>
+<Pos l='77' c='62' s='35'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_RMU_know_train3_cancel_VC'>
+<Attr>
+<Pos l='78' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='1766831434'>
+<Attr>
+<Pos l='78' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='78' c='55' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='1766831434'>
+<Attr>
+<Pos l='78' c='49' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_RMU_know_train3_cancel_VC' typref='1766831434'>
+<Attr>
+<Pos l='78' c='57' s='30'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_RMU_estab_train3'>
+<Attr>
+<Pos l='79' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='2457656781'>
+<Attr>
+<Pos l='79' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='79' c='46' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='2457656781'>
+<Attr>
+<Pos l='79' c='40' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_RMU_estab_train3' typref='2457656781'>
+<Attr>
+<Pos l='79' c='48' s='21'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_RMU_know_train2_cancel_VC'>
+<Attr>
+<Pos l='80' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='4140798475'>
+<Attr>
+<Pos l='80' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='80' c='55' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='4140798475'>
+<Attr>
+<Pos l='80' c='49' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_RMU_know_train2_cancel_VC' typref='4140798475'>
+<Attr>
+<Pos l='80' c='57' s='30'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+<Operation name='get_flag_RMU_estab_train2'>
+<Attr>
+<Pos l='81' c='5' s='6'/>
+</Attr>
+<Output_Parameters>
+<Id value='output' typref='1677069582'>
+<Attr>
+<Pos l='81' c='5' s='6'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Assignement_Sub>
+<Attr>
+<Pos l='81' c='46' s='2'/>
+</Attr>
+<Variables>
+<Id value='output' typref='1677069582'>
+<Attr>
+<Pos l='81' c='40' s='6'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='flag_RMU_estab_train2' typref='1677069582'>
+<Attr>
+<Pos l='81' c='48' s='21'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='1363008440'>
+<Id value='TRAIN_OPERATION'/>
+</Type>
+<Type id='1710673570'>
+<Id value='Flag_RMU_getinfor_train1'/>
+</Type>
+<Type id='4079428000'>
+<Id value='Flag_RMU_inform_train1_newlineinfor'/>
+</Type>
+<Type id='1766831434'>
+<Id value='Flag_RMU_know_train3_cancel_VC'/>
+</Type>
+<Type id='2457656781'>
+<Id value='Flag_RMU_estab_train3'/>
+</Type>
+<Type id='4140798475'>
+<Id value='Flag_RMU_know_train2_cancel_VC'/>
+</Type>
+<Type id='1677069582'>
+<Id value='Flag_RMU_estab_train2'/>
+</Type>
+</TypeInfos>
+
+</Machine>

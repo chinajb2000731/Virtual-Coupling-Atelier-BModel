@@ -1,0 +1,138 @@
+/* Train2_i
+ * Author: ASUS
+ * Creation date: 2022/1/15
+ */
+
+IMPLEMENTATION Train2_i
+REFINES Train2
+
+SEES
+    Context
+
+CONCRETE_VARIABLES
+    flag_train2_com,
+    flag_train2_operation,
+    flag_train2_getinfor_train1,
+    
+    flag_train2_VC_state,
+    flag_train2_get_train3_request,
+    flag_train2_check_train3_request,
+    flag_train2_confirm_train3_request,
+    flag_train2_estab_train3,
+    flag_train2_getinfor_train3,
+    flag_train2_conf_train1_acdc,
+    
+    flag_train2_wait_train3_finishedVC,
+    flag_train2_confirm_train3_finishedVC,
+    flag_train2_maintainVC
+
+INITIALISATION
+    flag_train2_com:=TRUE;
+    flag_train2_operation:=normally;
+    flag_train2_getinfor_train1:=train2_no_get_train1_infor;
+    
+    flag_train2_VC_state:=train2_no_maintain_VC_waitre;
+    flag_train2_get_train3_request:=trian2_no_receive_train3;
+    flag_train2_check_train3_request:=train2_find_request_error;
+    flag_train2_confirm_train3_request:=train2_no_confirm_train3_request;
+    flag_train2_estab_train3:=train2_no_estab_train3;
+    flag_train2_getinfor_train3:=train2_no_get_train3_infor;
+    flag_train2_conf_train1_acdc:=train2_no_conf_acdc;
+    
+    flag_train2_wait_train3_finishedVC:=train2_no_wait_finished;
+    flag_train2_confirm_train3_finishedVC:=train2_no_confirm_finished;
+    flag_train2_maintainVC:=train2_no_maintainVC
+
+OPERATIONS
+    change_flag_train2_operation(input)=
+    BEGIN
+        flag_train2_operation:=input
+    END;
+
+    
+    change_flag_train2_getinfor_train1(input)=
+    BEGIN
+        flag_train2_getinfor_train1:=input
+    END;
+
+    
+    change_flag_train2_VC_state(input)=
+    BEGIN
+        flag_train2_VC_state:=input
+    END;
+
+    
+    change_flag_train2_get_train3_request(input)=
+    BEGIN
+        flag_train2_get_train3_request:=input
+    END;
+
+    
+    change_flag_train2_check_train3_request(input)=
+    BEGIN
+        flag_train2_check_train3_request:=input
+    END;
+
+    
+    change_flag_train2_confirm_train3_request(input)=
+    BEGIN
+        flag_train2_check_train3_request:=input
+    END;
+
+    
+    change_flag_train2_estab_train3(input)=
+    BEGIN
+        flag_train2_estab_train3:=input
+    END;
+
+    
+    change_flag_train2_getinfor_train3(input)=
+    BEGIN
+        flag_train2_getinfor_train3:=input
+    END;
+
+    
+    change_flag_train2_conf_train1_acdc(input)=
+    BEGIN
+        flag_train2_conf_train1_acdc:=input
+    END;
+
+    
+    change_flag_train2_wait_train3_finishedVC(input)=
+    BEGIN
+        flag_train2_wait_train3_finishedVC:=input
+    END;
+
+    
+    change_flag_train2_confirm_train3_finishedVC(input)=
+    BEGIN
+        flag_train2_confirm_train3_finishedVC:=input
+    END;
+
+    
+    change_flag_train2_maintainVC(input)=
+    BEGIN
+        flag_train2_maintainVC:=input
+    END;
+
+    change_flag_train2_com_false=flag_train2_com:=FALSE;
+    change_flag_train2_com_true=flag_train2_com:=TRUE;
+    ////////////////////////////////////////////////////
+    output<--get_flag_train2_com=output:=flag_train2_com;
+    output<--get_flag_train2_operation=output:=flag_train2_operation;
+    output<--get_flag_train2_getinfor_train1=output:=flag_train2_getinfor_train1;
+    
+    output<--get_flag_train2_VC_state=output:=flag_train2_VC_state;
+    output<--get_flag_train2_get_train3_request=output:=flag_train2_get_train3_request;
+    output<--get_flag_train2_check_train3_request=output:=flag_train2_check_train3_request;
+    output<--get_flag_train2_confirm_train3_request=output:=flag_train2_confirm_train3_request;
+    output<--get_flag_train2_estab_train3=output:=flag_train2_estab_train3;
+    output<--get_flag_train2_getinfor_train3=output:=flag_train2_getinfor_train3;
+    output<--get_flag_train2_conf_train1_acdc=output:=flag_train2_conf_train1_acdc;
+    
+    output<--get_flag_train2_wait_train3_finishedVC=output:=flag_train2_wait_train3_finishedVC;
+    output<--get_flag_train2_confirm_train3_finishedVC=output:=flag_train2_confirm_train3_finishedVC;
+    output<--get_flag_train2_maintainVC=output:=flag_train2_maintainVC
+     
+
+ END

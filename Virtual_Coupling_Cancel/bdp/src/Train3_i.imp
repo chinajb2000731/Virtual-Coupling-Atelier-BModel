@@ -1,0 +1,107 @@
+﻿/* Train3_i
+ * Author: ASUS
+ * Creation date: 2022/1/21
+ */
+
+IMPLEMENTATION Train3_i
+REFINES Train3
+
+SEES
+    Context
+
+CONCRETE_VARIABLES
+    flag_train3_VC ,
+    flag_train3_operation ,
+    flag_train3_getinfor_train1 ,
+    flag_train3_getinfor_train2 ,
+
+    flag_train3_receive_newline_cancelVC ,
+    flag_train3_begin_cancelVC ,
+
+    flag_train3_reach_right_spdi ,
+    flag_train3_estab_train1 ,
+    flag_train3_estab_RMU ,
+    flag_train3_operation_state
+
+INITIALISATION
+    flag_train3_VC := FALSE ;
+    flag_train3_operation := normally ;
+    flag_train3_getinfor_train1 := train3_no_get_train1_infor ;
+    flag_train3_getinfor_train2 := train3_no_get_train2_infor ;
+
+    flag_train3_receive_newline_cancelVC := train3_not_recive ;
+    flag_train3_begin_cancelVC := train3_not_begin_cancelVC ;
+
+    flag_train3_reach_right_spdi := train3_not_reach ;
+    flag_train3_estab_train1 := train3_estab_train1 ;
+    flag_train3_estab_RMU := train3_no_estab_RMU ;
+    flag_train3_operation_state := train3_VC
+
+OPERATIONS
+    change_flag_train3_VC_true = flag_train3_VC := TRUE ;
+    change_flag_train3_VC_false = flag_train3_VC := FALSE ;
+    change_flag_train3_operation ( input ) =
+    BEGIN
+        flag_train3_operation := input
+    END ;
+
+
+    change_flag_train3_getinfor_train1 ( input ) =
+    BEGIN
+        flag_train3_getinfor_train1 := input
+    END ;
+
+
+    change_flag_train3_getinfor_train2 ( input ) =
+    BEGIN
+        flag_train3_getinfor_train2 := input
+    END ;
+
+    ////////////////////////////////////////////////
+    change_flag_train3_receive_newline_cancelVC ( input ) =
+    BEGIN
+        flag_train3_receive_newline_cancelVC := input
+    END ;
+
+
+    change_flag_train3_begin_cancelVC ( input ) =
+    BEGIN
+        flag_train3_begin_cancelVC := input
+    END ;
+
+    /////////////////////////////////////////////////
+    change_flag_train3_reach_right_spdi ( input ) =
+    BEGIN
+        flag_train3_reach_right_spdi := input
+    END ;
+
+
+    change_flag_train3_estab_train1 ( input ) =
+    BEGIN
+        flag_train3_estab_train1 := input
+    END ;
+
+
+    change_flag_train3_estab_RMU ( input ) =
+    BEGIN
+        flag_train3_estab_RMU := input
+    END ;
+
+
+    change_flag_train3_operation_state ( input ) =
+    BEGIN
+        flag_train3_operation_state := input
+    END ;
+output <-- get_flag_train3_VC = output := flag_train3_VC ;
+    output <-- get_flag_train3_operation = output := flag_train3_operation ;
+    output <-- get_flag_train3_getinfor_train1 = output := flag_train3_getinfor_train1 ;
+    output <-- get_flag_train3_getinfor_train2 = output := flag_train3_getinfor_train2 ;
+    output <-- get_flag_train3_receive_newline_cancelVC = output := flag_train3_receive_newline_cancelVC ;
+    output <-- get_flag_train3_begin_cancelVC = output := flag_train3_begin_cancelVC ;
+    output <-- get_flag_train3_reach_right_spdi = output := flag_train3_reach_right_spdi ;
+    output <-- get_flag_train3_estab_train1 = output := flag_train3_estab_train1 ;
+    output <-- get_flag_train3_estab_RMU = output := flag_train3_estab_RMU ;
+    output <-- get_flag_train3_operation_state = output := flag_train3_operation_state
+
+
+ END

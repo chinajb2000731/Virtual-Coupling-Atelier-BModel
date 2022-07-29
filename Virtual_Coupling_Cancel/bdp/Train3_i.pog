@@ -1,0 +1,3113 @@
+<Proof_Obligations>
+<Define name="B definitions" merge="=">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx" merge="=">
+<Attr>
+<Pos c="1" l="7" s="4"/>
+</Attr>
+<Set>
+<Id value="TRAIN_OPERATION" typref="3446528971" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Context.bxml:1:1:1:1">
+<Attr>
+<Pos c="4" l="8" s="15"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="normally" typref="1363008440" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Context.bxml:1:1:1:2:1">
+<Attr>
+<Pos c="21" l="8" s="8"/>
+</Attr>
+</Id>
+<Id value="abnormally" typref="1363008440" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Context.bxml:1:1:1:2:2">
+<Attr>
+<Pos c="30" l="8" s="10"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define name="seext" merge="="/>
+<Define name="mchcst" merge="="/>
+<Define name="aprp" merge="=">
+<Attr>
+<Pos c="1" l="9" s="4"/>
+</Attr>
+<Set>
+<Id value="Flag_train3_getinfor_train1" typref="90688212" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:1:1">
+<Attr>
+<Pos c="5" l="10" s="27"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_get_train1_infor" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:1:2:1">
+<Attr>
+<Pos c="34" l="10" s="23"/>
+</Attr>
+</Id>
+<Id value="train3_no_get_train1_infor" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:1:2:2">
+<Attr>
+<Pos c="58" l="10" s="26"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_getinfor_train2" typref="1419724501" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:2:1">
+<Attr>
+<Pos c="5" l="11" s="27"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_get_train2_infor" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:2:2:1">
+<Attr>
+<Pos c="34" l="11" s="23"/>
+</Attr>
+</Id>
+<Id value="train3_no_get_train2_infor" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:2:2:2">
+<Attr>
+<Pos c="58" l="11" s="26"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_receive_newline_cancelVC" typref="1497396644" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:3:1">
+<Attr>
+<Pos c="5" l="13" s="36"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_receive" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:3:2:1">
+<Attr>
+<Pos c="43" l="13" s="14"/>
+</Attr>
+</Id>
+<Id value="train3_not_recive" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:3:2:2">
+<Attr>
+<Pos c="58" l="13" s="17"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_begin_cancelVC" typref="4109230579" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:4:1">
+<Attr>
+<Pos c="5" l="14" s="26"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_begin_cancelVC" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:4:2:1">
+<Attr>
+<Pos c="33" l="14" s="21"/>
+</Attr>
+</Id>
+<Id value="train3_not_begin_cancelVC" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:4:2:2">
+<Attr>
+<Pos c="55" l="14" s="25"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_reach_right_spdi" typref="3251623015" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:5:1">
+<Attr>
+<Pos c="5" l="16" s="28"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_reach" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:5:2:1">
+<Attr>
+<Pos c="35" l="16" s="12"/>
+</Attr>
+</Id>
+<Id value="train3_not_reach" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:5:2:2">
+<Attr>
+<Pos c="48" l="16" s="16"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_estab_train1" typref="3819039383" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:6:1">
+<Attr>
+<Pos c="5" l="17" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_estab_train1" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:6:2:1">
+<Attr>
+<Pos c="31" l="17" s="19"/>
+</Attr>
+</Id>
+<Id value="train3_no_estab_train1" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:6:2:2">
+<Attr>
+<Pos c="51" l="17" s="22"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_estab_RMU" typref="3823236924" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:7:1">
+<Attr>
+<Pos c="5" l="18" s="21"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_estab_RMU" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:7:2:1">
+<Attr>
+<Pos c="28" l="18" s="16"/>
+</Attr>
+</Id>
+<Id value="train3_no_estab_RMU" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:7:2:2">
+<Attr>
+<Pos c="45" l="18" s="19"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_operation_state" typref="3880039699" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:8:1">
+<Attr>
+<Pos c="5" l="19" s="27"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_normally" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:8:2:1">
+<Attr>
+<Pos c="34" l="19" s="15"/>
+</Attr>
+</Id>
+<Id value="train3_VC" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:8:2:2">
+<Attr>
+<Pos c="50" l="19" s="9"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define name="abs" merge="=">
+<Attr>
+<Pos c="1" l="33" s="9"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":" initialTag="((flag_train3_VC) : (BOOL))">
+<Attr>
+<Pos c="19" l="34" s="1"/>
+</Attr>
+<Id value="flag_train3_VC" typref="2043437594" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:1:1">
+<Attr>
+<Pos c="5" l="34" s="14"/>
+</Attr>
+</Id>
+<Id value="BOOL" typref="4282494527" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:1:2">
+<Attr>
+<Pos c="20" l="34" s="4"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((flag_train3_operation) : (TRAIN_OPERATION))">
+<Attr>
+<Pos c="26" l="35" s="1"/>
+</Attr>
+<Id value="flag_train3_operation" typref="1363008440" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:2:1">
+<Attr>
+<Pos c="5" l="35" s="21"/>
+</Attr>
+</Id>
+<Id value="TRAIN_OPERATION" typref="3446528971" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:2:2">
+<Attr>
+<Pos c="27" l="35" s="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((flag_train3_getinfor_train1) : (Flag_train3_getinfor_train1))">
+<Attr>
+<Pos c="32" l="36" s="1"/>
+</Attr>
+<Id value="flag_train3_getinfor_train1" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:3:1">
+<Attr>
+<Pos c="5" l="36" s="27"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_getinfor_train1" typref="90688212" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:3:2">
+<Attr>
+<Pos c="33" l="36" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((flag_train3_getinfor_train2) : (Flag_train3_getinfor_train2))">
+<Attr>
+<Pos c="32" l="37" s="1"/>
+</Attr>
+<Id value="flag_train3_getinfor_train2" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:4:1">
+<Attr>
+<Pos c="5" l="37" s="27"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_getinfor_train2" typref="1419724501" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:4:2">
+<Attr>
+<Pos c="33" l="37" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((flag_train3_receive_newline_cancelVC) : (Flag_train3_receive_newline_cancelVC))">
+<Attr>
+<Pos c="41" l="39" s="1"/>
+</Attr>
+<Id value="flag_train3_receive_newline_cancelVC" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:5:1">
+<Attr>
+<Pos c="5" l="39" s="36"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_receive_newline_cancelVC" typref="1497396644" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:5:2">
+<Attr>
+<Pos c="42" l="39" s="36"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((flag_train3_begin_cancelVC) : (Flag_train3_begin_cancelVC))">
+<Attr>
+<Pos c="31" l="40" s="1"/>
+</Attr>
+<Id value="flag_train3_begin_cancelVC" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:6:1">
+<Attr>
+<Pos c="5" l="40" s="26"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_begin_cancelVC" typref="4109230579" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:6:2">
+<Attr>
+<Pos c="32" l="40" s="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((flag_train3_reach_right_spdi) : (Flag_train3_reach_right_spdi))">
+<Attr>
+<Pos c="33" l="42" s="1"/>
+</Attr>
+<Id value="flag_train3_reach_right_spdi" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:7:1">
+<Attr>
+<Pos c="5" l="42" s="28"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_reach_right_spdi" typref="3251623015" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:7:2">
+<Attr>
+<Pos c="34" l="42" s="28"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((flag_train3_estab_train1) : (Flag_train3_estab_train1))">
+<Attr>
+<Pos c="29" l="43" s="1"/>
+</Attr>
+<Id value="flag_train3_estab_train1" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:8:1">
+<Attr>
+<Pos c="5" l="43" s="24"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_estab_train1" typref="3819039383" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:8:2">
+<Attr>
+<Pos c="30" l="43" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((flag_train3_estab_RMU) : (Flag_train3_estab_RMU))">
+<Attr>
+<Pos c="26" l="44" s="1"/>
+</Attr>
+<Id value="flag_train3_estab_RMU" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:9:1">
+<Attr>
+<Pos c="5" l="44" s="21"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_estab_RMU" typref="3823236924" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:9:2">
+<Attr>
+<Pos c="27" l="44" s="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=":" initialTag="((flag_train3_operation_state) : (Flag_train3_operation_state))">
+<Attr>
+<Pos c="32" l="45" s="1"/>
+</Attr>
+<Id value="flag_train3_operation_state" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:10:1">
+<Attr>
+<Pos c="5" l="45" s="27"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_operation_state" typref="3880039699" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:4:1:10:2">
+<Attr>
+<Pos c="33" l="45" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="inv" merge="=">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=" initialTag="((flag_train3_VC) = (flag_train3_VC$1))">
+<Id value="flag_train3_VC" typref="2043437594" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:1">
+<Attr>
+<Pos c="5" l="13" s="14"/>
+</Attr>
+</Id>
+<Id value="flag_train3_VC" typref="2043437594" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:1" suffix="1">
+<Attr>
+<Pos c="5" l="13" s="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((flag_train3_operation) = (flag_train3_operation$1))">
+<Id value="flag_train3_operation" typref="1363008440" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:2">
+<Attr>
+<Pos c="5" l="14" s="21"/>
+</Attr>
+</Id>
+<Id value="flag_train3_operation" typref="1363008440" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:2" suffix="1">
+<Attr>
+<Pos c="5" l="14" s="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((flag_train3_getinfor_train1) = (flag_train3_getinfor_train1$1))">
+<Id value="flag_train3_getinfor_train1" typref="3231375471" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:3">
+<Attr>
+<Pos c="5" l="15" s="27"/>
+</Attr>
+</Id>
+<Id value="flag_train3_getinfor_train1" typref="3231375471" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:3" suffix="1">
+<Attr>
+<Pos c="5" l="15" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((flag_train3_getinfor_train2) = (flag_train3_getinfor_train2$1))">
+<Id value="flag_train3_getinfor_train2" typref="4011962670" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:4">
+<Attr>
+<Pos c="5" l="16" s="27"/>
+</Attr>
+</Id>
+<Id value="flag_train3_getinfor_train2" typref="4011962670" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:4" suffix="1">
+<Attr>
+<Pos c="5" l="16" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((flag_train3_receive_newline_cancelVC) = (flag_train3_receive_newline_cancelVC$1))">
+<Id value="flag_train3_receive_newline_cancelVC" typref="4194224757" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:5">
+<Attr>
+<Pos c="5" l="18" s="36"/>
+</Attr>
+</Id>
+<Id value="flag_train3_receive_newline_cancelVC" typref="4194224757" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:5" suffix="1">
+<Attr>
+<Pos c="5" l="18" s="36"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((flag_train3_begin_cancelVC) = (flag_train3_begin_cancelVC$1))">
+<Id value="flag_train3_begin_cancelVC" typref="1984493798" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:6">
+<Attr>
+<Pos c="5" l="19" s="26"/>
+</Attr>
+</Id>
+<Id value="flag_train3_begin_cancelVC" typref="1984493798" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:6" suffix="1">
+<Attr>
+<Pos c="5" l="19" s="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((flag_train3_reach_right_spdi) = (flag_train3_reach_right_spdi$1))">
+<Id value="flag_train3_reach_right_spdi" typref="2274113522" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:7">
+<Attr>
+<Pos c="5" l="21" s="28"/>
+</Attr>
+</Id>
+<Id value="flag_train3_reach_right_spdi" typref="2274113522" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:7" suffix="1">
+<Attr>
+<Pos c="5" l="21" s="28"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((flag_train3_estab_train1) = (flag_train3_estab_train1$1))">
+<Id value="flag_train3_estab_train1" typref="1369567426" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:8">
+<Attr>
+<Pos c="5" l="22" s="24"/>
+</Attr>
+</Id>
+<Id value="flag_train3_estab_train1" typref="1369567426" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:8" suffix="1">
+<Attr>
+<Pos c="5" l="22" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((flag_train3_estab_RMU) = (flag_train3_estab_RMU$1))">
+<Id value="flag_train3_estab_RMU" typref="3504030087" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:9">
+<Attr>
+<Pos c="5" l="23" s="21"/>
+</Attr>
+</Id>
+<Id value="flag_train3_estab_RMU" typref="3504030087" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:9" suffix="1">
+<Attr>
+<Pos c="5" l="23" s="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op="=" initialTag="((flag_train3_operation_state) = (flag_train3_operation_state$1))">
+<Id value="flag_train3_operation_state" typref="1491556720" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:10">
+<Attr>
+<Pos c="5" l="24" s="27"/>
+</Attr>
+</Id>
+<Id value="flag_train3_operation_state" typref="1491556720" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:10" suffix="1">
+<Attr>
+<Pos c="5" l="24" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass" merge="="/>
+<Define name="imlprp" merge="="/>
+<Define name="imprp" merge="="/>
+<Define name="imext" merge="="/>
+<Proof_Obligation>
+<Comment>Valuation dans une implantation</Comment>
+<Tag>ValuesLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="imprp"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Set>
+<Id value="Flag_train3_getinfor_train1" typref="90688212" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:1:1">
+<Attr>
+<Pos c="5" l="10" s="27"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_get_train1_infor" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:1:2:1">
+<Attr>
+<Pos c="34" l="10" s="23"/>
+</Attr>
+</Id>
+<Id value="train3_no_get_train1_infor" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:1:2:2">
+<Attr>
+<Pos c="58" l="10" s="26"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_getinfor_train1" typref="90688212" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:1:1">
+<Attr>
+<Pos c="5" l="10" s="27"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_get_train1_infor" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:1:2:1">
+<Attr>
+<Pos c="34" l="10" s="23"/>
+</Attr>
+</Id>
+<Id value="train3_no_get_train1_infor" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:1:2:2">
+<Attr>
+<Pos c="58" l="10" s="26"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_getinfor_train2" typref="1419724501" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:2:1">
+<Attr>
+<Pos c="5" l="11" s="27"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_get_train2_infor" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:2:2:1">
+<Attr>
+<Pos c="34" l="11" s="23"/>
+</Attr>
+</Id>
+<Id value="train3_no_get_train2_infor" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:2:2:2">
+<Attr>
+<Pos c="58" l="11" s="26"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_getinfor_train2" typref="1419724501" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:2:1">
+<Attr>
+<Pos c="5" l="11" s="27"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_get_train2_infor" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:2:2:1">
+<Attr>
+<Pos c="34" l="11" s="23"/>
+</Attr>
+</Id>
+<Id value="train3_no_get_train2_infor" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:2:2:2">
+<Attr>
+<Pos c="58" l="11" s="26"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_receive_newline_cancelVC" typref="1497396644" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:3:1">
+<Attr>
+<Pos c="5" l="13" s="36"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_receive" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:3:2:1">
+<Attr>
+<Pos c="43" l="13" s="14"/>
+</Attr>
+</Id>
+<Id value="train3_not_recive" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:3:2:2">
+<Attr>
+<Pos c="58" l="13" s="17"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_receive_newline_cancelVC" typref="1497396644" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:3:1">
+<Attr>
+<Pos c="5" l="13" s="36"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_receive" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:3:2:1">
+<Attr>
+<Pos c="43" l="13" s="14"/>
+</Attr>
+</Id>
+<Id value="train3_not_recive" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:3:2:2">
+<Attr>
+<Pos c="58" l="13" s="17"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_begin_cancelVC" typref="4109230579" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:4:1">
+<Attr>
+<Pos c="5" l="14" s="26"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_begin_cancelVC" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:4:2:1">
+<Attr>
+<Pos c="33" l="14" s="21"/>
+</Attr>
+</Id>
+<Id value="train3_not_begin_cancelVC" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:4:2:2">
+<Attr>
+<Pos c="55" l="14" s="25"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_begin_cancelVC" typref="4109230579" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:4:1">
+<Attr>
+<Pos c="5" l="14" s="26"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_begin_cancelVC" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:4:2:1">
+<Attr>
+<Pos c="33" l="14" s="21"/>
+</Attr>
+</Id>
+<Id value="train3_not_begin_cancelVC" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:4:2:2">
+<Attr>
+<Pos c="55" l="14" s="25"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_reach_right_spdi" typref="3251623015" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:5:1">
+<Attr>
+<Pos c="5" l="16" s="28"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_reach" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:5:2:1">
+<Attr>
+<Pos c="35" l="16" s="12"/>
+</Attr>
+</Id>
+<Id value="train3_not_reach" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:5:2:2">
+<Attr>
+<Pos c="48" l="16" s="16"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_reach_right_spdi" typref="3251623015" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:5:1">
+<Attr>
+<Pos c="5" l="16" s="28"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_reach" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:5:2:1">
+<Attr>
+<Pos c="35" l="16" s="12"/>
+</Attr>
+</Id>
+<Id value="train3_not_reach" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:5:2:2">
+<Attr>
+<Pos c="48" l="16" s="16"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_estab_train1" typref="3819039383" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:6:1">
+<Attr>
+<Pos c="5" l="17" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_estab_train1" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:6:2:1">
+<Attr>
+<Pos c="31" l="17" s="19"/>
+</Attr>
+</Id>
+<Id value="train3_no_estab_train1" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:6:2:2">
+<Attr>
+<Pos c="51" l="17" s="22"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_estab_train1" typref="3819039383" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:6:1">
+<Attr>
+<Pos c="5" l="17" s="24"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_estab_train1" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:6:2:1">
+<Attr>
+<Pos c="31" l="17" s="19"/>
+</Attr>
+</Id>
+<Id value="train3_no_estab_train1" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:6:2:2">
+<Attr>
+<Pos c="51" l="17" s="22"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_estab_RMU" typref="3823236924" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:7:1">
+<Attr>
+<Pos c="5" l="18" s="21"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_estab_RMU" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:7:2:1">
+<Attr>
+<Pos c="28" l="18" s="16"/>
+</Attr>
+</Id>
+<Id value="train3_no_estab_RMU" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:7:2:2">
+<Attr>
+<Pos c="45" l="18" s="19"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_estab_RMU" typref="3823236924" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:7:1">
+<Attr>
+<Pos c="5" l="18" s="21"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_estab_RMU" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:7:2:1">
+<Attr>
+<Pos c="28" l="18" s="16"/>
+</Attr>
+</Id>
+<Id value="train3_no_estab_RMU" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:7:2:2">
+<Attr>
+<Pos c="45" l="18" s="19"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_operation_state" typref="3880039699" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:8:1">
+<Attr>
+<Pos c="5" l="19" s="27"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_normally" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:8:2:1">
+<Attr>
+<Pos c="34" l="19" s="15"/>
+</Attr>
+</Id>
+<Id value="train3_VC" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:8:2:2">
+<Attr>
+<Pos c="50" l="19" s="9"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_train3_operation_state" typref="3880039699" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:8:1">
+<Attr>
+<Pos c="5" l="19" s="27"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="train3_normally" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:8:2:1">
+<Attr>
+<Pos c="34" l="19" s="15"/>
+</Attr>
+</Id>
+<Id value="train3_VC" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:2:8:2:2">
+<Attr>
+<Pos c="50" l="19" s="9"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Initialisation dans une implantation</Comment>
+<Tag>Initialisation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_VC_true</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_VC_true</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_VC_false</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_VC_false</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_operation</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="64" s="1"/>
+</Attr>
+<Id value="input" typref="1363008440" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:3:2:1:1">
+<Attr>
+<Pos c="9" l="64" s="5"/>
+</Attr>
+</Id>
+<Id value="TRAIN_OPERATION" typref="3446528971" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:3:2:1:2">
+<Attr>
+<Pos c="15" l="64" s="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="64" s="1"/>
+</Attr>
+<Id value="input" typref="1363008440" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:3:2:1:1">
+<Attr>
+<Pos c="9" l="64" s="5"/>
+</Attr>
+</Id>
+<Id value="TRAIN_OPERATION" typref="3446528971" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:3:2:1:2">
+<Attr>
+<Pos c="15" l="64" s="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_getinfor_train1</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="71" s="1"/>
+</Attr>
+<Id value="input" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:4:2:1:1">
+<Attr>
+<Pos c="9" l="71" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_getinfor_train1" typref="90688212" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:4:2:1:2">
+<Attr>
+<Pos c="15" l="71" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="71" s="1"/>
+</Attr>
+<Id value="input" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:4:2:1:1">
+<Attr>
+<Pos c="9" l="71" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_getinfor_train1" typref="90688212" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:4:2:1:2">
+<Attr>
+<Pos c="15" l="71" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_getinfor_train2</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="78" s="1"/>
+</Attr>
+<Id value="input" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:5:2:1:1">
+<Attr>
+<Pos c="9" l="78" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_getinfor_train2" typref="1419724501" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:5:2:1:2">
+<Attr>
+<Pos c="15" l="78" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_getinfor_train2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="78" s="1"/>
+</Attr>
+<Id value="input" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:5:2:1:1">
+<Attr>
+<Pos c="9" l="78" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_getinfor_train2" typref="1419724501" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:5:2:1:2">
+<Attr>
+<Pos c="15" l="78" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_receive_newline_cancelVC</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="85" s="1"/>
+</Attr>
+<Id value="input" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:6:2:1:1">
+<Attr>
+<Pos c="9" l="85" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_receive_newline_cancelVC" typref="1497396644" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:6:2:1:2">
+<Attr>
+<Pos c="15" l="85" s="36"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_receive_newline_cancelVC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="85" s="1"/>
+</Attr>
+<Id value="input" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:6:2:1:1">
+<Attr>
+<Pos c="9" l="85" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_receive_newline_cancelVC" typref="1497396644" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:6:2:1:2">
+<Attr>
+<Pos c="15" l="85" s="36"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_begin_cancelVC</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="92" s="1"/>
+</Attr>
+<Id value="input" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:7:2:1:1">
+<Attr>
+<Pos c="9" l="92" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_begin_cancelVC" typref="4109230579" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:7:2:1:2">
+<Attr>
+<Pos c="15" l="92" s="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_begin_cancelVC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="92" s="1"/>
+</Attr>
+<Id value="input" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:7:2:1:1">
+<Attr>
+<Pos c="9" l="92" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_begin_cancelVC" typref="4109230579" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:7:2:1:2">
+<Attr>
+<Pos c="15" l="92" s="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_reach_right_spdi</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="99" s="1"/>
+</Attr>
+<Id value="input" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:8:2:1:1">
+<Attr>
+<Pos c="9" l="99" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_reach_right_spdi" typref="3251623015" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:8:2:1:2">
+<Attr>
+<Pos c="15" l="99" s="28"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_reach_right_spdi</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="99" s="1"/>
+</Attr>
+<Id value="input" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:8:2:1:1">
+<Attr>
+<Pos c="9" l="99" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_reach_right_spdi" typref="3251623015" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:8:2:1:2">
+<Attr>
+<Pos c="15" l="99" s="28"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_estab_train1</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="106" s="1"/>
+</Attr>
+<Id value="input" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:9:2:1:1">
+<Attr>
+<Pos c="9" l="106" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_estab_train1" typref="3819039383" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:9:2:1:2">
+<Attr>
+<Pos c="15" l="106" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_estab_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="106" s="1"/>
+</Attr>
+<Id value="input" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:9:2:1:1">
+<Attr>
+<Pos c="9" l="106" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_estab_train1" typref="3819039383" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:9:2:1:2">
+<Attr>
+<Pos c="15" l="106" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_estab_RMU</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="113" s="1"/>
+</Attr>
+<Id value="input" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:10:2:1:1">
+<Attr>
+<Pos c="9" l="113" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_estab_RMU" typref="3823236924" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:10:2:1:2">
+<Attr>
+<Pos c="15" l="113" s="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_estab_RMU</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="113" s="1"/>
+</Attr>
+<Id value="input" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:10:2:1:1">
+<Attr>
+<Pos c="9" l="113" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_estab_RMU" typref="3823236924" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:10:2:1:2">
+<Attr>
+<Pos c="15" l="113" s="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_train3_operation_state</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="120" s="1"/>
+</Attr>
+<Id value="input" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:11:2:1:1">
+<Attr>
+<Pos c="9" l="120" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_operation_state" typref="3880039699" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:11:2:1:2">
+<Attr>
+<Pos c="15" l="120" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_train3_operation_state</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="120" s="1"/>
+</Attr>
+<Id value="input" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:11:2:1:1">
+<Attr>
+<Pos c="9" l="120" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_operation_state" typref="3880039699" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:11:2:1:2">
+<Attr>
+<Pos c="15" l="120" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_train3_VC</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="2043437594" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:12:1:1">
+<Attr>
+<Pos c="5" l="125" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="2043437594" suffix="">
+<Attr>
+<Pos c="5" l="125" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_train3_VC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="2043437594" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:5:12:1:1" suffix="1">
+<Attr>
+<Pos c="1" l="95" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="2043437594" suffix="">
+<Attr>
+<Pos c="5" l="125" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_train3_operation</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="1363008440" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:13:1:1">
+<Attr>
+<Pos c="5" l="126" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="1363008440" suffix="">
+<Attr>
+<Pos c="5" l="126" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_train3_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="1363008440" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:5:13:1:1" suffix="1">
+<Attr>
+<Pos c="5" l="96" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="1363008440" suffix="">
+<Attr>
+<Pos c="5" l="126" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_train3_getinfor_train1</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:14:1:1">
+<Attr>
+<Pos c="5" l="127" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="3231375471" suffix="">
+<Attr>
+<Pos c="5" l="127" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_train3_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="3231375471" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:5:14:1:1" suffix="1">
+<Attr>
+<Pos c="5" l="97" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="3231375471" suffix="">
+<Attr>
+<Pos c="5" l="127" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_train3_getinfor_train2</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:15:1:1">
+<Attr>
+<Pos c="5" l="128" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="4011962670" suffix="">
+<Attr>
+<Pos c="5" l="128" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_train3_getinfor_train2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="4011962670" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:5:15:1:1" suffix="1">
+<Attr>
+<Pos c="5" l="98" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="4011962670" suffix="">
+<Attr>
+<Pos c="5" l="128" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_train3_receive_newline_cancelVC</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:16:1:1">
+<Attr>
+<Pos c="5" l="129" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="4194224757" suffix="">
+<Attr>
+<Pos c="5" l="129" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_train3_receive_newline_cancelVC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="4194224757" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:5:16:1:1" suffix="1">
+<Attr>
+<Pos c="5" l="99" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="4194224757" suffix="">
+<Attr>
+<Pos c="5" l="129" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_train3_begin_cancelVC</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:17:1:1">
+<Attr>
+<Pos c="5" l="130" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="1984493798" suffix="">
+<Attr>
+<Pos c="5" l="130" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_train3_begin_cancelVC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="1984493798" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:5:17:1:1" suffix="1">
+<Attr>
+<Pos c="5" l="100" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="1984493798" suffix="">
+<Attr>
+<Pos c="5" l="130" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_train3_reach_right_spdi</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:18:1:1">
+<Attr>
+<Pos c="5" l="131" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="2274113522" suffix="">
+<Attr>
+<Pos c="5" l="131" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_train3_reach_right_spdi</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="2274113522" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:5:18:1:1" suffix="1">
+<Attr>
+<Pos c="5" l="101" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="2274113522" suffix="">
+<Attr>
+<Pos c="5" l="131" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_train3_estab_train1</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:19:1:1">
+<Attr>
+<Pos c="5" l="132" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="1369567426" suffix="">
+<Attr>
+<Pos c="5" l="132" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_train3_estab_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="1369567426" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:5:19:1:1" suffix="1">
+<Attr>
+<Pos c="5" l="102" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="1369567426" suffix="">
+<Attr>
+<Pos c="5" l="132" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_train3_estab_RMU</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:20:1:1">
+<Attr>
+<Pos c="5" l="133" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="3504030087" suffix="">
+<Attr>
+<Pos c="5" l="133" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_train3_estab_RMU</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="3504030087" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:5:20:1:1" suffix="1">
+<Attr>
+<Pos c="5" l="103" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="3504030087" suffix="">
+<Attr>
+<Pos c="5" l="133" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_train3_operation_state</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:21:1:1">
+<Attr>
+<Pos c="5" l="134" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="1491556720" suffix="">
+<Attr>
+<Pos c="5" l="134" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_train3_operation_state</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" typref="1491556720" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:5:21:1:1" suffix="1">
+<Attr>
+<Pos c="5" l="104" s="6"/>
+</Attr>
+</Id>
+<Id value="output" typref="1491556720" suffix="">
+<Attr>
+<Pos c="5" l="134" s="6"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Local_Hyp num="1">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Nary_Pred op="&amp;"/>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imprp"/>
+<Hypothesis/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Local_Hyp num="1">
+<Exp_Comparison op="=" initialTag="((flag_train3_estab_RMU) = (flag_train3_estab_RMU$1))">
+<Id value="flag_train3_estab_RMU" typref="3504030087" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:9">
+<Attr>
+<Pos c="5" l="23" s="21"/>
+</Attr>
+</Id>
+<Id value="flag_train3_estab_RMU" typref="3504030087" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:9" suffix="1">
+<Attr>
+<Pos c="5" l="23" s="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="2">
+<Exp_Comparison op="=" initialTag="((flag_train3_estab_train1) = (flag_train3_estab_train1$1))">
+<Id value="flag_train3_estab_train1" typref="1369567426" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:8">
+<Attr>
+<Pos c="5" l="22" s="24"/>
+</Attr>
+</Id>
+<Id value="flag_train3_estab_train1" typref="1369567426" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:8" suffix="1">
+<Attr>
+<Pos c="5" l="22" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="3">
+<Exp_Comparison op="=" initialTag="((flag_train3_reach_right_spdi) = (flag_train3_reach_right_spdi$1))">
+<Id value="flag_train3_reach_right_spdi" typref="2274113522" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:7">
+<Attr>
+<Pos c="5" l="21" s="28"/>
+</Attr>
+</Id>
+<Id value="flag_train3_reach_right_spdi" typref="2274113522" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:7" suffix="1">
+<Attr>
+<Pos c="5" l="21" s="28"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="4">
+<Exp_Comparison op="=" initialTag="((flag_train3_begin_cancelVC) = (flag_train3_begin_cancelVC$1))">
+<Id value="flag_train3_begin_cancelVC" typref="1984493798" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:6">
+<Attr>
+<Pos c="5" l="19" s="26"/>
+</Attr>
+</Id>
+<Id value="flag_train3_begin_cancelVC" typref="1984493798" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:6" suffix="1">
+<Attr>
+<Pos c="5" l="19" s="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="5">
+<Exp_Comparison op="=" initialTag="((flag_train3_receive_newline_cancelVC) = (flag_train3_receive_newline_cancelVC$1))">
+<Id value="flag_train3_receive_newline_cancelVC" typref="4194224757" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:5">
+<Attr>
+<Pos c="5" l="18" s="36"/>
+</Attr>
+</Id>
+<Id value="flag_train3_receive_newline_cancelVC" typref="4194224757" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:5" suffix="1">
+<Attr>
+<Pos c="5" l="18" s="36"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="6">
+<Exp_Comparison op="=" initialTag="((flag_train3_getinfor_train2) = (flag_train3_getinfor_train2$1))">
+<Id value="flag_train3_getinfor_train2" typref="4011962670" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:4">
+<Attr>
+<Pos c="5" l="16" s="27"/>
+</Attr>
+</Id>
+<Id value="flag_train3_getinfor_train2" typref="4011962670" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:4" suffix="1">
+<Attr>
+<Pos c="5" l="16" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="7">
+<Exp_Comparison op="=" initialTag="((flag_train3_getinfor_train1) = (flag_train3_getinfor_train1$1))">
+<Id value="flag_train3_getinfor_train1" typref="3231375471" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:3">
+<Attr>
+<Pos c="5" l="15" s="27"/>
+</Attr>
+</Id>
+<Id value="flag_train3_getinfor_train1" typref="3231375471" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:3" suffix="1">
+<Attr>
+<Pos c="5" l="15" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="8">
+<Exp_Comparison op="=" initialTag="((flag_train3_operation) = (flag_train3_operation$1))">
+<Id value="flag_train3_operation" typref="1363008440" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:2">
+<Attr>
+<Pos c="5" l="14" s="21"/>
+</Attr>
+</Id>
+<Id value="flag_train3_operation" typref="1363008440" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:2" suffix="1">
+<Attr>
+<Pos c="5" l="14" s="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+<Local_Hyp num="9">
+<Exp_Comparison op="=" initialTag="((flag_train3_VC) = (flag_train3_VC$1))">
+<Id value="flag_train3_VC" typref="2043437594" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:1">
+<Attr>
+<Pos c="5" l="13" s="14"/>
+</Attr>
+</Id>
+<Id value="flag_train3_VC" typref="2043437594" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:3:1" suffix="1">
+<Attr>
+<Pos c="5" l="13" s="14"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Local_Hyp>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_VC_true</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_VC_false</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="64" s="1"/>
+</Attr>
+<Id value="input" typref="1363008440" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:3:2:1:1">
+<Attr>
+<Pos c="9" l="64" s="5"/>
+</Attr>
+</Id>
+<Id value="TRAIN_OPERATION" typref="3446528971" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:3:2:1:2">
+<Attr>
+<Pos c="15" l="64" s="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="71" s="1"/>
+</Attr>
+<Id value="input" typref="3231375471" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:4:2:1:1">
+<Attr>
+<Pos c="9" l="71" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_getinfor_train1" typref="90688212" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:4:2:1:2">
+<Attr>
+<Pos c="15" l="71" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_getinfor_train2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="78" s="1"/>
+</Attr>
+<Id value="input" typref="4011962670" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:5:2:1:1">
+<Attr>
+<Pos c="9" l="78" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_getinfor_train2" typref="1419724501" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:5:2:1:2">
+<Attr>
+<Pos c="15" l="78" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_receive_newline_cancelVC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="85" s="1"/>
+</Attr>
+<Id value="input" typref="4194224757" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:6:2:1:1">
+<Attr>
+<Pos c="9" l="85" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_receive_newline_cancelVC" typref="1497396644" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:6:2:1:2">
+<Attr>
+<Pos c="15" l="85" s="36"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_begin_cancelVC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="92" s="1"/>
+</Attr>
+<Id value="input" typref="1984493798" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:7:2:1:1">
+<Attr>
+<Pos c="9" l="92" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_begin_cancelVC" typref="4109230579" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:7:2:1:2">
+<Attr>
+<Pos c="15" l="92" s="26"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_reach_right_spdi</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="99" s="1"/>
+</Attr>
+<Id value="input" typref="2274113522" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:8:2:1:1">
+<Attr>
+<Pos c="9" l="99" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_reach_right_spdi" typref="3251623015" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:8:2:1:2">
+<Attr>
+<Pos c="15" l="99" s="28"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_estab_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="106" s="1"/>
+</Attr>
+<Id value="input" typref="1369567426" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:9:2:1:1">
+<Attr>
+<Pos c="9" l="106" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_estab_train1" typref="3819039383" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:9:2:1:2">
+<Attr>
+<Pos c="15" l="106" s="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_estab_RMU</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="113" s="1"/>
+</Attr>
+<Id value="input" typref="3504030087" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:10:2:1:1">
+<Attr>
+<Pos c="9" l="113" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_estab_RMU" typref="3823236924" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:10:2:1:2">
+<Attr>
+<Pos c="15" l="113" s="21"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_train3_operation_state</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos c="14" l="120" s="1"/>
+</Attr>
+<Id value="input" typref="1491556720" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:11:2:1:1">
+<Attr>
+<Pos c="9" l="120" s="5"/>
+</Attr>
+</Id>
+<Id value="Flag_train3_operation_state" typref="3880039699" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:6:11:2:1:2">
+<Attr>
+<Pos c="15" l="120" s="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_train3_VC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_train3_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_train3_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_train3_getinfor_train2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_train3_receive_newline_cancelVC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_train3_begin_cancelVC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_train3_reach_right_spdi</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_train3_estab_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_train3_estab_RMU</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_train3_operation_state</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="2043437594">
+<Id value="BOOL" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:6:1:1"/>
+</Type>
+<Type id="1363008440">
+<Id value="TRAIN_OPERATION" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:6:2:1"/>
+</Type>
+<Type id="3231375471">
+<Id value="Flag_train3_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:6:3:1"/>
+</Type>
+<Type id="4011962670">
+<Id value="Flag_train3_getinfor_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:6:4:1"/>
+</Type>
+<Type id="4194224757">
+<Id value="Flag_train3_receive_newline_cancelVC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:6:5:1"/>
+</Type>
+<Type id="1984493798">
+<Id value="Flag_train3_begin_cancelVC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:6:6:1"/>
+</Type>
+<Type id="2274113522">
+<Id value="Flag_train3_reach_right_spdi" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:6:7:1"/>
+</Type>
+<Type id="1369567426">
+<Id value="Flag_train3_estab_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:6:8:1"/>
+</Type>
+<Type id="3504030087">
+<Id value="Flag_train3_estab_RMU" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:6:9:1"/>
+</Type>
+<Type id="1491556720">
+<Id value="Flag_train3_operation_state" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\Train3_i.bxml:1:6:10:1"/>
+</Type>
+<Type id="90688212">
+<Unary_Exp op="POW">
+<Id value="Flag_train3_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3231375471">
+<Id value="Flag_train3_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:2:1"/>
+</Type>
+<Type id="1419724501">
+<Unary_Exp op="POW">
+<Id value="Flag_train3_getinfor_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:3:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="4011962670">
+<Id value="Flag_train3_getinfor_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:4:1"/>
+</Type>
+<Type id="1497396644">
+<Unary_Exp op="POW">
+<Id value="Flag_train3_receive_newline_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:5:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="4194224757">
+<Id value="Flag_train3_receive_newline_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:6:1"/>
+</Type>
+<Type id="4109230579">
+<Unary_Exp op="POW">
+<Id value="Flag_train3_begin_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:7:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1984493798">
+<Id value="Flag_train3_begin_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:8:1"/>
+</Type>
+<Type id="3251623015">
+<Unary_Exp op="POW">
+<Id value="Flag_train3_reach_right_spdi" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:9:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2274113522">
+<Id value="Flag_train3_reach_right_spdi" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:10:1"/>
+</Type>
+<Type id="3819039383">
+<Unary_Exp op="POW">
+<Id value="Flag_train3_estab_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:11:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1369567426">
+<Id value="Flag_train3_estab_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:12:1"/>
+</Type>
+<Type id="3823236924">
+<Unary_Exp op="POW">
+<Id value="Flag_train3_estab_RMU" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:13:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3504030087">
+<Id value="Flag_train3_estab_RMU" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:14:1"/>
+</Type>
+<Type id="3880039699">
+<Unary_Exp op="POW">
+<Id value="Flag_train3_operation_state" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:15:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1491556720">
+<Id value="Flag_train3_operation_state" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:16:1"/>
+</Type>
+<Type id="2043437594">
+<Id value="BOOL" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:17:1"/>
+</Type>
+<Type id="1363008440">
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:18:1"/>
+</Type>
+<Type id="4282494527">
+<Unary_Exp op="POW">
+<Id value="BOOL" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:19:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3446528971">
+<Unary_Exp op="POW">
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Train3.bxml:1:7:20:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3446528971">
+<Unary_Exp op="POW">
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Context.bxml:1:3:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1363008440">
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Context.bxml:1:3:2:1"/>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

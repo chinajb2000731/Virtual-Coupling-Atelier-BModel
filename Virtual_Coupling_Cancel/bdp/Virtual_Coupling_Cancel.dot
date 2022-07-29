@@ -1,0 +1,15 @@
+digraph {
+Context_i [ label=" Context\nContext_i " shape= box ]
+RMU_i [ label=" RMU\nRMU_i " shape= box ]
+Train1_i [ label=" Train1\nTrain1_i " shape= box ]
+Train2_i [ label=" Train2\nTrain2_i " shape= box ]
+Train3_i [ label=" Train3\nTrain3_i " shape= box ]
+
+"RMU_i" -> "Context_i" [style= dotted ]
+"Train1_i" -> "Context_i" [style= dotted ]
+"Train1_i" -> "RMU_i" []
+"Train1_i" -> "Train2_i" []
+"Train1_i" -> "Train3_i" []
+"Train2_i" -> "Context_i" [style= dotted ]
+"Train3_i" -> "Context_i" [style= dotted ]
+}

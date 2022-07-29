@@ -1,0 +1,8 @@
+<Machine name='Context_i' type='implementation'>
+<Abstraction>Context</Abstraction>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos/>
+
+</Machine>

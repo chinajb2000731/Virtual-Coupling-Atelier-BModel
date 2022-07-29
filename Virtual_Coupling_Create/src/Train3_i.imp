@@ -1,0 +1,509 @@
+/* Train3_i
+ * Author: ASUS
+ * Creation date: 2022/1/15
+ */
+
+IMPLEMENTATION Train3_i
+REFINES Train3
+SEES
+    Context
+IMPORTS 
+    RMU,Train1,Train2
+CONCRETE_VARIABLES
+    flag_train3,
+    flag_train3_operation,
+    flag_go,
+    flag_station,
+    flag_train3_connect_RMU,
+    flag_train3_comm_train1,
+    flag_train3_estab_train1,
+    flag_train3_getinfor_train1,
+    
+    flag_train3_wait_train1_VC,
+    flag_train3_conf_train1_VC,
+    
+    flag_train3_comm_train2,
+    flag_train3_estab_train2,
+    flag_train3_getinfor_train2,
+    flag_train3_conf_train1_acdc,
+    
+    flag_train3_start_VC,
+    flag_train3_adjust_spdis,
+    flag_train3_inform_VC,
+    flag_train3_informRMU
+
+INITIALISATION
+    flag_train3:=TRUE;
+    flag_train3_operation:=normally;
+    flag_go:=not_ready_go;
+    flag_station:=no_leaving_station;
+    flag_train3_connect_RMU:=train3_no_get_RMU_infor;
+    flag_train3_comm_train1:=no_wait_train1;
+    flag_train3_estab_train1:=train3_no_estab_train1;
+    flag_train3_getinfor_train1:=train3_no_get_train1_infor;
+    
+    flag_train3_wait_train1_VC:=train3_no_wait_train1_VCre;
+    flag_train3_conf_train1_VC:=train3_no_conf_train1_VCres;
+    
+    flag_train3_comm_train2:=no_wait_train2;
+    flag_train3_estab_train2:=train3_no_estab_train2;
+    flag_train3_getinfor_train2:=train3_no_get_train2_infor;
+    flag_train3_conf_train1_acdc:=train3_no_conf_acdc;
+    
+    flag_train3_start_VC:=train3_no_start_VC;
+    flag_train3_adjust_spdis:=train3_no_complete_VC;
+    flag_train3_inform_VC:=train3_no_complete_informVC;
+    flag_train3_informRMU:=train3_no_maintainVC 
+
+OPERATIONS
+    Train1_exchange_information_RMU=
+    VAR RMU_operation,train1_getinfor_train2
+    IN RMU_operation<--get_flag_RMU_operation;
+       train1_getinfor_train2<--get_flag_train1_getinfor_train2;
+    IF RMU_operation=normally&train1_getinfor_train2=train1_get_train2_infor
+    THEN
+        change_flag_RMU_getinfor_train1(RMU_get_train1_infor);
+        change_flag_train1_connect_RMU(train1_get_RMU_infor)
+    ELSE
+        change_flag_RMU_getinfor_train1(RMU_no_get_train1_infor);
+        change_flag_train1_connect_RMU(train1_no_get_RMU_infor)
+    END
+    END;
+
+    
+    Train1_exchange_information_Train2=
+    VAR train1_operation,train2_operation
+    IN  train1_operation<--get_flag_train1_operation;
+        train2_operation<--get_flag_train2_operation;
+    IF  train1_operation=normally&train2_operation=normally
+    THEN
+        change_flag_train1_getinfor_train2(train1_get_train2_infor);
+        change_flag_train2_getinfor_train1(train2_get_train1_infor)
+    END
+    END;
+
+    
+    Train3_connect_RMU=
+    VAR RMU_getinfor_train1
+    IN RMU_getinfor_train1<--get_flag_RMU_getinfor_train1;
+    IF flag_station=leaving_station&RMU_getinfor_train1=RMU_get_train1_infor
+    THEN
+       flag_train3_connect_RMU:=train3_get_RMU_infor;
+       change_flag_RMU_getinfor_train3(RMU_get_train3_infor)
+    ELSIF (flag_station/=leaving_station or RMU_getinfor_train1/=RMU_get_train1_infor)&flag_train3_comm_train1/=        wait_train1
+    THEN
+       flag_train3_connect_RMU:=train3_no_get_RMU_infor;
+       change_flag_RMU_getinfor_train3(RMU_no_get_train3_infor) 
+    END
+    END;
+
+    
+    
+    Train3_selfcheck=
+    IF flag_train3_operation=normally&flag_train3=TRUE
+    THEN
+        flag_go:=ready_go
+    ELSE
+        flag_go:=not_ready_go
+    END;
+
+    
+    Train3_allow_outbound=
+    IF flag_go=ready_go&flag_train3=TRUE
+    THEN
+       flag_station:=leaving_station
+    END;
+
+    
+    Trian3_send_communication_request_Train1=
+    VAR train1_connect_RMU
+    IN train1_connect_RMU<--get_flag_train1_connect_RMU;
+    IF train1_connect_RMU=train1_get_RMU_infor&flag_train3_connect_RMU=train3_get_RMU_infor
+    THEN
+       flag_train3_comm_train1:=wait_train1
+    ELSE
+       flag_train3_comm_train1:=no_wait_train1
+    END
+    END;
+
+    
+    Train1_receive_Train3_communication_request=
+    VAR train1_connect_RMU
+    IN train1_connect_RMU<--get_flag_train1_connect_RMU;
+    IF train1_connect_RMU=train1_get_RMU_infor &flag_train3_connect_RMU=train3_get_RMU_infor&flag_train3_comm_train1=wait_train1
+    THEN 
+        change_flag_train1_get_train3_request(train1_receive_train3)
+     ELSIF train1_connect_RMU/=train1_get_RMU_infor or flag_train3_connect_RMU/=train3_get_RMU_infor or flag_train3_comm_train1/=wait_train1
+    THEN
+         change_flag_train1_get_train3_request(trian1_no_receive_train3)
+    END
+    END;
+
+    
+    Train1_check_communication_request=
+    VAR train1_get_train3_request,train1_com
+    IN train1_get_train3_request<--get_flag_train1_get_train3_request;
+       train1_com<--get_flag_train1_com;
+    IF train1_get_train3_request=train1_receive_train3&train1_com=FALSE
+    THEN
+         change_flag_train1_check_train3_request(train1_find_request_error)
+    ELSIF train1_get_train3_request=train1_receive_train3&train1_com=TRUE
+    THEN 
+         //change_flag_train1_confirm_train3_request(train1_confirm_train3_request)
+         change_flag_train1_check_train3_request(train1_confirm_request)
+    END
+    END;
+
+    
+    Train_send_termination_communication=
+    VAR train1_check_train3_request
+    IN train1_check_train3_request<--get_flag_train1_check_train3_request;
+    IF flag_train3_comm_train1=wait_train1&train1_check_train3_request=train1_find_request_error
+    THEN
+       change_flag_train1_termination(termination)
+    ELSE
+        change_flag_train1_termination(no_termination)
+    END
+    END;
+
+    
+    Train1_send_confirm_communication=
+    VAR train1_check_train3_request
+    IN train1_check_train3_request<--get_flag_train1_check_train3_request;
+    IF train1_check_train3_request=train1_confirm_request&flag_train3_comm_train1=wait_train1//flag_train1_confirm_train3_request=train1_confirm_train3_request
+    THEN 
+       flag_train3_estab_train1:=train3_estab_train1;
+       change_flag_train1_estab_train3(train1_estab_train3)
+    ELSIF train1_check_train3_request/=train1_confirm_request & flag_train3_comm_train1=wait_train1
+    THEN
+       flag_train3_estab_train1:=train3_no_estab_train1;
+       change_flag_train1_estab_train3(train1_no_estab_train3)
+     
+    END
+    END;
+
+    
+    Train1_and_Train3_exchange_information=
+    VAR train1_estab_train3_2
+    IN  train1_estab_train3_2<--get_flag_train1_estab_train3;
+    IF flag_train3_estab_train1=train3_estab_train1&train1_estab_train3_2=train1_estab_train3
+    THEN 
+       flag_train3_getinfor_train1:=train3_get_train1_infor;
+       change_flag_train1_getinfor_train3(train1_get_train3_infor)
+    ELSE
+       flag_train3_getinfor_train1:=train3_no_get_train1_infor;
+       change_flag_train1_getinfor_train3(train1_no_get_train3_infor) 
+    END
+    END;
+  
+    /////////////////////////////////////////////////////////////
+    //列车3发送虚拟编组请求过程
+    Train3_send_VC_request_to_train1=
+    VAR train1_getinfor_train3
+    IN  train1_getinfor_train3<--get_flag_train1_getinfor_train3;
+    IF flag_train3_getinfor_train1=train3_get_train1_infor&train1_getinfor_train3=train1_get_train3_infor
+    THEN 
+       flag_train3_wait_train1_VC:=train3_wait_train1_VCre;
+       change_flag_train1_receive_train3_VCre(receive_train3_VCre)
+    ELSIF flag_train3_getinfor_train1/=train3_get_train1_infor or train1_getinfor_train3/=train1_get_train3_infor
+    THEN
+       flag_train3_wait_train1_VC:=train3_no_wait_train1_VCre;
+       change_flag_train1_receive_train3_VCre(no_receive_train3_VCre)
+    END
+    END;
+
+    
+    Train1_check_Train3_VC_request=
+    VAR train1_receive_train3_VCre,train1_VC
+    IN train1_receive_train3_VCre<--get_flag_train1_receive_train3_VCre;
+       train1_VC<--get_flag_train1_VC;
+    IF train1_receive_train3_VCre=receive_train3_VCre&train1_VC=FALSE
+    THEN
+        change_flag_train1_check_train3_VCre(train3_VCre_error)
+    ELSIF train1_receive_train3_VCre=receive_train3_VCre&train1_VC=TRUE
+    THEN 
+        change_flag_train1_check_train3_VCre(train3_VCre_noerror)
+    END
+    END;
+
+    
+    Train1_analyze_VC_condition=
+    VAR train1_check_train3_VCre,train1_AnVC
+    IN  train1_check_train3_VCre<--get_flag_train1_check_train3_VCre;
+        train1_AnVC<--get_flag_train1_AnVC;
+    IF train1_check_train3_VCre=train3_VCre_noerror&train1_AnVC=FALSE
+    THEN 
+        change_flag_train1_analyze_VC(train3_not_suitable)
+    ELSIF train1_check_train3_VCre=train3_VCre_noerror&train1_AnVC=TRUE
+    THEN
+        change_flag_train1_analyze_VC(train3_suitable)
+    END
+    END;
+
+    
+    Train1_send_termination_VC_train3=
+    VAR train1_analyze_VC
+    IN  train1_analyze_VC<--get_flag_train1_analyze_VC;
+    IF train1_analyze_VC=train3_not_suitable&flag_train3_wait_train1_VC=train3_wait_train1_VCre
+    THEN
+        change_flag_train1_VC_terminationcmd(VCterminated)
+    ELSIF train1_analyze_VC/=train3_not_suitable or flag_train3_wait_train1_VC=train3_wait_train1_VCre
+    THEN
+         change_flag_train1_VC_terminationcmd(not_VCterminated)
+    END
+    END;
+
+    
+    Train1_send_analyze_result_train3=
+    VAR train1_analyze_VC
+    IN  train1_analyze_VC<--get_flag_train1_analyze_VC;
+    IF train1_analyze_VC=train3_suitable&flag_train3_wait_train1_VC=train3_wait_train1_VCre
+    THEN change_flag_train1_analyze_acdc(train1_analyze);
+         flag_train3_conf_train1_VC:=train3_conf_train1_VCres
+     ELSIF (train1_analyze_VC/=train3_suitable or flag_train3_wait_train1_VC/=train3_wait_train1_VCre)& flag_train3_comm_train2 /= wait_train2
+    THEN
+         change_flag_train1_analyze_acdc(train1_not_analyze);
+         flag_train3_conf_train1_VC:=train3_no_conf_train1_VCres
+    END
+    END;
+
+    ///////////////////////////////////////////////////////////
+    //列车3和列车2建立联接，列车3分析结果
+    Trian3_send_communication_request_Train2=
+    VAR train2_VC_state,train2_estab_train3_temp
+    IN  train2_VC_state<--get_flag_train2_VC_state;
+        train2_estab_train3_temp<--get_flag_train2_estab_train3;
+    IF  flag_train3_conf_train1_VC=train3_conf_train1_VCres&train2_VC_state=train2_maintain_VC_waitre
+    THEN
+       flag_train3_comm_train2:=wait_train2
+    ELSIF (flag_train3_conf_train1_VC/=train3_conf_train1_VCres or train2_VC_state/=train2_maintain_VC_waitre)&train2_estab_train3_temp /= train2_estab_train3
+    THEN
+       flag_train3_comm_train2:=no_wait_train2
+    END
+    END;
+
+    
+    Train2_receive_Train3_communication_request=
+    VAR train2_VC_state
+    IN  train2_VC_state<--get_flag_train2_VC_state;
+    IF flag_train3_conf_train1_VC=train3_conf_train1_VCres&
+       train2_VC_state=train2_maintain_VC_waitre&
+       flag_train3_comm_train2=wait_train2
+    THEN 
+         change_flag_train2_get_train3_request(train2_receive_train3)
+     ELSIF 
+       flag_train3_conf_train1_VC/=train3_conf_train1_VCres or
+       train2_VC_state/=train2_maintain_VC_waitre or
+       flag_train3_comm_train2/=wait_train2
+    THEN
+        change_flag_train2_get_train3_request(trian2_no_receive_train3)
+    END
+    END;
+
+    
+    Train2_check_communication_request=
+    VAR train2_get_train3_request,train2_com
+    IN  train2_get_train3_request<--get_flag_train2_get_train3_request;
+        train2_com<--get_flag_train2_com;
+    IF train2_get_train3_request=train2_receive_train3&train2_com=FALSE
+    THEN
+        change_flag_train2_check_train3_request(train2_find_request_error)  
+    ELSIF train2_get_train3_request=train2_receive_train3&train2_com=TRUE
+    THEN 
+         change_flag_train2_check_train3_request(train2_confirm_request) 
+    END
+    END;
+
+    
+    Train2_send_confirm_communication=
+    VAR train2_check_train3_request
+    IN  train2_check_train3_request<--get_flag_train2_check_train3_request;
+    IF  train2_check_train3_request=train2_confirm_request&flag_train3_comm_train2=wait_train2
+    THEN 
+       flag_train3_estab_train2:=train3_estab_train2;
+       change_flag_train2_estab_train3(train2_estab_train3)
+     ELSIF (train2_check_train3_request/=train2_confirm_request or flag_train3_comm_train2/=wait_train2)& flag_train3_getinfor_train2 /= train3_get_train2_infor
+    THEN
+       flag_train3_estab_train2:=train3_no_estab_train2;
+       change_flag_train2_estab_train3(train2_no_estab_train3)
+    END
+    END;
+
+    
+    Train2_and_Train3_exchange_information=
+    VAR train2_estab_train3_2
+    IN  train2_estab_train3_2<--get_flag_train2_estab_train3;
+    IF flag_train3_estab_train2=train3_estab_train2&train2_estab_train3_2=train2_estab_train3
+    THEN 
+       flag_train3_getinfor_train2:=train3_get_train2_infor;
+       change_flag_train2_getinfor_train3(train2_get_train3_infor)
+    ELSE
+       flag_train3_getinfor_train2:=train3_no_get_train2_infor;
+       change_flag_train2_getinfor_train3(train2_no_get_train3_infor) 
+    END
+    END;
+
+    
+    Train1_inform_reasonable_acdc=
+    VAR train2_getinfor_train3,train1_analyze_acdc
+    IN train2_getinfor_train3<--get_flag_train2_getinfor_train3;
+       train1_analyze_acdc<--get_flag_train1_analyze_acdc;
+    IF flag_train3_getinfor_train2=train3_get_train2_infor&
+       train2_getinfor_train3=train2_get_train3_infor&
+       train1_analyze_acdc=train1_analyze
+    THEN
+       flag_train3_conf_train1_acdc:=train3_conf_acdc;
+       change_flag_train2_conf_train1_acdc(train2_conf_acdc);
+       change_flag_train1_wait_VC(train1_wait_VCcomplete)
+    ELSIF 
+       (flag_train3_getinfor_train2/=train3_get_train2_infor or
+       train2_getinfor_train3/=train2_get_train3_infor or
+       train1_analyze_acdc/=train1_analyze)&flag_train3_start_VC/=train3_start_VC
+    THEN
+       flag_train3_conf_train1_acdc:=train3_no_conf_acdc;
+       change_flag_train2_conf_train1_acdc(train2_no_conf_acdc);
+       change_flag_train1_wait_VC(train1_nowait_VCcomplete)
+    END
+    END;
+
+    
+    Train2_maintain_VC_wait_request=
+    VAR train2_getinfor_train1
+    IN  train2_getinfor_train1<--get_flag_train2_getinfor_train1;
+    IF train2_getinfor_train1=train2_get_train1_infor
+    THEN change_flag_train2_VC_state(train2_maintain_VC_waitre)
+    ELSE
+        change_flag_train2_VC_state(train2_no_maintain_VC_waitre)
+    END
+    END;
+
+    //////////////////////////////////////////////////////////////
+   //l列车3调整速度，加入编组
+    Train3_inform_Train2_begin_VC=
+    VAR train2_conf_train1_acdc
+    IN  train2_conf_train1_acdc<--get_flag_train2_conf_train1_acdc;
+    IF flag_train3_conf_train1_acdc=train3_conf_acdc&
+       train2_conf_train1_acdc=train2_conf_acdc
+    THEN 
+       flag_train3_start_VC:=train3_start_VC;
+       change_flag_train2_wait_train3_finishedVC(train2_wait_finished)
+    ELSIF
+       flag_train3_conf_train1_acdc/=train3_conf_acdc or
+       train2_conf_train1_acdc/=train2_conf_acdc
+    THEN
+       flag_train3_start_VC:=train3_no_start_VC;
+       change_flag_train2_wait_train3_finishedVC(train2_no_wait_finished)
+    END
+    END;
+
+    
+    Train3_adjust_speed_distance=
+    VAR train1_confirm_train3completeVCinfor,train2_confirm_train3_finishedVC
+    IN train1_confirm_train3completeVCinfor<--get_flag_train1_confirm_train3completeVCinfor;
+       train2_confirm_train3_finishedVC<--get_flag_train2_confirm_train3_finishedVC;
+    IF flag_train3_start_VC=train3_start_VC
+    THEN
+       flag_train3_adjust_spdis:=train3_complete_VC
+     ELSIF flag_train3_start_VC/=train3_start_VC &train1_confirm_train3completeVCinfor/= train1_conf_train3completeVCinfor&train2_confirm_train3_finishedVC /= train2_confirm_finished
+    THEN
+       flag_train3_adjust_spdis:=train3_no_complete_VC 
+    END
+    END;
+
+    
+    Train3_inform_VC_finished_Train1_Train2=
+    VAR train2_wait_train3_finishedVC,train1_wait_VC,train1_informRMU,train2_maintainVC2
+    IN train2_wait_train3_finishedVC<--get_flag_train2_wait_train3_finishedVC;
+       train1_wait_VC<--get_flag_train1_wait_VC;
+       train1_informRMU<--get_flag_train1_informRMU;
+       train2_maintainVC2<--get_flag_train2_maintainVC;
+    IF flag_train3_adjust_spdis=train3_complete_VC&
+       train2_wait_train3_finishedVC=train2_wait_finished&
+       train1_wait_VC=train1_wait_VCcomplete
+    THEN 
+       change_flag_train1_confirm_train3completeVCinfor(train1_conf_train3completeVCinfor);
+       change_flag_train2_confirm_train3_finishedVC(train2_confirm_finished);
+       flag_train3_inform_VC:=train3_complete_informVC
+     ELSIF
+       (flag_train3_adjust_spdis/=train3_complete_VC or
+       train2_wait_train3_finishedVC/=train2_wait_finished or
+       train1_wait_VC/=train1_wait_VCcomplete)&train1_informRMU/= train1_maintainVC&train2_maintainVC2/= train2_maintainVC
+    THEN 
+       change_flag_train1_confirm_train3completeVCinfor(train1_no_conf_train3completeVCinfor);
+       change_flag_train2_confirm_train3_finishedVC(train2_no_confirm_finished);
+       flag_train3_inform_VC:=train3_no_complete_informVC
+    END
+    END;
+
+    
+    Train1_inform_RMU_VC_newinformation=
+    VAR train1_confirm_train3completeVCinfor,RMU_getinfor_train3
+    IN train1_confirm_train3completeVCinfor<--get_flag_train1_confirm_train3completeVCinfor;
+       RMU_getinfor_train3<--get_flag_RMU_getinfor_train3;
+    IF train1_confirm_train3completeVCinfor=train1_conf_train3completeVCinfor&
+       RMU_getinfor_train3=RMU_get_train3_infor
+    THEN
+       change_flag_RMU_getnewVC_train1(RMU_get_newVC_train1);
+       change_flag_train1_informRMU(train1_maintainVC)
+    ELSIF
+       (train1_confirm_train3completeVCinfor/=train1_conf_train3completeVCinfor or
+       RMU_getinfor_train3/=RMU_get_train3_infor)&flag_train3_informRMU/= train3_maintainVC
+    THEN
+       change_flag_RMU_getnewVC_train1(RMU_no_get_newVC_train1);
+       change_flag_train1_informRMU(train1_no_maintainVC)
+    END
+    END;
+
+    
+    Train3_inform_RMU_VC_newinformation=
+    VAR RMU_getnewVC_train1
+    IN RMU_getnewVC_train1<--get_flag_RMU_getnewVC_train1;
+    IF flag_train3_inform_VC=train3_complete_informVC&
+       RMU_getnewVC_train1=RMU_get_newVC_train1
+    THEN
+       flag_train3_informRMU:=train3_maintainVC;
+       change_flag_RMU_getnewVC_train3(RMU_get_newVC_train3)
+    ELSIF
+       flag_train3_inform_VC/=train3_complete_informVC or
+       RMU_getnewVC_train1/=RMU_get_newVC_train1
+    THEN
+       flag_train3_informRMU:=train3_no_maintainVC;
+       change_flag_RMU_getnewVC_train3(RMU_no_get_newVC_train3)
+    END
+    END;
+
+    
+    Train2_maintain_VC=
+    VAR train2_confirm_train3_finishedVC
+    IN train2_confirm_train3_finishedVC<--get_flag_train2_confirm_train3_finishedVC;
+    IF train2_confirm_train3_finishedVC=train2_confirm_finished
+    THEN
+        change_flag_train2_maintainVC(train2_maintainVC)
+    ELSIF train2_confirm_train3_finishedVC/=train2_confirm_finished
+    THEN
+         change_flag_train2_maintainVC(train2_no_maintainVC)
+    END
+    END;
+
+    output<--get_flag_train3=output:=flag_train3;
+    output<--get_flag_train3_operation=output:=flag_train3_operation;
+    output<--get_flag_go=output:=flag_go;
+    output<--get_flag_station=output:=flag_station;
+    output<--get_flag_train3_connect_RMU=output:=flag_train3_connect_RMU;
+    output<--get_flag_train3_comm_train1=output:=flag_train3_comm_train1;
+    output<--get_flag_train3_estab_train1=output:=flag_train3_estab_train1;
+    output<--get_flag_train3_getinfor_train1=output:=flag_train3_getinfor_train1;
+    
+    output<--get_flag_train3_wait_train1_VC=output:=flag_train3_wait_train1_VC;
+    output<--get_flag_train3_conf_train1_VC=output:=flag_train3_conf_train1_VC;
+    
+    output<--get_flag_train3_comm_train2=output:=flag_train3_comm_train2;
+    output<--get_flag_train3_estab_train2=output:=flag_train3_estab_train2;
+    output<--get_flag_train3_getinfor_train2=output:=flag_train3_getinfor_train2;
+    output<--get_flag_train3_conf_train1_acdc=output:=flag_train3_conf_train1_acdc;
+    
+    output<--get_flag_train3_start_VC=output:=flag_train3_start_VC;
+    output<--get_flag_train3_adjust_spdis=output:=flag_train3_adjust_spdis;
+    output<--get_flag_train3_inform_VC=output:=flag_train3_inform_VC;
+    output<--get_flag_train3_informRMU=output:=flag_train3_informRMU
+ END

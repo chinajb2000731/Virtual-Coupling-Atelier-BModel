@@ -1,0 +1,6147 @@
+<Proof_Obligations>
+<Define name="B definitions">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="NAT"/>
+<Binary_Exp op="..">
+<Integer_Literal value="0"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+<Exp_Comparison op="=">
+<Id value="INT"/>
+<Binary_Exp op="..">
+<Id value="MININT"/>
+<Id value="MAXINT"/>
+</Binary_Exp>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ctx">
+<Attr>
+<Pos s="4" l="7" c="1"/>
+</Attr>
+<Set>
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Context.bxml:1:1:1:1" typref="3446528971">
+<Attr>
+<Pos s="15" l="8" c="4"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="normally" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Context.bxml:1:1:1:2:1" typref="1363008440">
+<Attr>
+<Pos s="8" l="8" c="21"/>
+</Attr>
+</Id>
+<Id value="abnormally" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Context.bxml:1:1:1:2:2" typref="1363008440">
+<Attr>
+<Pos s="10" l="8" c="30"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define name="seext"/>
+<Define name="mchcst"/>
+<Define name="aprp">
+<Attr>
+<Pos s="4" l="9" c="1"/>
+</Attr>
+<Set>
+<Id value="Flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:1" typref="786048183">
+<Attr>
+<Pos s="24" l="10" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_get_train1_infor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:2:1" typref="1710673570">
+<Attr>
+<Pos s="20" l="10" c="31"/>
+</Attr>
+</Id>
+<Id value="RMU_no_get_train1_infor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:2:2" typref="1710673570">
+<Attr>
+<Pos s="23" l="10" c="52"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:1" typref="928276195">
+<Attr>
+<Pos s="35" l="12" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="wait_trian1_rec" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:2:1" typref="4079428000">
+<Attr>
+<Pos s="15" l="12" c="42"/>
+</Attr>
+</Id>
+<Id value="no_wait_train1_rec" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:2:2" typref="4079428000">
+<Attr>
+<Pos s="18" l="12" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:1" typref="2701672335">
+<Attr>
+<Pos s="30" l="14" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="know_train3_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:2:1" typref="1766831434">
+<Attr>
+<Pos s="20" l="14" c="37"/>
+</Attr>
+</Id>
+<Id value="not_know_train3_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:2:2" typref="1766831434">
+<Attr>
+<Pos s="24" l="14" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:1" typref="4060413558">
+<Attr>
+<Pos s="21" l="15" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:2:1" typref="2457656781">
+<Attr>
+<Pos s="16" l="15" c="28"/>
+</Attr>
+</Id>
+<Id value="RMU_no_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:2:2" typref="2457656781">
+<Attr>
+<Pos s="19" l="15" c="45"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:1" typref="1093531150">
+<Attr>
+<Pos s="30" l="16" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="know_train2_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:2:1" typref="4140798475">
+<Attr>
+<Pos s="20" l="16" c="37"/>
+</Attr>
+</Id>
+<Id value="not_know_train2_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:2:2" typref="4140798475">
+<Attr>
+<Pos s="24" l="16" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:1" typref="2731377269">
+<Attr>
+<Pos s="21" l="17" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:2:1" typref="1677069582">
+<Attr>
+<Pos s="16" l="17" c="28"/>
+</Attr>
+</Id>
+<Id value="RMU_no_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:2:2" typref="1677069582">
+<Attr>
+<Pos s="19" l="17" c="45"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Define>
+<Define name="abs">
+<Attr>
+<Pos s="9" l="28" c="1"/>
+</Attr>
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) : (TRAIN_OPERATION))" op=":">
+<Attr>
+<Pos s="1" l="29" c="23"/>
+</Attr>
+<Id value="flag_RMU_operation" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:1:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="29" c="5"/>
+</Attr>
+</Id>
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:1:2" typref="3446528971">
+<Attr>
+<Pos s="15" l="29" c="24"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) : (Flag_RMU_getinfor_train1))" op=":">
+<Attr>
+<Pos s="1" l="30" c="29"/>
+</Attr>
+<Id value="flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:2:1" typref="1710673570">
+<Attr>
+<Pos s="24" l="30" c="5"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:2:2" typref="786048183">
+<Attr>
+<Pos s="24" l="30" c="30"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) : (Flag_RMU_inform_train1_newlineinfor))" op=":">
+<Attr>
+<Pos s="1" l="32" c="40"/>
+</Attr>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:3:1" typref="4079428000">
+<Attr>
+<Pos s="35" l="32" c="5"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:3:2" typref="928276195">
+<Attr>
+<Pos s="35" l="32" c="41"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) : (Flag_RMU_know_train3_cancel_VC))" op=":">
+<Attr>
+<Pos s="1" l="34" c="35"/>
+</Attr>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:4:1" typref="1766831434">
+<Attr>
+<Pos s="30" l="34" c="5"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:4:2" typref="2701672335">
+<Attr>
+<Pos s="30" l="34" c="36"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) : (Flag_RMU_estab_train3))" op=":">
+<Attr>
+<Pos s="1" l="35" c="26"/>
+</Attr>
+<Id value="flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:5:1" typref="2457656781">
+<Attr>
+<Pos s="21" l="35" c="5"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:5:2" typref="4060413558">
+<Attr>
+<Pos s="21" l="35" c="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) : (Flag_RMU_know_train2_cancel_VC))" op=":">
+<Attr>
+<Pos s="1" l="36" c="35"/>
+</Attr>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:6:1" typref="4140798475">
+<Attr>
+<Pos s="30" l="36" c="5"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:6:2" typref="1093531150">
+<Attr>
+<Pos s="30" l="36" c="36"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) : (Flag_RMU_estab_train2))" op=":">
+<Attr>
+<Pos s="1" l="37" c="26"/>
+</Attr>
+<Id value="flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:7:1" typref="1677069582">
+<Attr>
+<Pos s="21" l="37" c="5"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:4:1:7:2" typref="2731377269">
+<Attr>
+<Pos s="21" l="37" c="27"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="inv">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Define>
+<Define name="ass"/>
+<Define name="imlprp"/>
+<Define name="imprp"/>
+<Define name="imext"/>
+<Proof_Obligation>
+<Comment>Valuation dans une implantation</Comment>
+<Tag>ValuesLemmas</Tag>
+<Tag>CONSTRAINTS</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="imprp"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Set>
+<Id value="Flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:1" typref="786048183">
+<Attr>
+<Pos s="24" l="10" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_get_train1_infor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:2:1" typref="1710673570">
+<Attr>
+<Pos s="20" l="10" c="31"/>
+</Attr>
+</Id>
+<Id value="RMU_no_get_train1_infor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:2:2" typref="1710673570">
+<Attr>
+<Pos s="23" l="10" c="52"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:1" typref="786048183">
+<Attr>
+<Pos s="24" l="10" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_get_train1_infor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:2:1" typref="1710673570">
+<Attr>
+<Pos s="20" l="10" c="31"/>
+</Attr>
+</Id>
+<Id value="RMU_no_get_train1_infor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:2:2" typref="1710673570">
+<Attr>
+<Pos s="23" l="10" c="52"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:1" typref="928276195">
+<Attr>
+<Pos s="35" l="12" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="wait_trian1_rec" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:2:1" typref="4079428000">
+<Attr>
+<Pos s="15" l="12" c="42"/>
+</Attr>
+</Id>
+<Id value="no_wait_train1_rec" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:2:2" typref="4079428000">
+<Attr>
+<Pos s="18" l="12" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:1" typref="928276195">
+<Attr>
+<Pos s="35" l="12" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="wait_trian1_rec" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:2:1" typref="4079428000">
+<Attr>
+<Pos s="15" l="12" c="42"/>
+</Attr>
+</Id>
+<Id value="no_wait_train1_rec" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:2:2" typref="4079428000">
+<Attr>
+<Pos s="18" l="12" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:1" typref="2701672335">
+<Attr>
+<Pos s="30" l="14" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="know_train3_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:2:1" typref="1766831434">
+<Attr>
+<Pos s="20" l="14" c="37"/>
+</Attr>
+</Id>
+<Id value="not_know_train3_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:2:2" typref="1766831434">
+<Attr>
+<Pos s="24" l="14" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:1" typref="2701672335">
+<Attr>
+<Pos s="30" l="14" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="know_train3_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:2:1" typref="1766831434">
+<Attr>
+<Pos s="20" l="14" c="37"/>
+</Attr>
+</Id>
+<Id value="not_know_train3_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:2:2" typref="1766831434">
+<Attr>
+<Pos s="24" l="14" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:1" typref="4060413558">
+<Attr>
+<Pos s="21" l="15" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:2:1" typref="2457656781">
+<Attr>
+<Pos s="16" l="15" c="28"/>
+</Attr>
+</Id>
+<Id value="RMU_no_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:2:2" typref="2457656781">
+<Attr>
+<Pos s="19" l="15" c="45"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:1" typref="4060413558">
+<Attr>
+<Pos s="21" l="15" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:2:1" typref="2457656781">
+<Attr>
+<Pos s="16" l="15" c="28"/>
+</Attr>
+</Id>
+<Id value="RMU_no_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:2:2" typref="2457656781">
+<Attr>
+<Pos s="19" l="15" c="45"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:1" typref="1093531150">
+<Attr>
+<Pos s="30" l="16" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="know_train2_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:2:1" typref="4140798475">
+<Attr>
+<Pos s="20" l="16" c="37"/>
+</Attr>
+</Id>
+<Id value="not_know_train2_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:2:2" typref="4140798475">
+<Attr>
+<Pos s="24" l="16" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:1" typref="1093531150">
+<Attr>
+<Pos s="30" l="16" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="know_train2_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:2:1" typref="4140798475">
+<Attr>
+<Pos s="20" l="16" c="37"/>
+</Attr>
+</Id>
+<Id value="not_know_train2_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:2:2" typref="4140798475">
+<Attr>
+<Pos s="24" l="16" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:1" typref="2731377269">
+<Attr>
+<Pos s="21" l="17" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:2:1" typref="1677069582">
+<Attr>
+<Pos s="16" l="17" c="28"/>
+</Attr>
+</Id>
+<Id value="RMU_no_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:2:2" typref="1677069582">
+<Attr>
+<Pos s="19" l="17" c="45"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:1" typref="2731377269">
+<Attr>
+<Pos s="21" l="17" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:2:1" typref="1677069582">
+<Attr>
+<Pos s="16" l="17" c="28"/>
+</Attr>
+</Id>
+<Id value="RMU_no_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:2:2" typref="1677069582">
+<Attr>
+<Pos s="19" l="17" c="45"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Valuation is correct">
+<Quantified_Pred type="#">
+<Variables/>
+<Body>
+<Sub_Calculus>
+<Nary_Sub op=";"/>
+<Nary_Pred op="&amp;">
+<Attr>
+<Pos s="4" l="9" c="1"/>
+</Attr>
+<Set>
+<Id value="Flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:1" typref="786048183">
+<Attr>
+<Pos s="24" l="10" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_get_train1_infor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:2:1" typref="1710673570">
+<Attr>
+<Pos s="20" l="10" c="31"/>
+</Attr>
+</Id>
+<Id value="RMU_no_get_train1_infor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:1:2:2" typref="1710673570">
+<Attr>
+<Pos s="23" l="10" c="52"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:1" typref="928276195">
+<Attr>
+<Pos s="35" l="12" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="wait_trian1_rec" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:2:1" typref="4079428000">
+<Attr>
+<Pos s="15" l="12" c="42"/>
+</Attr>
+</Id>
+<Id value="no_wait_train1_rec" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:2:2:2" typref="4079428000">
+<Attr>
+<Pos s="18" l="12" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:1" typref="2701672335">
+<Attr>
+<Pos s="30" l="14" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="know_train3_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:2:1" typref="1766831434">
+<Attr>
+<Pos s="20" l="14" c="37"/>
+</Attr>
+</Id>
+<Id value="not_know_train3_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:3:2:2" typref="1766831434">
+<Attr>
+<Pos s="24" l="14" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:1" typref="4060413558">
+<Attr>
+<Pos s="21" l="15" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:2:1" typref="2457656781">
+<Attr>
+<Pos s="16" l="15" c="28"/>
+</Attr>
+</Id>
+<Id value="RMU_no_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:4:2:2" typref="2457656781">
+<Attr>
+<Pos s="19" l="15" c="45"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:1" typref="1093531150">
+<Attr>
+<Pos s="30" l="16" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="know_train2_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:2:1" typref="4140798475">
+<Attr>
+<Pos s="20" l="16" c="37"/>
+</Attr>
+</Id>
+<Id value="not_know_train2_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:5:2:2" typref="4140798475">
+<Attr>
+<Pos s="24" l="16" c="58"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value="Flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:1" typref="2731377269">
+<Attr>
+<Pos s="21" l="17" c="5"/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value="RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:2:1" typref="1677069582">
+<Attr>
+<Pos s="16" l="17" c="28"/>
+</Attr>
+</Id>
+<Id value="RMU_no_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:2:6:2:2" typref="1677069582">
+<Attr>
+<Pos s="19" l="17" c="45"/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Nary_Pred>
+</Sub_Calculus>
+</Body>
+</Quantified_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Initialisation dans une implantation</Comment>
+<Tag>Initialisation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Attr>
+<Pos s="14" l="23" c="1"/>
+</Attr>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:1:1:1," typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="normally" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:1:2:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:2:1:1," typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="RMU_no_get_train1_infor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:2:2:1" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:3:1:1," typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="no_wait_train1_rec" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:3:2:1" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:4:1:1," typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="not_know_train3_cancelVC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:4:2:1" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:5:1:1," typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="RMU_no_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:5:2:1" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:6:1:1," typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="not_know_train2_cancelVC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:6:2:1" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:7:1:1," typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="RMU_no_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:7:2:1" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Attr>
+<Pos s="14" l="38" c="1"/>
+</Attr>
+<Nary_Sub op="||">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:1:1:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="39" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="normally" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:1:2:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="39" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:2:1:1" typref="1710673570">
+<Attr>
+<Pos s="24" l="40" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="RMU_no_get_train1_infor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:2:2:1" typref="1710673570">
+<Attr>
+<Pos s="24" l="40" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:3:1:1" typref="4079428000">
+<Attr>
+<Pos s="35" l="42" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="no_wait_train1_rec" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:3:2:1" typref="4079428000">
+<Attr>
+<Pos s="35" l="42" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:4:1:1" typref="1766831434">
+<Attr>
+<Pos s="30" l="44" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="not_know_train3_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:4:2:1" typref="1766831434">
+<Attr>
+<Pos s="30" l="44" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:5:1:1" typref="2457656781">
+<Attr>
+<Pos s="21" l="45" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="RMU_no_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:5:2:1" typref="2457656781">
+<Attr>
+<Pos s="21" l="45" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:6:1:1" typref="4140798475">
+<Attr>
+<Pos s="30" l="46" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="not_know_train2_cancelVC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:6:2:1" typref="4140798475">
+<Attr>
+<Pos s="30" l="46" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:7:1:1" typref="1677069582">
+<Attr>
+<Pos s="21" l="47" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="RMU_no_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:5:1:7:2:1" typref="1677069582">
+<Attr>
+<Pos s="21" l="47" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+</Nary_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_RMU_operation</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="51" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:1:2:1:1" typref="1363008440">
+<Attr>
+<Pos s="5" l="51" c="9"/>
+</Attr>
+</Id>
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:1:2:1:2" typref="3446528971">
+<Attr>
+<Pos s="15" l="51" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_RMU_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="51" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:1:2:1:1" typref="1363008440">
+<Attr>
+<Pos s="5" l="51" c="9"/>
+</Attr>
+</Id>
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:1:2:1:2" typref="3446528971">
+<Attr>
+<Pos s="15" l="51" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:1:2:1:1:1," typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:1:2:1:2:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:1:3:1:1:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="53" c="9"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:1:3:1:2:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="53" c="9"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_RMU_getinfor_train1</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="58" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:2:2:1:1" typref="1710673570">
+<Attr>
+<Pos s="5" l="58" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:2:2:1:2" typref="786048183">
+<Attr>
+<Pos s="24" l="58" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_RMU_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="58" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:2:2:1:1" typref="1710673570">
+<Attr>
+<Pos s="5" l="58" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:2:2:1:2" typref="786048183">
+<Attr>
+<Pos s="24" l="58" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:2:2:1:1:1," typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:2:2:1:2:1" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:2:3:1:1:1" typref="1710673570">
+<Attr>
+<Pos s="24" l="60" c="9"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:2:3:1:2:1" typref="1710673570">
+<Attr>
+<Pos s="24" l="60" c="9"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_RMU_inform_train1_newlineinfor_cancel</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="65" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:3:2:1:1" typref="4079428000">
+<Attr>
+<Pos s="5" l="65" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:3:2:1:2" typref="928276195">
+<Attr>
+<Pos s="35" l="65" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_RMU_inform_train1_newlineinfor_cancel</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="65" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:3:2:1:1" typref="4079428000">
+<Attr>
+<Pos s="5" l="65" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:3:2:1:2" typref="928276195">
+<Attr>
+<Pos s="35" l="65" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:3:2:1:1:1," typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:3:2:1:2:1" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:3:3:1:1:1" typref="4079428000">
+<Attr>
+<Pos s="35" l="67" c="9"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:3:3:1:2:1" typref="4079428000">
+<Attr>
+<Pos s="35" l="67" c="9"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_RMU_know_train3_cancel_VC</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="72" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:4:2:1:1" typref="1766831434">
+<Attr>
+<Pos s="5" l="72" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:4:2:1:2" typref="2701672335">
+<Attr>
+<Pos s="30" l="72" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_RMU_know_train3_cancel_VC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="72" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:4:2:1:1" typref="1766831434">
+<Attr>
+<Pos s="5" l="72" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:4:2:1:2" typref="2701672335">
+<Attr>
+<Pos s="30" l="72" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:4:2:1:1:1," typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:4:2:1:2:1" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:4:3:1:1:1" typref="1766831434">
+<Attr>
+<Pos s="30" l="74" c="9"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:4:3:1:2:1" typref="1766831434">
+<Attr>
+<Pos s="30" l="74" c="9"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_RMU_estab_train3</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="79" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:5:2:1:1" typref="2457656781">
+<Attr>
+<Pos s="5" l="79" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:5:2:1:2" typref="4060413558">
+<Attr>
+<Pos s="21" l="79" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_RMU_estab_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="79" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:5:2:1:1" typref="2457656781">
+<Attr>
+<Pos s="5" l="79" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:5:2:1:2" typref="4060413558">
+<Attr>
+<Pos s="21" l="79" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:5:2:1:1:1," typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:5:2:1:2:1" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:5:3:1:1:1" typref="2457656781">
+<Attr>
+<Pos s="21" l="81" c="9"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:5:3:1:2:1" typref="2457656781">
+<Attr>
+<Pos s="21" l="81" c="9"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_RMU_know_train2_cancel_VC</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="86" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:6:2:1:1" typref="4140798475">
+<Attr>
+<Pos s="5" l="86" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:6:2:1:2" typref="1093531150">
+<Attr>
+<Pos s="30" l="86" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_RMU_know_train2_cancel_VC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="86" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:6:2:1:1" typref="4140798475">
+<Attr>
+<Pos s="5" l="86" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:6:2:1:2" typref="1093531150">
+<Attr>
+<Pos s="30" l="86" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:6:2:1:1:1," typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:6:2:1:2:1" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:6:3:1:1:1" typref="4140798475">
+<Attr>
+<Pos s="30" l="88" c="9"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:6:3:1:2:1" typref="4140798475">
+<Attr>
+<Pos s="30" l="88" c="9"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>change_flag_RMU_estab_train2</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="93" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:7:2:1:1" typref="1677069582">
+<Attr>
+<Pos s="5" l="93" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:7:2:1:2" typref="2731377269">
+<Attr>
+<Pos s="21" l="93" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>change_flag_RMU_estab_train2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="93" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:7:2:1:1" typref="1677069582">
+<Attr>
+<Pos s="5" l="93" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:7:2:1:2" typref="2731377269">
+<Attr>
+<Pos s="21" l="93" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:7:2:1:1:1," typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:7:2:1:2:1" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:7:3:1:1:1" typref="1677069582">
+<Attr>
+<Pos s="21" l="95" c="9"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:7:3:1:2:1" typref="1677069582">
+<Attr>
+<Pos s="21" l="95" c="9"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_RMU_operation</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:8:1:1" typref="1363008440">
+<Attr>
+<Pos s="6" l="98" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1363008440" suffix="">
+<Attr>
+<Pos s="6" l="98" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_RMU_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:8:1:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="6" l="75" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1363008440" suffix="">
+<Attr>
+<Pos s="6" l="98" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:8:1:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:8:2:1:1:1," typref="1363008440" suffix="1">
+<Attr>
+<Pos s="6" l="75" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:8:2:1:2:1," typref="1363008440" suffix="1">
+<Attr>
+<Pos s="6" l="75" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:8:2:1:1:1" typref="1363008440">
+<Attr>
+<Pos s="6" l="98" c="37"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:8:2:1:2:1" typref="1363008440">
+<Attr>
+<Pos s="6" l="98" c="37"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:8:1:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="6" l="75" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1363008440" suffix="">
+<Attr>
+<Pos s="6" l="98" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_RMU_getinfor_train1</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:9:1:1" typref="1710673570">
+<Attr>
+<Pos s="6" l="99" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1710673570" suffix="">
+<Attr>
+<Pos s="6" l="99" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_RMU_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:9:1:1" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="6" l="76" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1710673570" suffix="">
+<Attr>
+<Pos s="6" l="99" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:9:1:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:9:2:1:1:1," typref="1710673570" suffix="1">
+<Attr>
+<Pos s="6" l="76" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:9:2:1:2:1," typref="1710673570" suffix="1">
+<Attr>
+<Pos s="6" l="76" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:9:2:1:1:1" typref="1710673570">
+<Attr>
+<Pos s="6" l="99" c="43"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:9:2:1:2:1" typref="1710673570">
+<Attr>
+<Pos s="6" l="99" c="43"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:9:1:1" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="6" l="76" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1710673570" suffix="">
+<Attr>
+<Pos s="6" l="99" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_RMU_inform_train1_newlineinfor</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:10:1:1" typref="4079428000">
+<Attr>
+<Pos s="6" l="100" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="4079428000" suffix="">
+<Attr>
+<Pos s="6" l="100" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_RMU_inform_train1_newlineinfor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:10:1:1" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="6" l="77" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="4079428000" suffix="">
+<Attr>
+<Pos s="6" l="100" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:10:1:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:10:2:1:1:1," typref="4079428000" suffix="1">
+<Attr>
+<Pos s="6" l="77" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:10:2:1:2:1," typref="4079428000" suffix="1">
+<Attr>
+<Pos s="6" l="77" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:10:2:1:1:1" typref="4079428000">
+<Attr>
+<Pos s="6" l="100" c="54"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:10:2:1:2:1" typref="4079428000">
+<Attr>
+<Pos s="6" l="100" c="54"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:10:1:1" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="6" l="77" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="4079428000" suffix="">
+<Attr>
+<Pos s="6" l="100" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_RMU_know_train3_cancel_VC</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:11:1:1" typref="1766831434">
+<Attr>
+<Pos s="6" l="101" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1766831434" suffix="">
+<Attr>
+<Pos s="6" l="101" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_RMU_know_train3_cancel_VC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:11:1:1" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="6" l="78" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1766831434" suffix="">
+<Attr>
+<Pos s="6" l="101" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:11:1:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:11:2:1:1:1," typref="1766831434" suffix="1">
+<Attr>
+<Pos s="6" l="78" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:11:2:1:2:1," typref="1766831434" suffix="1">
+<Attr>
+<Pos s="6" l="78" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:11:2:1:1:1" typref="1766831434">
+<Attr>
+<Pos s="6" l="101" c="49"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:11:2:1:2:1" typref="1766831434">
+<Attr>
+<Pos s="6" l="101" c="49"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:11:1:1" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="6" l="78" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1766831434" suffix="">
+<Attr>
+<Pos s="6" l="101" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_RMU_estab_train3</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:12:1:1" typref="2457656781">
+<Attr>
+<Pos s="6" l="102" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="2457656781" suffix="">
+<Attr>
+<Pos s="6" l="102" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_RMU_estab_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:12:1:1" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="6" l="79" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="2457656781" suffix="">
+<Attr>
+<Pos s="6" l="102" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:12:1:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:12:2:1:1:1," typref="2457656781" suffix="1">
+<Attr>
+<Pos s="6" l="79" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:12:2:1:2:1," typref="2457656781" suffix="1">
+<Attr>
+<Pos s="6" l="79" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:12:2:1:1:1" typref="2457656781">
+<Attr>
+<Pos s="6" l="102" c="40"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:12:2:1:2:1" typref="2457656781">
+<Attr>
+<Pos s="6" l="102" c="40"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:12:1:1" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="6" l="79" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="2457656781" suffix="">
+<Attr>
+<Pos s="6" l="102" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_RMU_know_train2_cancel_VC</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:13:1:1" typref="4140798475">
+<Attr>
+<Pos s="6" l="103" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="4140798475" suffix="">
+<Attr>
+<Pos s="6" l="103" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_RMU_know_train2_cancel_VC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:13:1:1" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="6" l="80" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="4140798475" suffix="">
+<Attr>
+<Pos s="6" l="103" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:13:1:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:13:2:1:1:1," typref="4140798475" suffix="1">
+<Attr>
+<Pos s="6" l="80" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:13:2:1:2:1," typref="4140798475" suffix="1">
+<Attr>
+<Pos s="6" l="80" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:13:2:1:1:1" typref="4140798475">
+<Attr>
+<Pos s="6" l="103" c="49"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:13:2:1:2:1" typref="4140798475">
+<Attr>
+<Pos s="6" l="103" c="49"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:13:1:1" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="6" l="80" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="4140798475" suffix="">
+<Attr>
+<Pos s="6" l="103" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation / Precondition</Comment>
+<Tag>get_flag_RMU_estab_train2</Tag>
+<Tag>PRECONDITION</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:14:1:1" typref="1677069582">
+<Attr>
+<Pos s="6" l="104" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1677069582" suffix="">
+<Attr>
+<Pos s="6" l="104" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Nary_Pred op="&amp;"/>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implantation</Comment>
+<Tag>get_flag_RMU_estab_train2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:14:1:1" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="6" l="81" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1677069582" suffix="">
+<Attr>
+<Pos s="6" l="104" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Refinement is correct">
+<Sub_Calculus>
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Sub_Calculus overflow="true">
+<Nary_Sub op=";">
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:14:1:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:14:2:1:1:1," typref="1677069582" suffix="1">
+<Attr>
+<Pos s="6" l="81" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:14:2:1:2:1," typref="1677069582" suffix="1">
+<Attr>
+<Pos s="6" l="81" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+</Nary_Sub>
+<Binary_Pred op="=&gt;">
+<Nary_Pred op="&amp;"/>
+<Not>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="output" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:14:2:1:1:1" typref="1677069582">
+<Attr>
+<Pos s="6" l="104" c="40"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:14:2:1:2:1" typref="1677069582">
+<Attr>
+<Pos s="6" l="104" c="40"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Not>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison initialTag="((flag_RMU_estab_train2) = (flag_RMU_estab_train2$1))" op="=">
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:7" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="21" l="21" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+<Exp_Comparison op="=">
+<Id value="output" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:5:14:1:1" typref="1677069582" suffix="1">
+<Attr>
+<Pos s="6" l="81" c="5"/>
+</Attr>
+</Id>
+<Id value="output" typref="1677069582" suffix="">
+<Attr>
+<Pos s="6" l="104" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Not>
+</Sub_Calculus>
+</Not>
+</Binary_Pred>
+</Sub_Calculus>
+</Binary_Pred>
+</Sub_Calculus>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessProperties</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imprp"/>
+<Hypothesis/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;"/>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInvariant</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((flag_RMU_operation) = (flag_RMU_operation$1))" op="=">
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1" typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((flag_RMU_getinfor_train1) = (flag_RMU_getinfor_train1$1))" op="=">
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2" typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((flag_RMU_inform_train1_newlineinfor) = (flag_RMU_inform_train1_newlineinfor$1))" op="=">
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3" typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((flag_RMU_know_train3_cancel_VC) = (flag_RMU_know_train3_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4" typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((flag_RMU_estab_train3) = (flag_RMU_estab_train3$1))" op="=">
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5" typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+<Binary_Pred op="=&gt;">
+<Exp_Comparison initialTag="((flag_RMU_know_train2_cancel_VC) = (flag_RMU_know_train2_cancel_VC$1))" op="=">
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6" typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op="&amp;">
+<Binary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+<Nary_Pred op="&amp;"/>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Tag>WellDefinednessInitialisation</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_operation" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:1,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:1:1:1," typref="1363008440" suffix="1">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="normally" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:1:2:1" typref="1363008440">
+<Attr>
+<Pos s="18" l="13" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:2,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:2:1:1," typref="1710673570" suffix="1">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="RMU_no_get_train1_infor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:2:2:1" typref="1710673570">
+<Attr>
+<Pos s="24" l="14" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:3,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:3:1:1," typref="4079428000" suffix="1">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="no_wait_train1_rec" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:3:2:1" typref="4079428000">
+<Attr>
+<Pos s="35" l="16" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:4,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:4:1:1," typref="1766831434" suffix="1">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="not_know_train3_cancelVC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:4:2:1" typref="1766831434">
+<Attr>
+<Pos s="30" l="18" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:5,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:5:1:1," typref="2457656781" suffix="1">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="RMU_no_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:5:2:1" typref="2457656781">
+<Attr>
+<Pos s="21" l="19" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+<Sub_Calculus>
+<Simple_Assignement_Sub>
+<Variables>
+<Id value="flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:3:6,F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:6:1:1," typref="4140798475" suffix="1">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value="not_know_train2_cancelVC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:4:1:6:2:1" typref="4140798475">
+<Attr>
+<Pos s="30" l="20" c="5"/>
+</Attr>
+</Id>
+</Values>
+</Simple_Assignement_Sub>
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Sub_Calculus>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_RMU_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="51" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:1:2:1:1" typref="1363008440">
+<Attr>
+<Pos s="5" l="51" c="9"/>
+</Attr>
+</Id>
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:1:2:1:2" typref="3446528971">
+<Attr>
+<Pos s="15" l="51" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_RMU_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="58" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:2:2:1:1" typref="1710673570">
+<Attr>
+<Pos s="5" l="58" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:2:2:1:2" typref="786048183">
+<Attr>
+<Pos s="24" l="58" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_RMU_inform_train1_newlineinfor_cancel</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="65" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:3:2:1:1" typref="4079428000">
+<Attr>
+<Pos s="5" l="65" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:3:2:1:2" typref="928276195">
+<Attr>
+<Pos s="35" l="65" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_RMU_know_train3_cancel_VC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="72" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:4:2:1:1" typref="1766831434">
+<Attr>
+<Pos s="5" l="72" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:4:2:1:2" typref="2701672335">
+<Attr>
+<Pos s="30" l="72" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_RMU_estab_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="79" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:5:2:1:1" typref="2457656781">
+<Attr>
+<Pos s="5" l="79" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:5:2:1:2" typref="4060413558">
+<Attr>
+<Pos s="21" l="79" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_RMU_know_train2_cancel_VC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="86" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:6:2:1:1" typref="4140798475">
+<Attr>
+<Pos s="5" l="86" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:6:2:1:2" typref="1093531150">
+<Attr>
+<Pos s="30" l="86" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_change_flag_RMU_estab_train2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;">
+<Exp_Comparison op=":">
+<Attr>
+<Pos s="1" l="93" c="14"/>
+</Attr>
+<Id value="input" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:7:2:1:1" typref="1677069582">
+<Attr>
+<Pos s="5" l="93" c="9"/>
+</Attr>
+</Id>
+<Id value="Flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:6:7:2:1:2" typref="2731377269">
+<Attr>
+<Pos s="21" l="93" c="15"/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_RMU_operation</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_RMU_getinfor_train1</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_RMU_inform_train1_newlineinfor</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_RMU_know_train3_cancel_VC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_RMU_estab_train3</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_RMU_know_train2_cancel_VC</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<Proof_Obligation>
+<Comment>Operations dans une implementation</Comment>
+<Tag>WellDefinedness_get_flag_RMU_estab_train2</Tag>
+<Tag>INVARIANT</Tag>
+<Definition name="B definitions"/>
+<Definition name="ctx"/>
+<Definition name="mchcst"/>
+<Definition name="aprp"/>
+<Definition name="imlprp"/>
+<Definition name="imprp"/>
+<Definition name="imext"/>
+<Definition name="seext"/>
+<Definition name="abs"/>
+<Definition name="inv"/>
+<Definition name="ass"/>
+<Hypothesis>
+<Nary_Pred op="&amp;"/>
+</Hypothesis>
+<Goal>
+<Tag goalTag="Well definedness">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;">
+<Nary_Pred op="&amp;"/>
+</Nary_Pred>
+</Nary_Pred>
+</Tag>
+</Goal>
+</Proof_Obligation>
+<TypeInfos>
+<Type id="1363008440">
+<Id value="TRAIN_OPERATION" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:6:1:1"/>
+</Type>
+<Type id="1710673570">
+<Id value="Flag_RMU_getinfor_train1" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:6:2:1"/>
+</Type>
+<Type id="4079428000">
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:6:3:1"/>
+</Type>
+<Type id="1766831434">
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:6:4:1"/>
+</Type>
+<Type id="2457656781">
+<Id value="Flag_RMU_estab_train3" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:6:5:1"/>
+</Type>
+<Type id="4140798475">
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:6:6:1"/>
+</Type>
+<Type id="1677069582">
+<Id value="Flag_RMU_estab_train2" tag="F:\Atelier\Virtual_Coupling_Cancel\bdp\RMU_i.bxml:1:6:7:1"/>
+</Type>
+<Type id="786048183">
+<Unary_Exp op="POW">
+<Id value="Flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1710673570">
+<Id value="Flag_RMU_getinfor_train1" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:2:1"/>
+</Type>
+<Type id="928276195">
+<Unary_Exp op="POW">
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:3:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="4079428000">
+<Id value="Flag_RMU_inform_train1_newlineinfor" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:4:1"/>
+</Type>
+<Type id="2701672335">
+<Unary_Exp op="POW">
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:5:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1766831434">
+<Id value="Flag_RMU_know_train3_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:6:1"/>
+</Type>
+<Type id="4060413558">
+<Unary_Exp op="POW">
+<Id value="Flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:7:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="2457656781">
+<Id value="Flag_RMU_estab_train3" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:8:1"/>
+</Type>
+<Type id="1093531150">
+<Unary_Exp op="POW">
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:9:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="4140798475">
+<Id value="Flag_RMU_know_train2_cancel_VC" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:10:1"/>
+</Type>
+<Type id="2731377269">
+<Unary_Exp op="POW">
+<Id value="Flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:11:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1677069582">
+<Id value="Flag_RMU_estab_train2" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:12:1"/>
+</Type>
+<Type id="1363008440">
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:13:1"/>
+</Type>
+<Type id="3446528971">
+<Unary_Exp op="POW">
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\RMU.bxml:1:7:14:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="3446528971">
+<Unary_Exp op="POW">
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Context.bxml:1:3:1:1:1"/>
+</Unary_Exp>
+</Type>
+<Type id="1363008440">
+<Id value="TRAIN_OPERATION" tag="F:/Atelier/Virtual_Coupling_Cancel/bdp\Context.bxml:1:3:2:1"/>
+</Type>
+</TypeInfos>
+</Proof_Obligations>

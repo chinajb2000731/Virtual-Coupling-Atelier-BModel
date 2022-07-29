@@ -1,0 +1,1 @@
+﻿Flag(FileOn("Train3.pmi.res")) & Set(toto | bfalse)

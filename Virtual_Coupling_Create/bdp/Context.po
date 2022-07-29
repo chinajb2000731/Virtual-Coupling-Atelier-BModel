@@ -1,0 +1,11 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..2)*{TRAIN_OPERATION}): FIN(NATURAL*{TRAIN_OPERATION}) & not(((1..2)*{TRAIN_OPERATION}) = {})
+END
+&
+THEORY EnumerateX IS
+TRAIN_OPERATION == {normally,abnormally}
+END

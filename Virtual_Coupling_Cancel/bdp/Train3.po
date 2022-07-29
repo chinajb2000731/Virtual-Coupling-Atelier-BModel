@@ -1,0 +1,41 @@
+THEORY ProofList
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..2)*{TRAIN_OPERATION}): FIN(NATURAL*{TRAIN_OPERATION}) & not(((1..2)*{TRAIN_OPERATION}) = {});
+((1..2)*{Flag_train3_getinfor_train1}): FIN(NATURAL*{Flag_train3_getinfor_train1}) & not(((1..2)*{Flag_train3_getinfor_train1}) = {}) & ((1..2)*{Flag_train3_getinfor_train2}): FIN(NATURAL*{Flag_train3_getinfor_train2}) & not(((1..2)*{Flag_train3_getinfor_train2}) = {}) & ((1..2)*{Flag_train3_receive_newline_cancelVC}): FIN(NATURAL*{Flag_train3_receive_newline_cancelVC}) & not(((1..2)*{Flag_train3_receive_newline_cancelVC}) = {}) & ((1..2)*{Flag_train3_begin_cancelVC}): FIN(NATURAL*{Flag_train3_begin_cancelVC}) & not(((1..2)*{Flag_train3_begin_cancelVC}) = {}) & ((1..2)*{Flag_train3_reach_right_spdi}): FIN(NATURAL*{Flag_train3_reach_right_spdi}) & not(((1..2)*{Flag_train3_reach_right_spdi}) = {}) & ((1..2)*{Flag_train3_estab_train1}): FIN(NATURAL*{Flag_train3_estab_train1}) & not(((1..2)*{Flag_train3_estab_train1}) = {}) & ((1..2)*{Flag_train3_estab_RMU}): FIN(NATURAL*{Flag_train3_estab_RMU}) & not(((1..2)*{Flag_train3_estab_RMU}) = {}) & ((1..2)*{Flag_train3_operation_state}): FIN(NATURAL*{Flag_train3_operation_state}) & not(((1..2)*{Flag_train3_operation_state}) = {});
+((flag_train3_VC) : (BOOL)) & ((flag_train3_operation) : (((1..2)*{TRAIN_OPERATION}))) & ((flag_train3_getinfor_train1) : (((1..2)*{Flag_train3_getinfor_train1}))) & ((flag_train3_getinfor_train2) : (((1..2)*{Flag_train3_getinfor_train2}))) & ((flag_train3_receive_newline_cancelVC) : (((1..2)*{Flag_train3_receive_newline_cancelVC}))) & ((flag_train3_begin_cancelVC) : (((1..2)*{Flag_train3_begin_cancelVC}))) & ((flag_train3_reach_right_spdi) : (((1..2)*{Flag_train3_reach_right_spdi}))) & ((flag_train3_estab_train1) : (((1..2)*{Flag_train3_estab_train1}))) & ((flag_train3_estab_RMU) : (((1..2)*{Flag_train3_estab_RMU}))) & ((flag_train3_operation_state) : (((1..2)*{Flag_train3_operation_state})));
+btrue;
+((input) : (((1..2)*{TRAIN_OPERATION})));
+((input) : (((1..2)*{Flag_train3_getinfor_train1})));
+((input) : (((1..2)*{Flag_train3_getinfor_train2})));
+((input) : (((1..2)*{Flag_train3_receive_newline_cancelVC})));
+((input) : (((1..2)*{Flag_train3_begin_cancelVC})));
+((input) : (((1..2)*{Flag_train3_reach_right_spdi})));
+((input) : (((1..2)*{Flag_train3_estab_train1})));
+((input) : (((1..2)*{Flag_train3_estab_RMU})));
+((input) : (((1..2)*{Flag_train3_operation_state})));
+((1..2)*{Flag_train3_getinfor_train1}): FIN(NATURAL*{Flag_train3_getinfor_train1}) & not(((1..2)*{Flag_train3_getinfor_train1}) = {});
+((flag_train3_estab_RMU) : (((1..2)*{Flag_train3_estab_RMU})));
+((flag_train3_estab_train1) : (((1..2)*{Flag_train3_estab_train1})));
+((flag_train3_reach_right_spdi) : (((1..2)*{Flag_train3_reach_right_spdi})));
+((flag_train3_begin_cancelVC) : (((1..2)*{Flag_train3_begin_cancelVC})));
+((flag_train3_receive_newline_cancelVC) : (((1..2)*{Flag_train3_receive_newline_cancelVC})));
+((flag_train3_getinfor_train2) : (((1..2)*{Flag_train3_getinfor_train2})));
+((flag_train3_getinfor_train1) : (((1..2)*{Flag_train3_getinfor_train1})));
+((flag_train3_operation) : (((1..2)*{TRAIN_OPERATION})));
+((flag_train3_VC) : (BOOL))
+END
+&
+THEORY EnumerateX IS
+Flag_train3_begin_cancelVC == {train3_begin_cancelVC,train3_not_begin_cancelVC};
+Flag_train3_estab_RMU == {train3_estab_RMU,train3_no_estab_RMU};
+Flag_train3_estab_train1 == {train3_estab_train1,train3_no_estab_train1};
+Flag_train3_getinfor_train1 == {train3_get_train1_infor,train3_no_get_train1_infor};
+Flag_train3_getinfor_train2 == {train3_get_train2_infor,train3_no_get_train2_infor};
+Flag_train3_operation_state == {train3_normally,train3_VC};
+Flag_train3_reach_right_spdi == {train3_reach,train3_not_reach};
+Flag_train3_receive_newline_cancelVC == {train3_receive,train3_not_recive};
+TRAIN_OPERATION == {normally,abnormally}
+END
