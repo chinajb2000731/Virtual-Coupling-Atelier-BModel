@@ -1,2 +1,4 @@
 # Virtual-Coupling-Atelier-B-Model
-Use the arc file to generate the entire project in Atelier-B
+Dear reviewers and readers:
+	Use the arc file to generate the entire project in Atelier-B.
+	•	Atelier B, Version 4.7.1 or later, Windows OS (We modelled it on the Windows version)
