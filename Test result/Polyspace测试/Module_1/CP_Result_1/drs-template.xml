@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--EDRS Version 2.0-->
+<global>
+   <file name="F:\\Atelier\\Virtual_Coupling_Create\\lang\\c\\Context_i.c" comment="">
+      <function name="Context__INITIALISATION" comment="" line="12" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+   </file>
+   <file name="F:\\Atelier\\Virtual_Coupling_Create\\lang\\c\\RMU_i.c" comment="">
+      <function name="RMU__INITIALISATION" comment="" line="20" main_generator_called="MAIN_GENERATOR"/>
+      <function name="RMU__change_flag_RMU_getinfor_train1" comment="" line="32" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="32" base_type="int32" complete_type="RMU__Flag_RMU_getinfor_train1" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="RMU__change_flag_RMU_getinfor_train3" comment="" line="37" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="37" base_type="int32" complete_type="RMU__Flag_RMU_getinfor_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="RMU__change_flag_RMU_getnewVC_train1" comment="" line="42" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="42" base_type="int32" complete_type="RMU__Flag_RMU_getnewVC_train1" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="RMU__change_flag_RMU_getnewVC_train3" comment="" line="47" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="47" base_type="int32" complete_type="RMU__Flag_RMU_getnewVC_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <scalar name="RMU__flag_RMU_getinfor_train1" comment="" line="14" base_type="int32" attributes="static" complete_type="RMU__Flag_RMU_getinfor_train1" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="RMU__flag_RMU_getinfor_train3" comment="" line="15" base_type="int32" attributes="static" complete_type="RMU__Flag_RMU_getinfor_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="RMU__flag_RMU_getnewVC_train1" comment="" line="16" base_type="int32" attributes="static" complete_type="RMU__Flag_RMU_getnewVC_train1" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="RMU__flag_RMU_getnewVC_train3" comment="" line="17" base_type="int32" attributes="static" complete_type="RMU__Flag_RMU_getnewVC_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="RMU__flag_RMU_operation" comment="" line="18" base_type="int32" attributes="static" complete_type="Context__TRAIN_OPERATION" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <function name="RMU__get_flag_RMU_getinfor_train1" comment="" line="52" main_generator_called="MAIN_GENERATOR"/>
+      <function name="RMU__get_flag_RMU_getinfor_train3" comment="" line="57" main_generator_called="MAIN_GENERATOR"/>
+      <function name="RMU__get_flag_RMU_getnewVC_train1" comment="" line="62" main_generator_called="MAIN_GENERATOR"/>
+      <function name="RMU__get_flag_RMU_getnewVC_train3" comment="" line="67" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="RMU__get_flag_RMU_operation" comment="" line="72" main_generator_called="MAIN_GENERATOR"/>
+   </file>
+   <file name="F:\\Atelier\\Virtual_Coupling_Create\\lang\\c\\Train1_i.c" comment="">
+      <function name="Train1__INITIALISATION" comment="" line="36" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__change_flag_train1_AnVC_false" comment="" line="174" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train1__change_flag_train1_AnVC_true" comment="" line="179" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train1__change_flag_train1_VC_false" comment="" line="164" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train1__change_flag_train1_VC_terminationcmd" comment="" line="129" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="129" base_type="int32" complete_type="Train1__Flag_train1_VC_terminationcmd" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_VC_true" comment="" line="169" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train1__change_flag_train1_analyze_VC" comment="" line="124" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="124" base_type="int32" complete_type="Train1__Flag_train1_analyze_VC" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_analyze_acdc" comment="" line="134" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="134" base_type="int32" complete_type="Train1__Flag_train1_analyze_acdc" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_check_train3_VCre" comment="" line="114" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="114" base_type="int32" complete_type="Train1__Flag_train1_check_train3_VCre" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_check_train3_request" comment="" line="84" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="84" base_type="int32" complete_type="Train1__Flag_train1_check_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_com_false" comment="" line="154" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train1__change_flag_train1_com_true" comment="" line="159" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train1__change_flag_train1_confirm_train3_VCre" comment="" line="119" main_generator_called="MAIN_GENERATOR" attributes="unused">
+         <scalar name="arg1" comment="" line="119" base_type="int32" complete_type="Train1__Flag_train1_confirm_train3_VCre" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_confirm_train3_request" comment="" line="89" main_generator_called="MAIN_GENERATOR" attributes="unused">
+         <scalar name="arg1" comment="" line="89" base_type="int32" complete_type="Train1__Flag_train1_confirm_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_confirm_train3completeVCinfor" comment="" line="144" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="144" base_type="int32" complete_type="Train1__Flag_train1_confirm_train3completeVCinfor" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_connect_RMU" comment="" line="74" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="74" base_type="int32" complete_type="Train1__Flag_train1_connect_RMU" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_estab_train3" comment="" line="94" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="94" base_type="int32" complete_type="Train1__Flag_train1_estab_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_get_train3_request" comment="" line="79" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="79" base_type="int32" complete_type="Train1__Flag_train1_get_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_getinfor_train2" comment="" line="69" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="69" base_type="int32" complete_type="Train1__Flag_train1_getinfor_train2" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_getinfor_train3" comment="" line="99" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="99" base_type="int32" complete_type="Train1__Flag_train1_getinfor_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_informRMU" comment="" line="149" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="149" base_type="int32" complete_type="Train1__Flag_train1_informRMU" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_operation" comment="" line="64" main_generator_called="MAIN_GENERATOR" attributes="unused">
+         <scalar name="arg1" comment="" line="64" base_type="int32" complete_type="Context__TRAIN_OPERATION" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_receive_train3_VCre" comment="" line="109" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="109" base_type="int32" complete_type="Train1__Flag_train1_receive_train3_VCre" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_termination" comment="" line="104" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="104" base_type="int32" complete_type="Train1__Flag_train1_termination" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train1__change_flag_train1_wait_VC" comment="" line="139" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="139" base_type="int32" complete_type="Train1__Flag_train1_wait_VC" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <scalar name="Train1__flag_train1_AnVC" comment="" line="16" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_VC" comment="" line="15" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_VC_terminationcmd" comment="" line="30" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_VC_terminationcmd" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_analyze_VC" comment="" line="29" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_analyze_VC" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_analyze_acdc" comment="" line="31" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_analyze_acdc" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_check_train3_VCre" comment="" line="27" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_check_train3_VCre" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_check_train3_request" comment="" line="21" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_check_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_com" comment="" line="14" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_confirm_train3_VCre" comment="" line="28" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_confirm_train3_VCre" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_confirm_train3_request" comment="" line="22" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_confirm_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_confirm_train3completeVCinfor" comment="" line="33" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_confirm_train3completeVCinfor" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_connect_RMU" comment="" line="19" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_connect_RMU" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_estab_train3" comment="" line="23" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_estab_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_get_train3_request" comment="" line="20" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_get_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_getinfor_train2" comment="" line="18" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_getinfor_train2" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_getinfor_train3" comment="" line="24" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_getinfor_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_informRMU" comment="" line="34" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_informRMU" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_operation" comment="" line="17" base_type="int32" attributes="static" complete_type="Context__TRAIN_OPERATION" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_receive_train3_VCre" comment="" line="26" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_receive_train3_VCre" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_termination" comment="" line="25" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_termination" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train1__flag_train1_wait_VC" comment="" line="32" base_type="int32" attributes="static" complete_type="Train1__Flag_train1_wait_VC" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <function name="Train1__get_flag_train1_AnVC" comment="" line="194" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_VC" comment="" line="189" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_VC_terminationcmd" comment="" line="264" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train1__get_flag_train1_analyze_VC" comment="" line="259" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_analyze_acdc" comment="" line="269" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_check_train3_VCre" comment="" line="249" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_check_train3_request" comment="" line="219" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_com" comment="" line="184" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_confirm_train3_VCre" comment="" line="254" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train1__get_flag_train1_confirm_train3_request" comment="" line="224" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train1__get_flag_train1_confirm_train3completeVCinfor" comment="" line="279" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_connect_RMU" comment="" line="209" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_estab_train3" comment="" line="229" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_get_train3_request" comment="" line="214" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_getinfor_train2" comment="" line="204" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_getinfor_train3" comment="" line="234" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_informRMU" comment="" line="284" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_operation" comment="" line="199" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_receive_train3_VCre" comment="" line="244" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train1__get_flag_train1_termination" comment="" line="239" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train1__get_flag_train1_wait_VC" comment="" line="274" main_generator_called="MAIN_GENERATOR"/>
+   </file>
+   <file name="F:\\Atelier\\Virtual_Coupling_Create\\lang\\c\\Train2_i.c" comment="">
+      <function name="Train2__INITIALISATION" comment="" line="28" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__change_flag_train2_VC_state" comment="" line="58" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="58" base_type="int32" complete_type="Train2__Flag_train2_VC_state" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_check_train3_request" comment="" line="68" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="68" base_type="int32" complete_type="Train2__Flag_train2_check_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_com_false" comment="" line="108" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train2__change_flag_train2_com_true" comment="" line="113" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train2__change_flag_train2_conf_train1_acdc" comment="" line="88" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="88" base_type="int32" complete_type="Train2__Flag_train2_conf_train1_acdc" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_confirm_train3_finishedVC" comment="" line="98" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="98" base_type="int32" complete_type="Train2__Flag_train2_confirm_train3_finishedVC" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_confirm_train3_request" comment="" line="73" main_generator_called="MAIN_GENERATOR" attributes="unused">
+         <scalar name="arg1" comment="" line="73" base_type="int32" complete_type="Train2__Flag_train2_check_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_estab_train3" comment="" line="78" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="78" base_type="int32" complete_type="Train2__Flag_train2_estab_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_get_train3_request" comment="" line="63" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="63" base_type="int32" complete_type="Train2__Flag_train2_get_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_getinfor_train1" comment="" line="53" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="53" base_type="int32" complete_type="Train2__Flag_train2_getinfor_train1" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_getinfor_train3" comment="" line="83" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="83" base_type="int32" complete_type="Train2__Flag_train2_getinfor_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_maintainVC" comment="" line="103" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="103" base_type="int32" complete_type="Train2__Flag_train2_maintainVC" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_operation" comment="" line="48" main_generator_called="MAIN_GENERATOR" attributes="unused">
+         <scalar name="arg1" comment="" line="48" base_type="int32" complete_type="Context__TRAIN_OPERATION" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <function name="Train2__change_flag_train2_wait_train3_finishedVC" comment="" line="93" main_generator_called="MAIN_GENERATOR">
+         <scalar name="arg1" comment="" line="93" base_type="int32" complete_type="Train2__Flag_train2_wait_train3_finishedVC" init_mode="MAIN_GENERATOR" init_modes_allowed="10" init_range="" global_assert="unsupported" assert_range="unsupported"/>
+      </function>
+      <scalar name="Train2__flag_train2_VC_state" comment="" line="17" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_VC_state" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_check_train3_request" comment="" line="19" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_check_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_com" comment="" line="14" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_conf_train1_acdc" comment="" line="23" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_conf_train1_acdc" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_confirm_train3_finishedVC" comment="" line="25" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_confirm_train3_finishedVC" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_confirm_train3_request" comment="" line="20" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_confirm_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_estab_train3" comment="" line="21" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_estab_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_get_train3_request" comment="" line="18" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_get_train3_request" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_getinfor_train1" comment="" line="16" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_getinfor_train1" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_getinfor_train3" comment="" line="22" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_getinfor_train3" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_maintainVC" comment="" line="26" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_maintainVC" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_operation" comment="" line="15" base_type="int32" attributes="static" complete_type="Context__TRAIN_OPERATION" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train2__flag_train2_wait_train3_finishedVC" comment="" line="24" base_type="int32" attributes="static" complete_type="Train2__Flag_train2_wait_train3_finishedVC" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <function name="Train2__get_flag_train2_VC_state" comment="" line="133" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_check_train3_request" comment="" line="143" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_com" comment="" line="118" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_conf_train1_acdc" comment="" line="163" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_confirm_train3_finishedVC" comment="" line="173" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_confirm_train3_request" comment="" line="148" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train2__get_flag_train2_estab_train3" comment="" line="153" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_get_train3_request" comment="" line="138" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_getinfor_train1" comment="" line="128" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_getinfor_train3" comment="" line="158" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_maintainVC" comment="" line="178" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_operation" comment="" line="123" main_generator_called="MAIN_GENERATOR"/>
+      <function name="Train2__get_flag_train2_wait_train3_finishedVC" comment="" line="168" main_generator_called="MAIN_GENERATOR"/>
+   </file>
+   <file name="F:\\Atelier\\Virtual_Coupling_Create\\lang\\c\\Train3_i.c" comment="">
+      <function name="Train3__INITIALISATION" comment="" line="38" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_analyze_VC_condition" comment="" line="285" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_and_Train3_exchange_information" comment="" line="230" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_check_Train3_VC_request" comment="" line="266" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_check_communication_request" comment="" line="176" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_exchange_information_RMU" comment="" line="66" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_exchange_information_Train2" comment="" line="86" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_inform_RMU_VC_newinformation" comment="" line="544" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_inform_reasonable_acdc" comment="" line="435" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_receive_Train3_communication_request" comment="" line="159" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_send_analyze_result_train3" comment="" line="321" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_send_confirm_communication" comment="" line="211" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train1_send_termination_VC_train3" comment="" line="304" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train2_and_Train3_exchange_information" comment="" line="417" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train2_check_communication_request" comment="" line="378" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train2_maintain_VC" comment="" line="584" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train2_maintain_VC_wait_request" comment="" line="461" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train2_receive_Train3_communication_request" comment="" line="361" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train2_send_confirm_communication" comment="" line="397" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train3_adjust_speed_distance" comment="" line="494" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train3_allow_outbound" comment="" line="134" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train3_connect_RMU" comment="" line="101" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train3_inform_RMU_VC_newinformation" comment="" line="566" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train3_inform_Train2_begin_VC" comment="" line="476" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train3_inform_VC_finished_Train1_Train2" comment="" line="513" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train3_selfcheck" comment="" line="121" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train3_send_VC_request_to_train1" comment="" line="248" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Train_send_termination_communication" comment="" line="195" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Trian3_send_communication_request_Train1" comment="" line="143" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__Trian3_send_communication_request_Train2" comment="" line="341" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <scalar name="Train3__flag_go" comment="" line="21" base_type="int32" attributes="static" complete_type="Train3__Flag_go" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_station" comment="" line="22" base_type="int32" attributes="static" complete_type="Train3__Flag_station" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3" comment="" line="19" base_type="uint8" attributes="static" complete_type="uint8" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_adjust_spdis" comment="" line="34" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_adjust_spdis" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_comm_train1" comment="" line="24" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_comm_train1" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_comm_train2" comment="" line="29" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_comm_train2" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_conf_train1_VC" comment="" line="28" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_conf_train1_VC" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_conf_train1_acdc" comment="" line="32" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_conf_train1_acdc" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_connect_RMU" comment="" line="23" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_connect_RMU" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_estab_train1" comment="" line="25" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_estab_train1" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_estab_train2" comment="" line="30" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_estab_train2" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_getinfor_train1" comment="" line="26" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_getinfor_train1" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_getinfor_train2" comment="" line="31" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_getinfor_train2" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_informRMU" comment="" line="36" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_informRMU" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_inform_VC" comment="" line="35" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_inform_VC" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_operation" comment="" line="20" base_type="int32" attributes="static" complete_type="Context__TRAIN_OPERATION" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_start_VC" comment="" line="33" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_start_VC" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <scalar name="Train3__flag_train3_wait_train1_VC" comment="" line="27" base_type="int32" attributes="static" complete_type="Train3__Flag_train3_wait_train1_VC" init_mode="MAIN_GENERATOR" init_modes_allowed="15" init_range="" global_assert="NO" assert_range=""/>
+      <function name="Train3__get_flag_go" comment="" line="609" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_station" comment="" line="614" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3" comment="" line="599" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_adjust_spdis" comment="" line="674" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_comm_train1" comment="" line="624" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_comm_train2" comment="" line="649" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_conf_train1_VC" comment="" line="644" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_conf_train1_acdc" comment="" line="664" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_connect_RMU" comment="" line="619" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_estab_train1" comment="" line="629" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_estab_train2" comment="" line="654" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_getinfor_train1" comment="" line="634" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_getinfor_train2" comment="" line="659" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_informRMU" comment="" line="684" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_inform_VC" comment="" line="679" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_operation" comment="" line="604" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_start_VC" comment="" line="669" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+      <function name="Train3__get_flag_train3_wait_train1_VC" comment="" line="639" main_generator_called="MAIN_GENERATOR" attributes="unused"/>
+   </file>
+</global>

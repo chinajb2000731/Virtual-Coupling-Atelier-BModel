@@ -1,0 +1,476 @@
+<polyspace-bug-finder R2019b PID16440 PGID16440>
+
+Polyspace verification of test project.
+Starting at 03/14/2022, 10h28.
+
+Remark: -float-rounding-mode is ignored in Polyspace Bug Finder.
+Remark: -O2 is ignored in Polyspace Bug Finder.
+Remark: -to is ignored in Polyspace Bug Finder.
+Remark: -main-generator-calls is ignored in Polyspace Bug Finder.
+Remark: -main-generator-writes-variables is ignored in Polyspace Bug Finder.
+Remark: -unsigned-integer-overflows is ignored in Polyspace Bug Finder.
+Remark: -signed-integer-overflows is ignored in Polyspace Bug Finder.
+Remark: -check-subnormal is ignored in Polyspace Bug Finder.
+Remark: -uncalled-function-checks is ignored in Polyspace Bug Finder.
+
+Activated checkers: 
+       INT_ZERO_DIV, FLOAT_ZERO_DIV, INT_CONV_OVFL, UINT_CONV_OVFL, SIGN_CHANGE, FLOAT_CONV_OVFL, 
+  INT_STD_LIB, FLOAT_STD_LIB, OUT_BOUND_ARRAY, NULL_PTR, OUT_BOUND_PTR, FUNC_CAST, PTR_CAST, 
+  MEM_STD_LIB, STR_STD_LIB, FREED_PTR, DOUBLE_DEALLOCATION, BAD_FREE, BAD_EQUAL_USE, 
+  BAD_EQUAL_EQUAL_USE, DECL_MISMATCH, MISSING_NULL_CHAR, PTR_SIZEOF_MISMATCH, TYPEDEF_MISMATCH, 
+  USELESS_WRITE, NON_INIT_VAR, NON_INIT_PTR, VAR_SHADOWING, MISSING_RETURN, RESOURCE_LEAK, 
+  UNREACHABLE, DEAD_CODE, PARTIALLY_ACCESSED_ARRAY, USELESS_IF, DEADLOCK, BAD_LOCK, DOUBLE_LOCK, 
+  DATA_RACE, DOUBLE_UNLOCK, BAD_UNLOCK, OTHER_STD_LIB, ASSERT, STRING_FORMAT, IMPROPER_ARRAY_INIT, 
+  BAD_PTR_SCALING, SIZEOF_MISUSE, FLOAT_ABSORPTION, LOCAL_ADDR_ESCAPE, STR_FORMAT_BUFFER_OVERFLOW, 
+  STRLIB_BUFFER_OVERFLOW, STRLIB_BUFFER_UNDERFLOW, PUTENV_AUTO_VAR, PTR_TO_DIFF_ARRAY, 
+  ALIGNMENT_CHANGE, READ_ONLY_RESOURCE_WRITE, CLOSED_RESOURCE_USE, DOUBLE_RESOURCE_CLOSE, 
+  DOUBLE_RESOURCE_OPEN, OPERATOR_PRECEDENCE, STD_FUNC_ARG_MISMATCH, INVALID_MEMORY_ASSUMPTION, 
+  CONSTANT_OBJECT_WRITE, INVALID_VA_LIST_ARG, NON_POSITIVE_VLA_SIZE, MEMCMP_STRINGS, 
+  MEMCMP_PADDING_DATA, INVALID_ENV_POINTER, ERRNO_MISUSE, MISSING_ERRNO_RESET, CHARACTER_MISUSE, 
+  CHAR_EOF_CONFUSED, IO_INTERLEAVING, SIG_HANDLER_COMP_EXCP_RETURN, SIG_HANDLER_CALLING_SIGNAL, 
+  UNPROTOTYPED_FUNC_CALL, FILE_OBJECT_MISUSE, FLEXIBLE_ARRAY_MEMBER_STRUCT_MISUSE, 
+  SIG_HANDLER_SHARED_OBJECT, MACRO_USED_AS_OBJECT, SIDE_EFFECT_IGNORED, PRE_UCNAME_JOIN_TOKENS, 
+  PRE_DIRECTIVE_MACRO_ARG, INLINE_CONSTRAINT_NOT_RESPECTED, VA_ARG_INCORRECT_TYPE, 
+  TOO_MANY_VA_ARG_CALLS, STREAM_WITH_SIDE_EFFECT, TEMP_OBJECT_ACCESS, SIG_HANDLER_ERRNO_MISUSE, 
+  VA_START_MISUSE, VA_START_INCORRECT_TYPE, DATA_RACE_STD_LIB, ATOMIC_VAR_ACCESS_TWICE, 
+  ATOMIC_VAR_SEQUENCE_NOT_ATOMIC
+
+Remark: By default, some results are not generated for headers.
+|       Search for '-generate-results-for' in user documentation to generate results for these headers.
+
+Verifying sources compliance ...
+
+Options used with Verifier:
+-prog=test
+-lang=C
+-polyspace-version=3.1 (R2019b)
+-results-dir=E:\matlab\Module_2\BF_Result_1
+-date=14/03/2022
+
+User:
+-I1=F:\Atelier\Virtual_Coupling_Create\lang\c
+-I2=F:\Atelier\Virtual_Coupling_Cancel\lang\c - 2
+-target=i386
+-compiler=generic
+-dos=true
+-verif-version=1.0
+-author=ASUS
+
+
+Verifying host configuration:
+Number of cores:                6
+Processor type:                 amd64
+Processor model:                Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+Processor frequency:            2.208 GHz
+Memory > 4 GB:                                              7.85 GB
+Tmp space available in C:\Users\ASUS\AppData\Local\Temp:    11.38 GB
+
+Remark: 6 core(s) detected. The verification creates 6 process(es).
+*** Configuration of the host :	OK
+
+
+Type E:\matlab\Module_2\BF_Result_1\kill-rte-kernel.bat on host LAPTOP-PBOPS4TO to halt Verifier process
+
+
+Checking license ...
+
+License is OK
+
+
+Polyspace C analysis
+Copyright 1999-2019 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Mon Mar 14 10:28:42 2022
+Host: MINGW64_NTx_64-6.2 LAPTOP-PBOPS4TO 0 amd64
+User: ASUS
+**********************************************************
+***
+*** Verifying C sources
+***
+**********************************************************
+
+Verifying sources ...
+Verifying RMU_i.c (1/5)
+Verifying Train2_i.c (2/5)
+Verifying Train3_i.c (3/5)
+Verifying Context_i.c (4/5)
+Verifying Train1_i.c (5/5)
+Global compilation phase...
+
+Number of files                  : 5
+Number of lines                  : 1010
+Number of lines without comments : 813
+
+Verifying cross-files ANSI C compliance
+
+Stubbing standard library functions ...
+Remark: The generated default DRS XML file "drs-template.xml" can be found in <result_dir> folder.
+Doing code transformations ...
+
+
+
+
+Packing compilation data
+
+Defects statistics:
+  - Total number of defects: 0
+done.
+
+**********************************************************
+***
+*** C sources verification done
+***
+**********************************************************
+Ending at: Mon Mar 14 10:28:46 2022
+User time for compilation: 00:00:04.9 (4.1real, 4.1u + 0s (0.08gc))
+
+Polyspace C analysis
+Copyright 1999-2019 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Mon Mar 14 10:28:46 2022
+Host: MINGW64_NTx_64-6.2 LAPTOP-PBOPS4TO 0 amd64
+User: ASUS
+**********************************************************
+***
+*** Beginning Bug-finder - Pre-analysis
+***
+**********************************************************
+**** Bug-finder - Pre-analysis - 1 (P_AL)
+Total complexity = 4161
+**** Bug-finder - Pre-analysis - 1 (P_AL) took 0.3real, 0.3u + 0s
+**** Bug-finder - Pre-analysis - 2 (P_ACP)
+* n-acp-t = 0 n-epp' = 0 n-acp-l = 0
+**** Bug-finder - Pre-analysis - 2 (P_ACP) took 0.11real, 0.11u + 0s
+**** Bug-finder - Pre-analysis - 3 (P_O)
+**** Bug-finder - Pre-analysis - 3 (P_O) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 4 (P_MA)
+**** Bug-finder - Pre-analysis - 4 (P_MA) took 0.03real, 0.03u + 0s
+**** Bug-finder - Pre-analysis - 5 (P_G)
+**** Bug-finder - Pre-analysis - 5 (P_G) took 0.01real, 0.01u + 0s
+**** Bug-finder - Pre-analysis - 6 (P_DRC)
+**** Bug-finder - Pre-analysis - 6 (P_DRC) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 7 (P_TT)
+**** Bug-finder - Pre-analysis - 7 (P_TT) took 0real, 0u + 0s
+**** Bug-finder - Pre-analysis - 8 (P_FI)
+**** Bug-finder - Pre-analysis - 8 (P_FI) took 0.15real, 0.15u + 0s
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.37real
+
+**********************************************************
+***
+*** Bug-finder - Pre-analysis done
+***
+**********************************************************
+Ending at: Mon Mar 14 10:28:48 2022
+User time for pre-analysis: 00:00:01.49 (1.5real, 1.5u + 0s (0.09gc))
+
+Polyspace C analysis
+Copyright 1999-2019 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Mon Mar 14 10:28:48 2022
+Host: MINGW64_NTx_64-6.2 LAPTOP-PBOPS4TO 0 amd64
+User: ASUS
+**********************************************************
+***
+*** Beginning Bug-finder - Function Analysis
+***
+**********************************************************
+**** Bug-finder - Function Analysis - (Verifying function #1 / 102: Train3__INITIALISATION)
+**** Bug-finder - Function Analysis - (Verifying function #2 / 102: Train2__get_flag_train2_operation)
+**** Bug-finder - Function Analysis - (Verifying function #3 / 102: Train2__change_flag_train2_receive_newline_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #4 / 102: Train1__change_Train3_flag_train3_VC_true)
+**** Bug-finder - Function Analysis - (Verifying function #5 / 102: Train1__Train3_adjust_spdi)
+**** Bug-finder - Function Analysis - (Verifying function #6 / 102: Train1__get_flag_train1_getinfor_train2)
+**** Bug-finder - Function Analysis - (Verifying function #7 / 102: RMU__change_flag_RMU_operation)
+**** Bug-finder - Function Analysis - (Verifying function #8 / 102: RMU__change_flag_RMU_inform_train1_newlineinfor_cancel)
+**** Bug-finder - Function Analysis - (Verifying function #9 / 102: RMU__get_flag_RMU_inform_train1_newlineinfor)
+**** Bug-finder - Function Analysis - (Verifying function #10 / 102: Train2__change_flag_train2_estab_train1)
+**** Bug-finder - Function Analysis - (Verifying function #11 / 102: RMU__get_flag_RMU_know_train2_cancel_VC)
+**** Bug-finder - Function Analysis - (Verifying function #12 / 102: Train2__change_flag_train2_wait_train3_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #13 / 102: Train2__change_flag_train2_know_train3_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #14 / 102: Train1__Train1_selfcheck)
+**** Bug-finder - Function Analysis - (Verifying function #15 / 102: Train1__get_flag_train1_getRMU_newlineinfor)
+**** Bug-finder - Function Analysis - (Verifying function #16 / 102: Train2__change_flag_train2_getinfor_train3)
+**** Bug-finder - Function Analysis - (Verifying function #17 / 102: Train1__get_flag_train1_operation)
+**** Bug-finder - Function Analysis - (Verifying function #18 / 102: Train3__get_flag_train3_operation_state)
+**** Bug-finder - Function Analysis - (Verifying function #19 / 102: Train3__get_flag_train3_VC)
+**** Bug-finder - Function Analysis - (Verifying function #20 / 102: Train1__Train3_communicate_RMU)
+**** Bug-finder - Function Analysis - (Verifying function #21 / 102: RMU__get_flag_RMU_operation)
+**** Bug-finder - Function Analysis - (Verifying function #22 / 102: Train1__Train3_check_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #23 / 102: Train3__change_flag_train3_VC_true)
+**** Bug-finder - Function Analysis - (Verifying function #24 / 102: Train3__change_flag_train3_VC_false)
+**** Bug-finder - Function Analysis - (Verifying function #25 / 102: Train3__change_flag_train3_reach_right_spdi)
+**** Bug-finder - Function Analysis - (Verifying function #26 / 102: Train3__get_flag_train3_estab_RMU)
+**** Bug-finder - Function Analysis - (Verifying function #27 / 102: Train2__get_flag_train2_operation_state)
+**** Bug-finder - Function Analysis - (Verifying function #28 / 102: Train3__get_flag_train3_getinfor_train1)
+**** Bug-finder - Function Analysis - (Verifying function #29 / 102: Train1__Train1_inform_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #30 / 102: RMU__get_flag_RMU_know_train3_cancel_VC)
+**** Bug-finder - Function Analysis - (Verifying function #31 / 102: Train3__change_flag_train3_getinfor_train2)
+**** Bug-finder - Function Analysis - (Verifying function #32 / 102: Train2__get_flag_train2_VC)
+**** Bug-finder - Function Analysis - (Verifying function #33 / 102: Train2__change_flag_train2_VC_true)
+**** Bug-finder - Function Analysis - (Verifying function #34 / 102: Train1__get_flag_train1_decide_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #35 / 102: RMU__change_flag_RMU_estab_train2)
+**** Bug-finder - Function Analysis - (Verifying function #36 / 102: Train2__change_flag_train2_VC_false)
+**** Bug-finder - Function Analysis - (Verifying function #37 / 102: Train3__get_flag_train3_estab_train1)
+**** Bug-finder - Function Analysis - (Verifying function #38 / 102: Train1__Train3_inform_cancelVC_finished)
+**** Bug-finder - Function Analysis - (Verifying function #39 / 102: Train3__change_flag_train3_estab_RMU)
+**** Bug-finder - Function Analysis - (Verifying function #40 / 102: Train2__change_flag_train2_reach_right_spdi)
+**** Bug-finder - Function Analysis - (Verifying function #41 / 102: Train2__get_flag_train2_estab_RMU)
+**** Bug-finder - Function Analysis - (Verifying function #42 / 102: Train1__get_flag_train1_operation_state)
+**** Bug-finder - Function Analysis - (Verifying function #43 / 102: RMU__get_flag_RMU_estab_train3)
+**** Bug-finder - Function Analysis - (Verifying function #44 / 102: RMU__get_flag_RMU_estab_train2)
+**** Bug-finder - Function Analysis - (Verifying function #45 / 102: Train2__INITIALISATION)
+**** Bug-finder - Function Analysis - (Verifying function #46 / 102: Train2__get_flag_train2_getinfor_train1)
+**** Bug-finder - Function Analysis - (Verifying function #47 / 102: Train3__change_flag_train3_operation)
+**** Bug-finder - Function Analysis - (Verifying function #48 / 102: Context__INITIALISATION)
+**** Bug-finder - Function Analysis - (Verifying function #49 / 102: RMU__change_flag_RMU_know_train2_cancel_VC)
+**** Bug-finder - Function Analysis - (Verifying function #50 / 102: Train1__Train1_exchange_infor_Train3)
+**** Bug-finder - Function Analysis - (Verifying function #51 / 102: Train2__get_flag_train2_estab_train1)
+**** Bug-finder - Function Analysis - (Verifying function #52 / 102: Train2__change_flag_train2_estab_RMU)
+**** Bug-finder - Function Analysis - (Verifying function #53 / 102: Train1__Train2_selfcheck)
+**** Bug-finder - Function Analysis - (Verifying function #54 / 102: Train1__Train1_inform_RMU_Trian2_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #55 / 102: Train2__change_flag_train2_operation)
+**** Bug-finder - Function Analysis - (Verifying function #56 / 102: Train2__get_flag_train2_getinfor_train3)
+**** Bug-finder - Function Analysis - (Verifying function #57 / 102: Train1__change_Train2_flag_train2_VC_false)
+**** Bug-finder - Function Analysis - (Verifying function #58 / 102: Train1__change_Train3_flag_train3_VC_false)
+**** Bug-finder - Function Analysis - (Verifying function #59 / 102: Train3__change_flag_train3_getinfor_train1)
+**** Bug-finder - Function Analysis - (Verifying function #60 / 102: Train1__change_flag_train1_newline_true)
+**** Bug-finder - Function Analysis - (Verifying function #61 / 102: Train2__get_flag_train2_wait_train3_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #62 / 102: Train2__get_flag_train2_know_train3_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #63 / 102: RMU__get_flag_RMU_getinfor_train1)
+**** Bug-finder - Function Analysis - (Verifying function #64 / 102: Train1__Train1_analyze_newlineinfor)
+**** Bug-finder - Function Analysis - (Verifying function #65 / 102: Train3__get_flag_train3_receive_newline_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #66 / 102: Train1__get_flag_train1_getinfor_train3)
+**** Bug-finder - Function Analysis - (Verifying function #67 / 102: Train2__change_flag_train2_getinfor_train1)
+**** Bug-finder - Function Analysis - (Verifying function #68 / 102: RMU__INITIALISATION)
+**** Bug-finder - Function Analysis - (Verifying function #69 / 102: Train1__INITIALISATION)
+**** Bug-finder - Function Analysis - (Verifying function #70 / 102: Train1__get_flag_train1_wait_train3_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #71 / 102: Train1__get_flag_train1_know_train3_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #72 / 102: RMU__change_flag_RMU_know_train3_cancel_VC)
+**** Bug-finder - Function Analysis - (Verifying function #73 / 102: Train1__Train2_exchange_infor_Train3)
+**** Bug-finder - Function Analysis - (Verifying function #74 / 102: Train2__get_flag_train2_receive_newline_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #75 / 102: Train1__Train3_selfcheck)
+**** Bug-finder - Function Analysis - (Verifying function #76 / 102: Train1__Train2_adjust_spdi)
+**** Bug-finder - Function Analysis - (Verifying function #77 / 102: Train1__Train1_inform_RMU_Trian3_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #78 / 102: Train1__Train1_exchange_infor_RMU)
+**** Bug-finder - Function Analysis - (Verifying function #79 / 102: Train1__RMU_inform_Train1_newlineinfor)
+**** Bug-finder - Function Analysis - (Verifying function #80 / 102: Train3__get_flag_train3_reach_right_spdi)
+**** Bug-finder - Function Analysis - (Verifying function #81 / 102: Train1__Train2_inform_trains_cancelVC_finished)
+**** Bug-finder - Function Analysis - (Verifying function #82 / 102: Train1__get_flag_train1_wait_train2_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #83 / 102: Train1__get_flag_train1_know_train2_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #84 / 102: Train3__get_flag_train3_getinfor_train2)
+**** Bug-finder - Function Analysis - (Verifying function #85 / 102: Train1__get_flag_train1_getinfor_RMU)
+**** Bug-finder - Function Analysis - (Verifying function #86 / 102: Train2__get_flag_train2_reach_right_spdi)
+**** Bug-finder - Function Analysis - (Verifying function #87 / 102: Train1__Train2_communicate_RMU)
+**** Bug-finder - Function Analysis - (Verifying function #88 / 102: Train1__get_flag_train1_newline)
+**** Bug-finder - Function Analysis - (Verifying function #89 / 102: Train1__get_flag_train1_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #90 / 102: Train3__get_flag_train3_begin_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #91 / 102: Train3__change_flag_train3_operation_state)
+**** Bug-finder - Function Analysis - (Verifying function #92 / 102: Train1__Train1_exchange_infor_Train2)
+**** Bug-finder - Function Analysis - (Verifying function #93 / 102: Train1__Train2_check_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #94 / 102: Train3__get_flag_train3_operation)
+**** Bug-finder - Function Analysis - (Verifying function #95 / 102: Train1__change_flag_train1_newline_false)
+**** Bug-finder - Function Analysis - (Verifying function #96 / 102: Train3__change_flag_train3_receive_newline_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #97 / 102: Train3__change_flag_train3_begin_cancelVC)
+**** Bug-finder - Function Analysis - (Verifying function #98 / 102: RMU__change_flag_RMU_getinfor_train1)
+**** Bug-finder - Function Analysis - (Verifying function #99 / 102: Train3__change_flag_train3_estab_train1)
+**** Bug-finder - Function Analysis - (Verifying function #100 / 102: Train2__change_flag_train2_operation_state)
+**** Bug-finder - Function Analysis - (Verifying function #101 / 102: RMU__change_flag_RMU_estab_train3)
+**** Bug-finder - Function Analysis - (Verifying function #102 / 102: Train1__change_Train2_flag_train2_VC_true)
+**** Bug-finder - Function Analysis - (Verifying function #2 / 102: Train2__get_flag_train2_operation) took 0.7real
+**** Bug-finder - Function Analysis - (Verifying function #3 / 102: Train2__change_flag_train2_receive_newline_cancelVC) took 0.78real
+**** Bug-finder - Function Analysis - (Verifying function #1 / 102: Train3__INITIALISATION) took 0.75real
+**** Bug-finder - Function Analysis - (Verifying function #7 / 102: RMU__change_flag_RMU_operation) took 0.27real
+**** Bug-finder - Function Analysis - (Verifying function #5 / 102: Train1__Train3_adjust_spdi) took 1.04real
+**** Bug-finder - Function Analysis - (Verifying function #8 / 102: RMU__change_flag_RMU_inform_train1_newlineinfor_cancel) took 0.27real
+**** Bug-finder - Function Analysis - (Verifying function #4 / 102: Train1__change_Train3_flag_train3_VC_true) took 1.01real
+**** Bug-finder - Function Analysis - (Verifying function #9 / 102: RMU__get_flag_RMU_inform_train1_newlineinfor) took 0.26real
+**** Bug-finder - Function Analysis - (Verifying function #10 / 102: Train2__change_flag_train2_estab_train1) took 0.27real
+**** Bug-finder - Function Analysis - (Verifying function #6 / 102: Train1__get_flag_train1_getinfor_train2) took 1.21real
+**** Bug-finder - Function Analysis - (Verifying function #12 / 102: Train2__change_flag_train2_wait_train3_cancelVC) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #11 / 102: RMU__get_flag_RMU_know_train2_cancel_VC) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #13 / 102: Train2__change_flag_train2_know_train3_cancelVC) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #14 / 102: Train1__Train1_selfcheck) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #15 / 102: Train1__get_flag_train1_getRMU_newlineinfor) took 0.34real
+**** Bug-finder - Function Analysis - (Verifying function #16 / 102: Train2__change_flag_train2_getinfor_train3) took 0.34real
+**** Bug-finder - Function Analysis - (Verifying function #17 / 102: Train1__get_flag_train1_operation) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #18 / 102: Train3__get_flag_train3_operation_state) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #19 / 102: Train3__get_flag_train3_VC) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #20 / 102: Train1__Train3_communicate_RMU) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #21 / 102: RMU__get_flag_RMU_operation) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #24 / 102: Train3__change_flag_train3_VC_false) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #23 / 102: Train3__change_flag_train3_VC_true) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #22 / 102: Train1__Train3_check_cancelVC) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #25 / 102: Train3__change_flag_train3_reach_right_spdi) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #26 / 102: Train3__get_flag_train3_estab_RMU) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #27 / 102: Train2__get_flag_train2_operation_state) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #28 / 102: Train3__get_flag_train3_getinfor_train1) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #30 / 102: RMU__get_flag_RMU_know_train3_cancel_VC) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #29 / 102: Train1__Train1_inform_cancelVC) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #31 / 102: Train3__change_flag_train3_getinfor_train2) took 0.27real
+**** Bug-finder - Function Analysis - (Verifying function #32 / 102: Train2__get_flag_train2_VC) took 0.28real
+**** Bug-finder - Function Analysis - (Verifying function #33 / 102: Train2__change_flag_train2_VC_true) took 0.26real
+**** Bug-finder - Function Analysis - (Verifying function #35 / 102: RMU__change_flag_RMU_estab_train2) took 0.25real
+**** Bug-finder - Function Analysis - (Verifying function #34 / 102: Train1__get_flag_train1_decide_cancelVC) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #36 / 102: Train2__change_flag_train2_VC_false) took 0.27real
+**** Bug-finder - Function Analysis - (Verifying function #37 / 102: Train3__get_flag_train3_estab_train1) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #39 / 102: Train3__change_flag_train3_estab_RMU) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #38 / 102: Train1__Train3_inform_cancelVC_finished) took 0.41real
+**** Bug-finder - Function Analysis - (Verifying function #40 / 102: Train2__change_flag_train2_reach_right_spdi) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #42 / 102: Train1__get_flag_train1_operation_state) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #41 / 102: Train2__get_flag_train2_estab_RMU) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #43 / 102: RMU__get_flag_RMU_estab_train3) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #44 / 102: RMU__get_flag_RMU_estab_train2) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #45 / 102: Train2__INITIALISATION) took 0.34real
+**** Bug-finder - Function Analysis - (Verifying function #46 / 102: Train2__get_flag_train2_getinfor_train1) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #47 / 102: Train3__change_flag_train3_operation) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #48 / 102: Context__INITIALISATION) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #49 / 102: RMU__change_flag_RMU_know_train2_cancel_VC) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #50 / 102: Train1__Train1_exchange_infor_Train3) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #51 / 102: Train2__get_flag_train2_estab_train1) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #52 / 102: Train2__change_flag_train2_estab_RMU) took 0.34real
+**** Bug-finder - Function Analysis - (Verifying function #53 / 102: Train1__Train2_selfcheck) took 0.35real
+**** Bug-finder - Function Analysis - (Verifying function #55 / 102: Train2__change_flag_train2_operation) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #54 / 102: Train1__Train1_inform_RMU_Trian2_cancelVC) took 0.39real
+**** Bug-finder - Function Analysis - (Verifying function #56 / 102: Train2__get_flag_train2_getinfor_train3) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #57 / 102: Train1__change_Train2_flag_train2_VC_false) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #58 / 102: Train1__change_Train3_flag_train3_VC_false) took 0.34real
+**** Bug-finder - Function Analysis - (Verifying function #59 / 102: Train3__change_flag_train3_getinfor_train1) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #60 / 102: Train1__change_flag_train1_newline_true) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #61 / 102: Train2__get_flag_train2_wait_train3_cancelVC) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #62 / 102: Train2__get_flag_train2_know_train3_cancelVC) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #63 / 102: RMU__get_flag_RMU_getinfor_train1) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #65 / 102: Train3__get_flag_train3_receive_newline_cancelVC) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #64 / 102: Train1__Train1_analyze_newlineinfor) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #66 / 102: Train1__get_flag_train1_getinfor_train3) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #67 / 102: Train2__change_flag_train2_getinfor_train1) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #68 / 102: RMU__INITIALISATION) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #69 / 102: Train1__INITIALISATION) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #70 / 102: Train1__get_flag_train1_wait_train3_cancelVC) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #72 / 102: RMU__change_flag_RMU_know_train3_cancel_VC) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #71 / 102: Train1__get_flag_train1_know_train3_cancelVC) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #73 / 102: Train1__Train2_exchange_infor_Train3) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #74 / 102: Train2__get_flag_train2_receive_newline_cancelVC) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #75 / 102: Train1__Train3_selfcheck) took 0.33real
+**** Bug-finder - Function Analysis - (Verifying function #76 / 102: Train1__Train2_adjust_spdi) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #78 / 102: Train1__Train1_exchange_infor_RMU) took 0.34real
+**** Bug-finder - Function Analysis - (Verifying function #77 / 102: Train1__Train1_inform_RMU_Trian3_cancelVC) took 0.36real
+**** Bug-finder - Function Analysis - (Verifying function #80 / 102: Train3__get_flag_train3_reach_right_spdi) took 0.35real
+**** Bug-finder - Function Analysis - (Verifying function #79 / 102: Train1__RMU_inform_Train1_newlineinfor) took 0.38real
+**** Bug-finder - Function Analysis - (Verifying function #82 / 102: Train1__get_flag_train1_wait_train2_cancelVC) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #81 / 102: Train1__Train2_inform_trains_cancelVC_finished) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #83 / 102: Train1__get_flag_train1_know_train2_cancelVC) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #84 / 102: Train3__get_flag_train3_getinfor_train2) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #86 / 102: Train2__get_flag_train2_reach_right_spdi) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #85 / 102: Train1__get_flag_train1_getinfor_RMU) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #88 / 102: Train1__get_flag_train1_newline) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #87 / 102: Train1__Train2_communicate_RMU) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #89 / 102: Train1__get_flag_train1_cancelVC) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #90 / 102: Train3__get_flag_train3_begin_cancelVC) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #91 / 102: Train3__change_flag_train3_operation_state) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #92 / 102: Train1__Train1_exchange_infor_Train2) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #94 / 102: Train3__get_flag_train3_operation) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #93 / 102: Train1__Train2_check_cancelVC) took 0.32real
+**** Bug-finder - Function Analysis - (Verifying function #95 / 102: Train1__change_flag_train1_newline_false) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #96 / 102: Train3__change_flag_train3_receive_newline_cancelVC) took 0.31real
+**** Bug-finder - Function Analysis - (Verifying function #97 / 102: Train3__change_flag_train3_begin_cancelVC) took 0.29real
+**** Bug-finder - Function Analysis - (Verifying function #98 / 102: RMU__change_flag_RMU_getinfor_train1) took 0.3real
+**** Bug-finder - Function Analysis - (Verifying function #99 / 102: Train3__change_flag_train3_estab_train1) took 0.28real
+**** Bug-finder - Function Analysis - (Verifying function #101 / 102: RMU__change_flag_RMU_estab_train3) took 0.27real
+**** Bug-finder - Function Analysis - (Verifying function #100 / 102: Train2__change_flag_train2_operation_state) took 0.27real
+**** Bug-finder - Function Analysis - (Verifying function #102 / 102: Train1__change_Train2_flag_train2_VC_true) took 0.25real
+Maximum Memory Usage: 1754 MB
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.34real
+
+* Total IL complexity: 5400
+
+**********************************************************
+***
+*** Bug-finder - Function Analysis done
+***
+**********************************************************
+Ending at: Mon Mar 14 10:28:56 2022
+User time for function: 00:00:07.90 (7.91real, 7.91u + 0s (0.03gc))
+
+Polyspace C analysis
+Copyright 1999-2019 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Mon Mar 14 10:28:56 2022
+Host: MINGW64_NTx_64-6.2 LAPTOP-PBOPS4TO 0 amd64
+User: ASUS
+**********************************************************
+***
+*** Beginning Bug-finder - Module Analysis
+***
+**********************************************************
+**** Bug-finder - Module Analysis - 1 (Computing modules)
+* Created 1 module
+**** Bug-finder - Module Analysis - 1 (Computing modules) took 0.06real, 0.06u + 0s (0.03gc)
+**** Bug-finder - Module Analysis - (Verifying module #1 / 1: 79 functions)
+**** Bug-finder - Module Analysis - (Verifying module #1 / 1: 79 functions) took 0.69real
+Maximum Memory Usage: 1754 MB
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.32real
+
+**********************************************************
+***
+*** Bug-finder - Module Analysis done
+***
+**********************************************************
+Ending at: Mon Mar 14 10:28:57 2022
+User time for module: 00:00:01.16 (1.16real, 1.16u + 0s (0.06gc))
+
+Polyspace C analysis
+Copyright 1999-2019 The MathWorks, Inc.
+All rights reserved.
+
+Starting at: Mon Mar 14 10:28:57 2022
+Host: MINGW64_NTx_64-6.2 LAPTOP-PBOPS4TO 0 amd64
+User: ASUS
+**********************************************************
+***
+*** Beginning Bug-finder - Global analysis
+***
+**********************************************************
+**** Bug-finder - Global analysis - 1 (P_CCG)
+**** Bug-finder - Global analysis - 1 (P_CCG) took 0real, 0u + 0s
+
+Generating GUI files
+
+Defects statistics:
+  - Total number of defects: 0
+
+GUI files generation completed in 0.35real
+
+**********************************************************
+***
+*** Bug-finder - Global analysis done
+***
+**********************************************************
+Ending at: Mon Mar 14 10:28:58 2022
+User time for global: 00:00:00.62 (0.63real, 0.63u + 0s (0.05gc))
+User time for polyspace-bug-finder: 00:00:15.86 (15.86real, 15.86u + 0s (0.31gc))
+
+***
+*** End of Polyspace analysis
+***
